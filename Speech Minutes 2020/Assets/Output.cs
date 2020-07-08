@@ -22,12 +22,13 @@ public class Output : MonoBehaviour
     public void OnClick()
     {
 
-		string CSVFilePath = Application.dataPath + @"\Scripts\File\hunanichi_hu.csv";
-		string CSVWriteFilePath = Application.dataPath + @"\Scripts\File\CSVWriteFile.csv";
+		string CSVFilePath = Application.dataPath + @"\LogData.txt";
+		string CSVWriteFilePath = Application.dataPath + @"\CSVLogFile.csv";
 
+		var fs = new FileStream(CSVFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 
 		//　ストリームで読み込みと書き込み
-		using (StreamReader streamReader = new StreamReader(CSVFilePath))
+		using (StreamReader streamReader = new StreamReader(fs))
 		using (StreamWriter streamWriter = new StreamWriter(CSVWriteFilePath))
 		{
 
@@ -43,7 +44,7 @@ public class Output : MonoBehaviour
 			{
 				streamWriter.Write(list.ToString() + ',');
 				count++;
-				if (count % 3 == 0)
+				if (count % 2 == 0)
 				{
 					streamWriter.WriteLine();
 				}
