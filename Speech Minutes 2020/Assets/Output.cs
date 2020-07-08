@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System;
 public class Output : MonoBehaviour
 {
+	public voiceSample vS;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,10 @@ public class Output : MonoBehaviour
     }
     public void OnClick()
     {
-     
+
 		string CSVFilePath = Application.dataPath + @"\Scripts\File\hunanichi_hu.csv";
 		string CSVWriteFilePath = Application.dataPath + @"\Scripts\File\CSVWriteFile.csv";
+
 
 		//　ストリームで読み込みと書き込み
 		using (StreamReader streamReader = new StreamReader(CSVFilePath))
