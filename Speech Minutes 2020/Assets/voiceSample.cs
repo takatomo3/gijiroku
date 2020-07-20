@@ -13,15 +13,23 @@ public class voiceSample : MonoBehaviour
     bool Record = true;
     string filePath;
     public GameObject ButtonText;
+    string LogDataFilePath = @"\LogData.txt";       //Assets\以下の音声ファイルの書き込み先のファイル指定
 
 
     public void Start()
     {
+        //LogData i .txt の初期化
+        for(int i = 0; i < 4; i++)
+        {
+            //filePathのパス指定
+            FilePathSelect(i);
+            File.CreateText(filePath);
+        }
         filePath = Application.dataPath + @"\LogData.txt";
         File.CreateText(filePath);
 
-            //インスタンスの生成
-            session = PXCMSession.CreateInstance();
+        //インスタンスの生成
+        session = PXCMSession.CreateInstance();
             //音声データの入力
             source = session.CreateAudioSource();
            
@@ -58,6 +66,55 @@ public class voiceSample : MonoBehaviour
         Debug.Log(text + " , " + duration.ToString());
     }
 
+    //filePathのパス指定
+   void FilePathSelect(int number)
+    {
+        switch (number)
+        {
+            case 0:
+                LogDataFilePath = @"\LogData0.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                break;
+            case 1:
+                LogDataFilePath = @"\LogData1.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                break;
+            case 2:
+                LogDataFilePath = @"\LogData2.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                break;
+            case 3:
+                LogDataFilePath = @"\LogData3.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                break;
+            default:
+                break;
+        }
+    }
+
+    //話題ボタンが押されると呼び出されるメソッド
+    public void WadaiButton0()
+    {
+        FilePathSelect(0);
+        Debug.Log("話題0が押されました");
+    }
+    public void WadaiButton1()
+    {
+        FilePathSelect(1);
+        Debug.Log("話題1が押されました");
+    }
+    public void WadaiButton2()
+    {
+        FilePathSelect(2);
+        Debug.Log("話題2が押されました");
+    }
+    public void WadaiButton3()
+    {
+        FilePathSelect(3);
+        Debug.Log("話題3が押されました");
+    }
+
+
 
     //Recordボタンを押すと呼び出されるメソッド
     public void SetRecord()
@@ -93,5 +150,13 @@ public class voiceSample : MonoBehaviour
         if (session != null)
             session.Dispose();
     }
+
+    /*
+    void Update()
+    {
+        filePath = Application.dataPath + LogDataFilePath;
+        File.CreateText(filePath);
+    }
+    */
 
 }

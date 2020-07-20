@@ -68,6 +68,10 @@
     <Compile Include="Assets\Plugins.Managed\pxcmdefs.extensions.cs" />
     <Compile Include="Assets\voiceSample.cs" />
     <None Include="Assets\LogData.txt" />
+    <None Include="Assets\LogData2.txt" />
+    <None Include="Assets\LogData0.txt" />
+    <None Include="Assets\LogData1.txt" />
+    <None Include="Assets\LogData3.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/so506/Unity/Clone Forder/Speech Minutes 2020/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
