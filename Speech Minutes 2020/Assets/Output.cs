@@ -1,7 +1,27 @@
-﻿using UnityEngine;using System.Collections;using System.IO;using System.Collections.Generic;using System.ComponentModel;using System;public class Output : MonoBehaviour{	string InputPath;
+﻿
+using UnityEngine;
+using System.Collections;
+using System.IO;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System;
+public class Output : MonoBehaviour
+{
+	string InputPath;
     string OutputPath;
     // Start is called before the first frame update
-    void Start()    {            }    // Update is called once per frame    void Update()    {            }    public void OnClick()    {
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void OnClick()
+    {
         for (int i = 0; i < 5; i++)
         {
             InputPathName(i);                                                   //CSVファイルの書き込み元ファイルを選択します
@@ -39,7 +59,9 @@
                     Debug.Log(list);
                 }
             }
-        }	}
+        }
+
+	}
 
     //CSVファイルの書き込み元ファイルを選択します
     void InputPathName(int number)
@@ -85,4 +107,5 @@
                 OutputPath = @"\CSVLogFile.csv";
                 break;
         }
-    }}
+    }
+}
