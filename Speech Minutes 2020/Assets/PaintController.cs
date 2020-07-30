@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 public class PaintController : MonoBehaviour {
 
@@ -24,6 +25,20 @@ public class PaintController : MonoBehaviour {
     /// </summary>
     [Range(0,10)] public float lineWidth;
 
+    public bool mode = false;   //PenMode用フラグ
+
+    public GameObject PenMode;
+
+    //public bool onetime = true;
+    //public bool add = false;
+
+    //private Vector3 touchPos;
+
+    //public float lineLength = 0.01f;
+
+    void Start () {
+        PenMode = GameObject.Find("PenMode");
+    }
 
     void Awake () {
         lineRendererList = new List<LineRenderer>();
@@ -31,18 +46,41 @@ public class PaintController : MonoBehaviour {
 
     void Update () {
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
+        //Debug.Log(hit2d.collider);
 
         // ボタンが押された時に線オブジェクトの追加を行う
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && mode) {
             this.AddLineObject();
+            //touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //touchPos.z=0;
         }
 
         // ボタンが押されている時、LineRendererに位置データの設定を指定していく
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0) && mode) {
             this.AddPositionDataToLineRendererList();
+
+            /*if(onetime){
+                Vector3 startPos = touchPos;
+                Vector3 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                endPos.z=0;
+                if((endPos-startPos).magnitude > lineLength){
+                    this.AddLineObject();
+                    onetime = false;
+                    add = true;
+                }
+            }
+
+            if(add){
+                this.AddPositionDataToLineRendererList();
+            }*/
         }
+
+        /*if(Input.GetMouseButtonUp(0)){
+            onetime = true;
+            add = false;
+        }*/
     }
 
     /// <summary>
@@ -56,6 +94,7 @@ public class PaintController : MonoBehaviour {
 
         // オブジェクトにLineRendererを取り付ける
         lineObject.AddComponent<LineRenderer>();
+        lineObject.AddComponent<MeshCollider>();
 
         // 描く線のコンポーネントリストに追加する
         lineRendererList.Add(lineObject.GetComponent<LineRenderer>());
@@ -96,6 +135,19 @@ public class PaintController : MonoBehaviour {
         foreach (var clone in clones)
         {
             Destroy(clone);
+        }
+    }
+
+    //PenMode切り替え用
+    public void Mode(){
+        if(mode){
+            mode = false;
+            Debug.Log("PenMode:" + mode);
+            PenMode.GetComponentInChildren<Text> ().text = "PenMode:false";
+        }else{
+            mode = true;
+            Debug.Log("PenMode:" + mode);
+            PenMode.GetComponentInChildren<Text> ().text = "PenMode:true";
         }
     }
 }
