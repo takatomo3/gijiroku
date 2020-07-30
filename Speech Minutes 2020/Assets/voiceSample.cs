@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 
 public class voiceSample : MonoBehaviour
@@ -12,8 +13,10 @@ public class voiceSample : MonoBehaviour
     private PXCMSpeechRecognition.Handler handler;
     bool Record = true;
     string filePath;
-    public GameObject ButtonText;
     string LogDataFilePath = @"\LogData.txt";       //Assets\以下の音声ファイルの書き込み先のファイル指定
+    public Text text;
+    public GameObject[] Button;
+    int NowBottonPushed = -1;
 
 
     public void Start()
@@ -53,6 +56,8 @@ public class voiceSample : MonoBehaviour
             handler = new PXCMSpeechRecognition.Handler();
             handler.onRecognition = (x) => Dataoutput(x.scores[0].sentence, x.duration);
             sr.SetDictation();
+
+        text.text = "話題未選択";
     }
 
     //データの出力
@@ -72,22 +77,49 @@ public class voiceSample : MonoBehaviour
         switch (number)
         {
             case 0:
-                LogDataFilePath = @"\LogData0.txt";
+                LogDataFilePath = @"\LogDatas\LogData0.txt";
                 filePath = Application.dataPath + LogDataFilePath;
+                text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 1:
-                LogDataFilePath = @"\LogData1.txt";
+                LogDataFilePath = @"\LogDatas\LogData1.txt";
                 filePath = Application.dataPath + LogDataFilePath;
+                text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 2:
-                LogDataFilePath = @"\LogData2.txt";
+                LogDataFilePath = @"\LogDatas\LogData2.txt";
                 filePath = Application.dataPath + LogDataFilePath;
+                text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 3:
-                LogDataFilePath = @"\LogData3.txt";
+                LogDataFilePath = @"\LogDatas\LogData3.txt";
                 filePath = Application.dataPath + LogDataFilePath;
+                text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
+                break;
+            case 4:
+                LogDataFilePath = @"\LogDatas\LogData4.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
+                break;
+            case 5:
+                LogDataFilePath = @"\LogDatas\LogData5.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
+                break;
+            case 6:
+                LogDataFilePath = @"\LogDatas\LogData6.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
+                break;
+            case 7:
+                LogDataFilePath = @"\LogDatas\LogData7.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             default:
+                LogDataFilePath = @"\LogDatas\LogData.txt";
+                filePath = Application.dataPath + LogDataFilePath;
+                text.text = "話題未選択";
                 break;
         }
     }
@@ -95,23 +127,124 @@ public class voiceSample : MonoBehaviour
     //話題ボタンが押されると呼び出されるメソッド
     public void WadaiButton0()
     {
-        FilePathSelect(0);
-        Debug.Log("話題0が押されました");
+        if(NowBottonPushed != 0)
+        {
+            FilePathSelect(0);
+            Debug.Log("話題0が押されました");
+            NowBottonPushed = 0;
+        }
+        else
+        {
+            FilePathSelect(-1);
+            Debug.Log("話題が解除されました");
+            NowBottonPushed = -1;
+        }
+
     }
     public void WadaiButton1()
     {
-        FilePathSelect(1);
-        Debug.Log("話題1が押されました");
+        if (NowBottonPushed != 1)
+        {
+            FilePathSelect(1);
+            Debug.Log("話題1が押されました");
+            NowBottonPushed = 1;
+        }
+        else
+        {
+            FilePathSelect(-1);
+            Debug.Log("話題が解除されました");
+            NowBottonPushed = -1;
+        }
     }
     public void WadaiButton2()
     {
-        FilePathSelect(2);
-        Debug.Log("話題2が押されました");
+        if (NowBottonPushed != 2)
+        {
+            FilePathSelect(2);
+            Debug.Log("話題2が押されました");
+            NowBottonPushed = 2;
+        }
+        else
+        {
+            FilePathSelect(-1);
+            Debug.Log("話題が解除されました");
+            NowBottonPushed = -1;
+        }
     }
     public void WadaiButton3()
     {
-        FilePathSelect(3);
-        Debug.Log("話題3が押されました");
+        if (NowBottonPushed != 3)
+        {
+            FilePathSelect(3);
+            Debug.Log("話題3が押されました");
+            NowBottonPushed = 3;
+        }
+        else
+        {
+            FilePathSelect(-1);
+            Debug.Log("話題が解除されました");
+            NowBottonPushed = -1;
+        }
+    }
+    public void WadaiButton4()
+    {
+        if (NowBottonPushed != 4)
+        {
+            FilePathSelect(4);
+            Debug.Log("話題4が押されました");
+            NowBottonPushed = 4;
+        }
+        else
+        {
+            FilePathSelect(-1);
+            Debug.Log("話題が解除されました");
+            NowBottonPushed = -1;
+        }
+    }
+    public void WadaiButton5()
+    {
+        if (NowBottonPushed != 5)
+        {
+            FilePathSelect(5);
+            Debug.Log("話題5が押されました");
+            NowBottonPushed = 5;
+        }
+        else
+        {
+            FilePathSelect(-1);
+            Debug.Log("話題が解除されました");
+            NowBottonPushed = -1;
+        }
+    }
+    public void WadaiButton6()
+    {
+        if (NowBottonPushed != 6)
+        {
+            FilePathSelect(6);
+            Debug.Log("話題6が押されました");
+            NowBottonPushed = 6;
+        }
+        else
+        {
+            FilePathSelect(-1);
+            Debug.Log("話題が解除されました");
+            NowBottonPushed = -1;
+        }
+    }
+    public void WadaiButton7()
+    {
+        if (NowBottonPushed != 7)
+        {
+            FilePathSelect(7);
+            Debug.Log("話題7が押されました");
+            NowBottonPushed = 7;
+        }
+        else
+        {
+            FilePathSelect(-1);
+            Debug.Log("話題が解除されました");
+            NowBottonPushed = -1;
+        }
     }
 
 
