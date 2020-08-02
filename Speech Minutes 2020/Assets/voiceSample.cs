@@ -13,7 +13,7 @@ public class voiceSample : MonoBehaviour
     private PXCMSpeechRecognition.Handler handler;
     bool Record = true;
     string filePath;
-    string LogDataFilePath = @"\LogData.txt";       //Assets\以下の音声ファイルの書き込み先のファイル指定
+    string LogDataFilePath = @"\LogDatas\LogData.txt";       //Assets\以下の音声ファイルの書き込み先のファイル指定
     public Text text;
     public GameObject[] Button;
     int NowBottonPushed = -1;
@@ -22,13 +22,13 @@ public class voiceSample : MonoBehaviour
     public void Start()
     {
         //LogData i .txt の初期化
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 7; i++)
         {
             //filePathのパス指定
             FilePathSelect(i);
             File.CreateText(filePath);
         }
-        filePath = Application.dataPath + @"\LogData.txt";
+        filePath = Application.dataPath + @"\LogDatas\LogData.txt";
         File.CreateText(filePath);
 
         //インスタンスの生成
