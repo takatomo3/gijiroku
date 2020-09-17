@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{976775B6-4691-2D80-C4AF-ABACF6ADF225}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextBoxOutput.cs">
     <Files>
-      <File FileName="Assets/NewBehaviourScript.cs" Line="25" Column="37" />
-      <File FileName="Assets/TextBoxOutput.cs" Line="5" Column="15" />
+      <File FileName="Assets/NewBehaviourScript.cs" Line="24" Column="9" />
+      <File FileName="Assets/TextBoxOutput.cs" Line="23" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
