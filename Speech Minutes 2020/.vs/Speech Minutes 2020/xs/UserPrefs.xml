@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{976775B6-4691-2D80-C4AF-ABACF6ADF225}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextBoxOutput.cs">
+    <Files>
+      <File FileName="Assets/NewBehaviourScript.cs" Line="25" Column="37" />
+      <File FileName="Assets/TextBoxOutput.cs" Line="5" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Speech Minutes 2020" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="TextBoxOutput.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="955e717b-6551-41ca-b48d-e4a2d4e35301" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
