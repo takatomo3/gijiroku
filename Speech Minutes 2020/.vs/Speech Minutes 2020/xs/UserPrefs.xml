@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{976775B6-4691-2D80-C4AF-ABACF6ADF225}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextBoxOutput.cs">
     <Files>
-      <File FileName="Assets/NewBehaviourScript.cs" Line="24" Column="9" />
-      <File FileName="Assets/TextBoxOutput.cs" Line="23" Column="12" />
+      <File FileName="Assets/TextBoxOutput.cs" Line="41" Column="6" />
+      <File FileName="Assets/WadaiChange.cs" Line="23" Column="26" />
+      <File FileName="Assets/TextControl.cs" Line="9" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="955e717b-6551-41ca-b48d-e4a2d4e35301" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8d383f98-4afb-4eb9-8db9-9a2d52564490" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

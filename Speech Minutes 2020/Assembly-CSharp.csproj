@@ -70,8 +70,8 @@
     <Compile Include="Assets\Output.cs" />
     <Compile Include="Assets\PaintController.cs" />
     <Compile Include="Assets\Plugins.Managed\pxcmdefs.extensions.cs" />
-    <Compile Include="Assets\TextBox.cs" />
     <Compile Include="Assets\TextBoxOutput.cs" />
+    <Compile Include="Assets\TextControl.cs" />
     <Compile Include="Assets\voiceSample.cs" />
     <Compile Include="Assets\WadaiChange.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

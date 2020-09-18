@@ -29,7 +29,14 @@ public class TextBoxOutput : MonoBehaviour
 
     public void EndEdit()
     {
-        GameObject prefab = (GameObject)Instantiate(gametext);
-        prefab.transform.SetParent(canvas.transform, false);
+        if (GameObject.Find("TextBox").GetComponent<InputField>().text != "") {
+            GameObject prefab = (GameObject)Instantiate(gametext);
+            prefab.transform.SetParent(canvas.transform, false);
+        }
+    }
+
+    public void Send()
+    {
+        GameObject.Find("TextBox").GetComponent<InputField>().text = "";
     }
 }
