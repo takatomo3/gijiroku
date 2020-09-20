@@ -15,64 +15,16 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 0
-    width: 1440
-    height: 900
-  m_ShowMode: 4
-  m_Title: 
-  m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
-=======
     y: 43.2
     width: 1536
     height: 780.8
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 398}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-<<<<<<< HEAD
-    width: 306
-    height: 850
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-=======
-    width: 326
-    height: 731
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
-  m_ActualView: {fileID: 15}
-  m_Panes:
-  - {fileID: 15}
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,28 +37,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 2}
   - {fileID: 9}
-  - {fileID: 4}
+  - {fileID: 3}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
-<<<<<<< HEAD
-    width: 1440
-    height: 850
-  m_MinSize: {x: 713, y: 498}
-  m_MaxSize: {x: 18008, y: 14048}
-  vertical: 0
-  controlID: 12
-=======
     width: 1536
     height: 731
-  m_MinSize: {x: 683, y: 348}
-  m_MaxSize: {x: 12008, y: 8048}
+  m_MinSize: {x: 683, y: 498}
+  m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 101
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+  controlID: 12
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1089
+    y: 0
+    width: 447
+    height: 731
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,32 +90,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1018
+    x: 0
     y: 0
-    width: 422
-    height: 850
-  m_MinSize: {x: 275, y: 50}
+    width: 200
+    height: 457
+  m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
-=======
-    x: 1259
-    y: 0
-    width: 277
-    height: 731
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  - {fileID: 11}
-  m_Selected: 0
-  m_LastSelected: 1
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,31 +117,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 493
-    width: 712
-    height: 357
-  m_MinSize: {x: 234, y: 274}
-  m_MaxSize: {x: 10004, y: 10024}
-  m_ActualView: {fileID: 12}
-  m_Panes:
-  - {fileID: 12}
-  - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
-=======
-    y: 452
-    width: 933
-    height: 279
-  m_MinSize: {x: 104, y: 124}
-  m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 18}
+    y: 457
+    width: 1089
+    height: 274
+  m_MinSize: {x: 232, y: 274}
+  m_MaxSize: {x: 10002, y: 10024}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
+  m_Selected: 0
   m_LastSelected: 0
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -203,21 +142,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 7}
-  - {fileID: 3}
+  - {fileID: 2}
   - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1440
-    height: 900
-  m_MinSize: {x: 950, y: 300}
-=======
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 398}
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -236,11 +169,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1440
-=======
     width: 1536
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -261,13 +190,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 880
-    width: 1440
-=======
     y: 761
     width: 1536
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -288,26 +212,40 @@ MonoBehaviour:
   - {fileID: 5}
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 306
+    x: 0
     y: 0
-    width: 712
-    height: 850
-  m_MinSize: {x: 234, y: 498}
-  m_MaxSize: {x: 10004, y: 14048}
-  vertical: 1
-  controlID: 105
-=======
-    x: 326
-    y: 0
-    width: 933
+    width: 1089
     height: 731
-  m_MinSize: {x: 204, y: 348}
-  m_MaxSize: {x: 4004, y: 8048}
+  m_MinSize: {x: 406, y: 498}
+  m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 33
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+  controlID: 13
 --- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1089
+    height: 457
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
+  vertical: 0
+  controlID: 14
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,393 +260,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 200
     y: 0
-<<<<<<< HEAD
-    width: 712
-    height: 493
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 15}
-  m_Panes:
-  - {fileID: 15}
-  - {fileID: 16}
-  - {fileID: 11}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &11
-=======
-    width: 933
-    height: 452
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+    width: 889
+    height: 457
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
-  - {fileID: 12}
   - {fileID: 17}
-  m_Selected: 2
+  - {fileID: 12}
+  m_Selected: 1
   m_LastSelected: 0
---- !u!114 &11
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1259.2001
-    y: 73.6
-    width: 275
-    height: 711
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_TestTypeToolbarIndex: 0
-  m_PlayModeTestListGUI:
-    m_Window: {fileID: 11}
-    newResultList:
-    - id: '[Speech Minutes 2020][suite]'
-      name: Speech Minutes 2020
-      fullName: Speech Minutes 2020
-      resultStatus: 2
-      duration: 0.278262
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: 
-    - id: '[C:/Users/so506/Unity/Clone Forder/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll][suite]'
-      name: PlayMode.dll
-      fullName: C:/Users/so506/Unity/Clone Forder/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll
-      resultStatus: 2
-      duration: 0.1553802
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Speech Minutes 2020][suite]'
-    - id: '[Tests][suite]'
-      name: Tests
-      fullName: Tests
-      resultStatus: 2
-      duration: 0.1360557
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[C:/Users/so506/Unity/Clone Forder/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: '[PlayMode][Tests.NewTestScript][suite]'
-      name: NewTestScript
-      fullName: Tests.NewTestScript
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[PlayMode][Tests.NewTestScript.NewTestScriptSimplePasses]'
-      name: NewTestScriptSimplePasses
-      fullName: Tests.NewTestScript.NewTestScriptSimplePasses
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[PlayMode][Tests.NewTestScript][suite]'
-    - id: '[PlayMode][Tests.NewTestScript.OnTolggle0]'
-      name: OnTolggle0
-      fullName: Tests.NewTestScript.OnTolggle0
-      resultStatus: 2
-      duration: 0
-      messages: Method returning void cannot have an expected result
-      output: 
-      stacktrace: 
-      notRunnable: 1
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[PlayMode][Tests.NewTestScript][suite]'
-    - id: '[PlayMode][Tests.otamesi][suite]'
-      name: otamesi
-      fullName: Tests.otamesi
-      resultStatus: 2
-      duration: 0.115113
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[PlayMode][Tests.otamesi.otamesiSimplePasses]'
-      name: otamesiSimplePasses
-      fullName: Tests.otamesi.otamesiSimplePasses
-      resultStatus: 2
-      duration: 0.0343696
-      messages: "  Expected: -2\r\n  But was:  1\r\n"
-      output: 
-      stacktrace: "at Tests.otamesi.otamesiSimplePasses () [0x00003] in C:\\Users\\so506\\Unity\\Clone
-        Forder\\Speech Minutes 2020\\Assets\\Test\\PlayMode\\otamesi.cs:17\r\n"
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[PlayMode][Tests.otamesi][suite]'
-    - id: '[PlayMode][Tests.otamesi.otamesiWithEnumeratorPasses]'
-      name: otamesiWithEnumeratorPasses
-      fullName: Tests.otamesi.otamesiWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0461474
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[PlayMode][Tests.otamesi][suite]'
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 4bc3ddf43beef20282472209244e5347ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
-  m_EditModeTestListGUI:
-    m_Window: {fileID: 11}
-    newResultList:
-    - id: '[Speech Minutes 2020][suite]'
-      name: Speech Minutes 2020
-      fullName: Speech Minutes 2020
-      resultStatus: 2
-      duration: 0.310167
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: 
-    - id: '[C:/Users/so506/Unity/Clone Forder/Speech Minutes 2020/Library/ScriptAssemblies/EditMode.dll][suite]'
-      name: EditMode.dll
-      fullName: C:/Users/so506/Unity/Clone Forder/Speech Minutes 2020/Library/ScriptAssemblies/EditMode.dll
-      resultStatus: 2
-      duration: 0.2023008
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Speech Minutes 2020][suite]'
-    - id: '[Tests][suite]'
-      name: Tests
-      fullName: Tests
-      resultStatus: 2
-      duration: 0.1932418
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[C:/Users/so506/Unity/Clone Forder/Speech Minutes 2020/Library/ScriptAssemblies/EditMode.dll][suite]'
-    - id: '[EditMode][Tests.NewTestScript][suite]'
-      name: NewTestScript
-      fullName: Tests.NewTestScript
-      resultStatus: 2
-      duration: 0.1426663
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[EditMode][Tests.NewTestScript.NewTestScriptSimplePasses]'
-      name: NewTestScriptSimplePasses
-      fullName: Tests.NewTestScript.NewTestScriptSimplePasses
-      resultStatus: 2
-      duration: 0.0357735
-      messages: "  Expected: -2\r\n  But was:  1\r\n"
-      output: 
-      stacktrace: "at Tests.NewTestScript.NewTestScriptSimplePasses () [0x00003] in
-        C:\\Users\\so506\\Unity\\Clone Forder\\Speech Minutes 2020\\Assets\\Test\\EditMode\\NewTestScript.cs:19\r\n"
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.NewTestScript][suite]'
-    - id: '[EditMode][Tests.NewTestScript.NewTestScriptWithEnumeratorPasses]'
-      name: NewTestScriptWithEnumeratorPasses
-      fullName: Tests.NewTestScript.NewTestScriptWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0739747
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.NewTestScript][suite]'
-    - id: '[EditMode][Tests.Output][suite]'
-      name: Output
-      fullName: Tests.Output
-      resultStatus: 1
-      duration: 0.037612
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[EditMode][Tests.Output.OutputSimplePasses]'
-      name: OutputSimplePasses
-      fullName: Tests.Output.OutputSimplePasses
-      resultStatus: 1
-      duration: 0.0010966
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.Output][suite]'
-    - id: '[EditMode][Tests.Output.OutputWithEnumeratorPasses]'
-      name: OutputWithEnumeratorPasses
-      fullName: Tests.Output.OutputWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0254031
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.Output][suite]'
-    m_ResultText: Output (0.038s)
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0f314969
-      m_LastClickedID: 1766404367
-      m_ExpandedIDs: e934dbc74bc3ddf4d63723fb3beef2020f314969ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
 --- !u!114 &12
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -723,22 +288,18 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
-    m_Text: Asset Store
+    m_Text: "\u30A2\u30BB\u30C3\u30C8\u30B9\u30C8\u30A2"
     m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 247.2
-    y: 73.6
-    width: 897
-    height: 434
+    x: 468
+    y: 181
+    width: 973
+    height: 501
   m_PersistentViewDataDictionary: {fileID: 0}
-<<<<<<< HEAD
---- !u!114 &12
-=======
 --- !u!114 &13
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -753,23 +314,16 @@ MonoBehaviour:
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
-    m_Text: Project
+    m_Text: "\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8"
     m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 306
-    y: 523
-    width: 708
-    height: 337
-=======
-    x: 326.4
-    y: 525.60004
-    width: 929
-    height: 259
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    x: 0
+    y: 530.4
+    width: 1087
+    height: 254
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -785,25 +339,18 @@ MonoBehaviour:
     m_Folders:
     - Assets
   m_ViewMode: 1
-  m_StartGridSize: 52
+  m_StartGridSize: 64
   m_LastFolders:
   - Assets
-  m_LastFoldersGridSize: 52
-  m_LastProjectPath: /Users/kurimatomohiro/clonefolder/Speech Minutes 2020
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\so506\Unity\Clone Forder\Speech Minutes 2020
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f62b0000
-    m_LastClickedID: 11254
-    m_ExpandedIDs: 00000000f62b00007e2c000000ca9a3b
-=======
-    scrollPos: {x: 0, y: 46}
-    m_SelectedIDs: c0090000
-    m_LastClickedID: 2496
-    m_ExpandedIDs: 00000000c00900003c0a0000920a000000ca9a3b
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    m_SelectedIDs: 3e2d0000
+    m_LastClickedID: 11582
+    m_ExpandedIDs: 000000003e2d0000b02d0000fe2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -831,11 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000f62b00007e2c0000
-=======
-    m_ExpandedIDs: 00000000c00900003c0a0000920a0000
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    m_ExpandedIDs: 000000003e2d0000b02d0000fe2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -879,7 +422,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -888,13 +431,9 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 52
+    m_GridSize: 64
   m_DirectoriesAreaWidth: 115
-<<<<<<< HEAD
---- !u!114 &13
-=======
 --- !u!114 &14
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -909,23 +448,16 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Inspector
+    m_Text: "\u30A4\u30F3\u30B9\u30DA\u30AF\u30BF\u30FC"
     m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1018
-    y: 30
-    width: 420
-    height: 830
-=======
-    x: 1259.2001
+    x: 1088.8
     y: 73.6
-    width: 275
+    width: 445
     height: 711
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -936,11 +468,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-<<<<<<< HEAD
---- !u!114 &14
-=======
 --- !u!114 &15
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -955,29 +483,23 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Hierarchy
+    m_Text: "\u30D2\u30A8\u30E9\u30EB\u30AD\u30FC"
     m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 30
-    width: 304
-    height: 830
-=======
     y: 73.6
-    width: 324
-    height: 711
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    width: 198
+    height: 437
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 662f0000
-      m_LastClickedID: 12134
-      m_ExpandedIDs: 28f9ffff64300000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6ef7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -993,19 +515,15 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 2}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-  m_WindowGUID: 8ab649248e24783478ab5028016d5ea9
-<<<<<<< HEAD
---- !u!114 &15
-=======
+  m_WindowGUID: 6f84bef4e4b646444bfe3fd450309c17
 --- !u!114 &16
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1021,31 +539,25 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 0}
+    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000,
+      type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 306
-    y: 30
-    width: 708
-    height: 473
-=======
-    x: 326.4
-    y: 73.6
-    width: 929
-    height: 432
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    x: 209.6
+    y: 80.8
+    width: 469
+    height: 414
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_WindowGUID: 072a4d54742a69746991931f6bdcc737
+  m_WindowGUID: 04d84cab3cf762e419d11029d66c5d92
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 624.0058, y: 324.37903, z: 5.8692503}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 624.0058, y: 324.37903, z: 5.8692503}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1065,37 +577,33 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: -1}
+    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 754.7503
+    m_Target: 10
     speed: 2
-    m_Value: 754.7503
+    m_Value: 10
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
-<<<<<<< HEAD
---- !u!114 &16
-=======
 --- !u!114 &17
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1110,45 +618,31 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Game
+    m_Text: "\u30B2\u30FC\u30E0"
     m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 306
-    y: 30
-    width: 708
-    height: 473
-=======
-    x: 326.4
+    x: 200
     y: 73.6
-    width: 929
-    height: 432
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    width: 885
+    height: 437
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-<<<<<<< HEAD
-    m_HBaseRangeMin: -354
-    m_HBaseRangeMax: 354
-    m_VBaseRangeMin: -199
-    m_VBaseRangeMax: 199
-=======
-    m_HBaseRangeMin: -368.80002
-    m_HBaseRangeMax: 368.80002
-    m_VBaseRangeMin: -207.5
-    m_VBaseRangeMax: 207.5
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    m_HBaseRangeMin: -442.5
+    m_HBaseRangeMax: 442.5
+    m_VBaseRangeMin: -210
+    m_VBaseRangeMax: 210
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1157,7 +651,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1166,52 +660,30 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-<<<<<<< HEAD
-      width: 708
-      height: 456
+      width: 885
+      height: 420
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 354, y: 228}
-=======
-      width: 929
-      height: 415
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 464.5, y: 207.5}
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    m_Translation: {x: 442.5, y: 210}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
-      x: -354
-      y: -228
-      width: 708
-      height: 456
-=======
-      x: -464.5
-      y: -207.5
-      width: 929
-      height: 415
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+      x: -442.5
+      y: -210
+      width: 885
+      height: 420
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-<<<<<<< HEAD
-  m_LastWindowPixelSize: {x: 1416, y: 946}
-=======
-  m_LastWindowPixelSize: {x: 1161.25, y: 540}
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+  m_LastWindowPixelSize: {x: 1106.25, y: 546.25}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
-<<<<<<< HEAD
---- !u!114 &17
-=======
 --- !u!114 &18
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1226,21 +698,14 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Console
+    m_Text: "\u30B3\u30F3\u30BD\u30FC\u30EB"
     m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 272
-    y: 465
-    width: 629
-    height: 295
-=======
-    x: 326.4
-    y: 525.60004
-    width: 929
-    height: 259
->>>>>>> fa2c9f9c434cb3e32bd3315f448d8d250625b99f
+    x: 8
+    y: 718
+    width: 1366
+    height: 308
   m_PersistentViewDataDictionary: {fileID: 0}
