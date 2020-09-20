@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine.UI;
 
 
+
 public class voiceSample : MonoBehaviour
 {
     private PXCMSession session;
@@ -35,6 +36,7 @@ public class voiceSample : MonoBehaviour
         session = PXCMSession.CreateInstance();
             //音声データの入力
             source = session.CreateAudioSource();
+        //Assert.NotNull(source);
            
             PXCMAudioSource.DeviceInfo dinfo = null;
 

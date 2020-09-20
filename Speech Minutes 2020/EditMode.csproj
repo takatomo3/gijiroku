@@ -63,7 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Test\EditMode\ButtonActive.cs" />
+    <Compile Include="Assets\Test\EditMode\ChangeLineColors.cs" />
+    <Compile Include="Assets\Test\EditMode\ChangeLineWeight.cs" />
+    <Compile Include="Assets\Test\EditMode\ChangeText.cs" />
+    <Compile Include="Assets\Test\EditMode\NewTestScript.cs" />
     <Compile Include="Assets\Test\EditMode\Output.cs" />
+    <Compile Include="Assets\Test\EditMode\PaintController.cs" />
+    <Compile Include="Assets\Test\EditMode\voiceSample.cs" />
+    <Compile Include="Assets\Test\EditMode\WadaiChange.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
