@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour
@@ -38,6 +39,14 @@ public class TextManager : MonoBehaviour
         }
     }
 
+   /* public void Update()
+    {
+        EventSystem ev = EventSystem.current;
+        if (ev.alreadySelecting)
+        {
+            Debug.Log("何かを選択しています");
+        }
+    }*/
     //送信ボタンを押した時
     public void Send()
     {
