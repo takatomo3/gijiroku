@@ -57,10 +57,19 @@ public class TextControl : MonoBehaviour, IDragHandler
         {
             scroll = Input.GetAxis("Mouse ScrollWheel");
             Text textfont = this.GetComponent<Text>();
+
             if (scroll > 0)
             {
-                textfont.fontSize += 14;
-                Debug.Log("回ったよ");
+                textfont.fontSize += 1;// (int)scroll*100;
+                Debug.Log("大よ"+scroll);
+            }else if (scroll < 0)
+            {
+                if (textfont.fontSize >= 10)
+                {
+                    textfont.fontSize -= 1;// (int)scroll*100;
+                    Debug.Log("小よ" + scroll);
+                }
+                else { textfont.fontSize = 10; }
             }
 
             if (Input.GetMouseButtonDown(0))

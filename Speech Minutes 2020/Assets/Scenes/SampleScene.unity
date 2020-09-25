@@ -10560,6 +10560,16 @@ PrefabInstance:
       propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8146255296071399979, guid: cf321e0ba7085426f899bde72dd5e47b,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146255296071399979, guid: cf321e0ba7085426f899bde72dd5e47b,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8146255296071399981, guid: cf321e0ba7085426f899bde72dd5e47b,
         type: 3}
       propertyPath: m_LocalPosition.x
