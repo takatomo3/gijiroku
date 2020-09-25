@@ -9,6 +9,7 @@ public class TextManager : MonoBehaviour
     //オブジェクトと結びつける
     public InputField inputField;
     public Text text;
+    public Text display;
 
     public GameObject canvas;//キャンバス
     public GameObject gametext;
@@ -25,17 +26,35 @@ public class TextManager : MonoBehaviour
     {
         //テキストにinputFieldの内容を反映
         text.text = inputField.text;
+        display.text = inputField.text;
         //オブジェクトを表示する
-        gametext.gameObject.SetActive(true);
+      //  gametext.gameObject.SetActive(true);
     }
-
+    int resetcunter = 0;
+    public RectTransform input_rectTransform = null;
+    public RectTransform display_rectTransform = null;
     //テキストボックスへの入力が終わった時に呼び出す
     public void EndEdit()
-    {
+    { 
         if (GameObject.Find("TextBox").GetComponent<InputField>().text != "") {
             //テキストがあればプレハブからオブジェクト生成
+            gametext.gameObject.SetActive(true);
             GameObject prefab = (GameObject)Instantiate(gametext);
             prefab.transform.SetParent(canvas.transform, false);
+            //int px = Random.Range(30, -35);
+            //int py = Random.Range(19, -25);
+           
+            if (resetcunter<4)
+            {
+                resetcunter += 1;
+                input_rectTransform.position += new Vector3(10, -20, 0f);
+                display_rectTransform.position = input_rectTransform.position;
+            }else if(resetcunter>=4)
+            {
+                resetcunter = 0;
+                input_rectTransform.position += new Vector3(-40, 80, 0f); ;
+                display_rectTransform.position = input_rectTransform.position;
+            }
         }
     }
 
@@ -52,5 +71,6 @@ public class TextManager : MonoBehaviour
     {
         //インプットフィールドの中身を消す
         GameObject.Find("TextBox").GetComponent<InputField>().text = "";
+        gametext.gameObject.SetActive(false);
     }
 }

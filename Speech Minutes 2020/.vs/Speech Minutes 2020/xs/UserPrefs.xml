@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{976775B6-4691-2D80-C4AF-ABACF6ADF225}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextControl.cs">
     <Files>
-      <File FileName="Assets/TextControl.cs" Line="23" Column="12" />
       <File FileName="Assets/TextManager.cs" Line="10" Column="5" />
+      <File FileName="Assets/TextControl.cs" Line="12" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,16 +14,11 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Speech Minutes 2020" expanded="True" selected="True" />
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="03040724-7dde-4840-94c8-f8838856d42e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cf8a5a00-8062-4f46-b975-b2749c46ae53" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

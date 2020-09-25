@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TextControl : MonoBehaviour, IDragHandler
 {
-    
+    private float scroll;
     bool Selectflag=false;
     void Start()
     {
@@ -29,13 +29,13 @@ public class TextControl : MonoBehaviour, IDragHandler
                // 色を指定
                text.color = Color.green;
                Debug.Log("Selectされました");
+            scroll = Input.GetAxis("Mouse ScrollWheel");
+            if (scroll > 0)
+            {
+                text.fontSize += 14;
+                Debug.Log("回ったよ");
+            }
             
-            /* if (Input.GetKey(KeyCode.Backspace))
-             {
-                 Destroy(this.gameObject);
-                Selectflag = false; 
-                 Debug.Log("false&destroy");
-             }*/
 
 
         }
@@ -55,6 +55,14 @@ public class TextControl : MonoBehaviour, IDragHandler
 
         if (Selectflag == true)
         {
+            scroll = Input.GetAxis("Mouse ScrollWheel");
+            Text textfont = this.GetComponent<Text>();
+            if (scroll > 0)
+            {
+                textfont.fontSize += 14;
+                Debug.Log("回ったよ");
+            }
+
             if (Input.GetMouseButtonDown(0))
                  {
                       Selectflag = false;
