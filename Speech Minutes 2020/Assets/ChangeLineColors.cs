@@ -21,7 +21,7 @@ public class ChangeLineColors : MonoBehaviour
     void Update()
     {
         if(dropdown.value == 0){
-            script.lineColor = Color.black;
+            script.lineColor = Color.white;
         }
 
         if(dropdown.value == 1){

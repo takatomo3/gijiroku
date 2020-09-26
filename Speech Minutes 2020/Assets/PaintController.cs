@@ -29,6 +29,8 @@ public class PaintController : MonoBehaviour {
 
     public GameObject PenMode;
 
+    public Text Buttontext;
+
     //public bool onetime = true;
     //public bool add = false;
 
@@ -143,11 +145,11 @@ public class PaintController : MonoBehaviour {
         if(mode){
             mode = false;
             Debug.Log("PenMode:" + mode);
-            PenMode.GetComponentInChildren<Text> ().text = "PenMode:false";
+            Buttontext.text = "PenMode:false";
         }else{
             mode = true;
             Debug.Log("PenMode:" + mode);
-            PenMode.GetComponentInChildren<Text> ().text = "PenMode:true";
+            Buttontext.text = "PenMode:true";
         }
     }
 }
