@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TextControl : MonoBehaviour, IDragHandler
 {
     private float scroll;
-    bool Selectflag=false;
+    public bool Selectflag=false;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
