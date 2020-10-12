@@ -1,9 +1,8 @@
-﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="b419ee45-c0a6-4c9d-be7b-e7dc9c6bae5d" />
+﻿<Properties StartupConfiguration="{976775B6-4691-2D80-C4AF-ABACF6ADF225}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextManager.cs">
     <Files>
       <File FileName="Assets/TextManager.cs" Line="29" Column="40" />
-      <File FileName="Assets/TextControl.cs" />
+      <File FileName="Assets/TextControl.cs" Line="63" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
