@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MUNnewUI.unity
     guid: df0d45cf90e6c4e0dbc53dcad418d0a5
   - enabled: 1
-    path: Assets/Scenes/StartGamen.unity
+    path: Assets/Scenes/StartScene.unity
     guid: ee6fb573555a2428f918a5ab52d391f6
   m_configObjects: {}

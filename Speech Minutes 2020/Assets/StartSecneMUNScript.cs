@@ -41,6 +41,7 @@ public class StartSecneMUNScript : MonobitEngine.MonoBehaviour
             if (MonobitNetwork.inRoom)
             {
                 /*
+                
                 //Debug.Log("ルームに入室しました");
                 // ルーム内のプレイヤー一覧の表示
                 GUILayout.BeginHorizontal();
