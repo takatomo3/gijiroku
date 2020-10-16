@@ -47,7 +47,9 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
         
         GUILayout.BeginHorizontal();
         roomName = MonobitEngine.MonobitNetwork.room.name;
-        GUILayout.Label("roomName : " + roomName + "\n");
+        GUILayout.Label("roomName : " + roomName);
+        GUILayout.EndHorizontal();
+        GUILayout.BeginHorizontal();
         GUILayout.Label("PlayerList : ");
         
         //Debug.Log("PlayerList:");
