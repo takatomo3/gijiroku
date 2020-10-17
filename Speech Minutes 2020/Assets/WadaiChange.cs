@@ -79,7 +79,7 @@ public class WadaiChange : MonoBehaviour
     {
         if (dropdown.value != dropdown2)
         {
-            InputField form = GameObject.Find("InputField").GetComponent<InputField>();
+            InputField form = GameObject.Find("wadaiInputField").GetComponent<InputField>();
             form.text = "";
             dropdown2 = dropdown.value;
         }

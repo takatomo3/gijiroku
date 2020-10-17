@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1960,7 +1960,7 @@ GameObject:
   - component: {fileID: 240041776}
   - component: {fileID: 240041779}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: wadaiInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9104,6 +9104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10188e0af83e04929b40aed9b898c832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chatComent: {fileID: 0}
+  Selectflag: 0
   m_rectTransform: {fileID: 1879630781}
 --- !u!223 &1879630785
 Canvas:

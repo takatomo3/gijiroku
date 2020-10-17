@@ -6,13 +6,18 @@ using UnityEngine.UI;
 
 public class TextControl : MonoBehaviour, IDragHandler
 {
+    // マウススクロール変数
     private float scroll;
+    public Text chatComent;
     public bool Selectflag=false;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
+    /// <summary>
+    /// テキストコメントを選択するための関数
+    /// </summary>
     public void Selecter()
     {
      /*  if (Input.GetMouseButtonDown(0) && Cursor.lockState != CursorLockMode.Locked)
@@ -25,16 +30,16 @@ public class TextControl : MonoBehaviour, IDragHandler
         if (Selectflag == true)
         {
             // Textコンポーネントを取得
-               Text text = this.GetComponent<Text>();
+               chatComent = this.GetComponent<Text>();
                // 色を指定
-               text.color = Color.green;
+               chatComent.color = Color.green;
                Debug.Log("Selectされました");
             scroll = Input.GetAxis("Mouse ScrollWheel");
-            if (scroll > 0)
+          /*  if (scroll > 0)
             {
                 text.fontSize += 14;
                 Debug.Log("回ったよ");
-            }
+            }*/
             
 
 
@@ -45,6 +50,9 @@ public class TextControl : MonoBehaviour, IDragHandler
             Debug.Log("何かを選択しています");
         }*/
     }
+    /// <summary>
+    /// テキストのフォントサイズ変更及び削除
+    /// </summary>
     void Update()
     {
         
@@ -104,23 +112,28 @@ public class TextControl : MonoBehaviour, IDragHandler
             Debug.Log("Pressed middle click.ｑ２");
     }
     public RectTransform m_rectTransform = null;
-
+    /// <summary>
+    /// テキストの位置取得
+    /// </summary>
     private void Reset()
     {
         m_rectTransform = GetComponent<RectTransform>();
     }
-
+    /// <summary>
+    /// テキストの位置操作
+    /// </summary>
+    /// <param name="e"></param>
     public void OnDrag(PointerEventData e)
     {
         m_rectTransform.position += new Vector3(e.delta.x, e.delta.y, 0f);
     }
 
-    //テキストボックスの削除(バックスペースで削除)
+    /*//テキストボックスの削除(バックスペースで削除)
     public void Destroy()
     {
         if (Input.GetKey(KeyCode.Backspace)) {
             Destroy(this.gameObject);
             Debug.Log("ok");
         }
-    }
+    }*/
 }

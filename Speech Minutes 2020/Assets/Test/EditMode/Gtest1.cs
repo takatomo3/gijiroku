@@ -14,9 +14,19 @@ namespace Tests
         {
             // Use the Assert class to test conditions
             var x = new TextControl();
-            Assert.IsFalse(x.Selectflag);
+
+            Assert.IsEmpty(x.chatComent.text);
+            x.chatComent.text = "Matsuno";
+            Assert.AreEqual(x.chatComent.color, Color.black) ; 
         }
 
+        [Test]
+        public void Gtest2SimplePasses()
+        {
+            // Use the Assert class to test conditions
+            var x = new TextControl();
+            Assert.IsTrue(x.Selectflag);
+        }
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
