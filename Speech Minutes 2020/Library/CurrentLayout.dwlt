@@ -15,23 +15,13 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
     y: 44
     width: 1920
-    height: 963
-=======
-    y: 0
-    width: 1440
-<<<<<<< HEAD
-    height: 787
-=======
-    height: 900
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    height: 961
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 398}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -53,29 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-<<<<<<< HEAD
     width: 1920
-    height: 913
-  m_MinSize: {x: 683, y: 348}
-  m_MaxSize: {x: 12008, y: 8048}
-  vertical: 0
-  controlID: 41
-=======
-    width: 1440
-<<<<<<< HEAD
-    height: 737
-  m_MinSize: {x: 683, y: 498}
-  m_MaxSize: {x: 14004, y: 14048}
-  vertical: 0
-  controlID: 29
-=======
-    height: 850
+    height: 911
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
   controlID: 75
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -91,30 +64,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1112
+    x: 1531
     y: 0
-<<<<<<< HEAD
     width: 389
-    height: 913
-=======
-<<<<<<< HEAD
-    width: 328
-    height: 737
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    height: 911
   m_MinSize: {x: 277, y: 74}
   m_MaxSize: {x: 4002, y: 4024}
-=======
-    width: 292
-    height: 850
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 12}
+  - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,25 +92,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 379
-    height: 552
-=======
-<<<<<<< HEAD
-    width: 273
-    height: 447
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    height: 551
   m_MinSize: {x: 202, y: 224}
   m_MaxSize: {x: 4002, y: 4024}
-=======
-    width: 284
-    height: 515
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 16}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -169,37 +117,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 552
+    y: 551
     width: 1531
-    height: 361
-  m_MinSize: {x: 102, y: 124}
-  m_MaxSize: {x: 4002, y: 4024}
-  m_ActualView: {fileID: 18}
+    height: 360
+  m_MinSize: {x: 232, y: 274}
+  m_MaxSize: {x: 10002, y: 10024}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
-=======
-<<<<<<< HEAD
-    y: 447
-    width: 1112
-    height: 290
-=======
-    y: 515
-    width: 1148
-    height: 335
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-  m_MinSize: {x: 232, y: 274}
-  m_MaxSize: {x: 10002, y: 10024}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,19 +148,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 1920
-    height: 963
-  m_MinSize: {x: 950, y: 398}
-=======
-    width: 1440
-<<<<<<< HEAD
-    height: 787
-=======
-    height: 900
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
+    height: 961
   m_MinSize: {x: 950, y: 300}
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -251,7 +169,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1440
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -272,17 +190,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 943
+    y: 941
     width: 1920
-=======
-<<<<<<< HEAD
-    y: 767
-=======
-    y: 880
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-    width: 1440
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -305,30 +214,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 1531
-    height: 913
-  m_MinSize: {x: 406, y: 348}
-  m_MaxSize: {x: 8006, y: 8048}
-  vertical: 1
-  controlID: 42
-=======
-<<<<<<< HEAD
-    width: 1112
-    height: 737
-  m_MinSize: {x: 406, y: 498}
-  m_MaxSize: {x: 10002, y: 14048}
-  vertical: 1
-  controlID: 30
-=======
-    width: 1148
-    height: 850
+    height: 911
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
   controlID: 76
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,30 +239,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 1531
-    height: 552
-  m_MinSize: {x: 406, y: 224}
-  m_MaxSize: {x: 8006, y: 4024}
-  vertical: 0
-  controlID: 43
-=======
-<<<<<<< HEAD
-    width: 1112
-    height: 447
-  m_MinSize: {x: 406, y: 224}
-  m_MaxSize: {x: 8006, y: 4024}
-  vertical: 0
-  controlID: 31
-=======
-    width: 1148
-    height: 515
+    height: 551
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
   controlID: 77
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -387,502 +260,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 273
+    x: 379
     y: 0
-<<<<<<< HEAD
     width: 1152
-    height: 552
+    height: 551
   m_MinSize: {x: 204, y: 224}
   m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 16}
-=======
-<<<<<<< HEAD
-    width: 839
-    height: 447
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 17}
-=======
-    width: 864
-    height: 515
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
   m_Panes:
+  - {fileID: 16}
   - {fileID: 17}
-<<<<<<< HEAD
   - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
-=======
-  - {fileID: 18}
-  - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 2
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
 --- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1148
-    y: 30
-    width: 290
-<<<<<<< HEAD
-    height: 717
-=======
-    height: 830
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_TestTypeToolbarIndex: 0
-  m_PlayModeTestListGUI:
-    m_Window: {fileID: 12}
-    newResultList:
-    - id: '[Speech Minutes 2020][suite]'
-      name: Speech Minutes 2020
-      fullName: Speech Minutes 2020
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: 
-<<<<<<< HEAD
-    - id: '[/Users/matsulab/gijiroku/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll][suite]'
-      name: PlayMode.dll
-      fullName: /Users/matsulab/gijiroku/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll
-=======
-    - id: '[/Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll][suite]'
-      name: PlayMode.dll
-      fullName: /Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Speech Minutes 2020][suite]'
-    - id: '[Tests][suite]'
-      name: Tests
-      fullName: Tests
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-<<<<<<< HEAD
-      parentID: '[/Users/matsulab/gijiroku/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll][suite]'
-=======
-      parentID: '[/Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Library/ScriptAssemblies/PlayMode.dll][suite]'
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-    - id: '[PlayMode][Tests.NewTestScript][suite]'
-      name: NewTestScript
-      fullName: Tests.NewTestScript
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[PlayMode][Tests.NewTestScript.NewTestScriptSimplePasses]'
-      name: NewTestScriptSimplePasses
-      fullName: Tests.NewTestScript.NewTestScriptSimplePasses
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[PlayMode][Tests.NewTestScript][suite]'
-    - id: '[PlayMode][Tests.NewTestScript.OnTolggle0]'
-      name: OnTolggle0
-      fullName: Tests.NewTestScript.OnTolggle0
-      resultStatus: 2
-      duration: 0
-      messages: Method returning void cannot have an expected result
-      output: 
-      stacktrace: 
-      notRunnable: 1
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[PlayMode][Tests.NewTestScript][suite]'
-    - id: '[PlayMode][Tests.otamesi][suite]'
-      name: otamesi
-      fullName: Tests.otamesi
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[PlayMode][Tests.otamesi.otamesiSimplePasses]'
-      name: otamesiSimplePasses
-      fullName: Tests.otamesi.otamesiSimplePasses
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[PlayMode][Tests.otamesi][suite]'
-    - id: '[PlayMode][Tests.otamesi.otamesiWithEnumeratorPasses]'
-      name: otamesiWithEnumeratorPasses
-      fullName: Tests.otamesi.otamesiWithEnumeratorPasses
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[PlayMode][Tests.otamesi][suite]'
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-<<<<<<< HEAD
-      m_ExpandedIDs: 2df03abc4bc3ddf43beef20282472209ced97e24ffffff7f
-=======
-      m_ExpandedIDs: 2df03abc4bc3ddf43beef202824722097389b927ffffff7f
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
-  m_EditModeTestListGUI:
-    m_Window: {fileID: 12}
-    newResultList:
-    - id: '[Speech Minutes 2020][suite]'
-      name: Speech Minutes 2020
-      fullName: Speech Minutes 2020
-      resultStatus: 2
-      duration: 0.2294427
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: 
-    - id: '[/Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Library/ScriptAssemblies/EditMode.dll][suite]'
-      name: EditMode.dll
-<<<<<<< HEAD
-      fullName: /Users/matsulab/gijiroku/Speech Minutes 2020/Library/ScriptAssemblies/EditMode.dll
-      resultStatus: 2
-      duration: 0.202617
-      messages: One or more child tests had errors
-=======
-      fullName: /Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Library/ScriptAssemblies/EditMode.dll
-      resultStatus: 0
-      duration: 0
-      messages: 
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Speech Minutes 2020][suite]'
-    - id: '[Tests][suite]'
-      name: Tests
-      fullName: Tests
-      resultStatus: 2
-      duration: 0.1747646
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[/Users/matsulab/gijiroku/Speech Minutes 2020/Library/ScriptAssemblies/EditMode.dll][suite]'
-    - id: '[EditMode][Tests.Gtest1][suite]'
-      name: Gtest1
-      fullName: Tests.Gtest1
-      resultStatus: 2
-      duration: 0.071679
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[EditMode][Tests.Gtest1.Gtest1SimplePasses]'
-      name: Gtest1SimplePasses
-      fullName: Tests.Gtest1.Gtest1SimplePasses
-      resultStatus: 2
-      duration: 0.0049564
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword.  This
-        is not allowed.  MonoBehaviours can only be added using AddComponent(). Alternatively,
-        your script can inherit from ScriptableObject or no base class at all
-
-'
-      stacktrace: "  at Tests.Gtest1.Gtest1SimplePasses () [0x00007] in /Users/matsulab/gijiroku/Speech
-        Minutes 2020/Assets/Test/EditMode/Gtest1.cs:18 \n  at (wrapper managed-to-native)
-        System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)\n
-        \ at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-        culture) [0x00032] in <e1319b7195c343e79b385cd3aa43f5dc>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.Gtest1][suite]'
-    - id: '[EditMode][Tests.Gtest1.Gtest1WithEnumeratorPasses]'
-      name: Gtest1WithEnumeratorPasses
-      fullName: Tests.Gtest1.Gtest1WithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0475679
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.Gtest1][suite]'
-    - id: '[EditMode][Tests.Gtest1.Gtest2SimplePasses]'
-      name: Gtest2SimplePasses
-      fullName: Tests.Gtest1.Gtest2SimplePasses
-      resultStatus: 2
-      duration: 0.0049734
-      messages: "  Expected: True\n  But was:  False\n"
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword.  This
-        is not allowed.  MonoBehaviours can only be added using AddComponent(). Alternatively,
-        your script can inherit from ScriptableObject or no base class at all
-
-'
-      stacktrace: 'at Tests.Gtest1.Gtest2SimplePasses () [0x00007] in /Users/matsulab/gijiroku/Speech
-        Minutes 2020/Assets/Test/EditMode/Gtest1.cs:28
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.Gtest1][suite]'
-    - id: '[EditMode][Tests.NewTestScript][suite]'
-      name: NewTestScript
-      fullName: Tests.NewTestScript
-      resultStatus: 2
-      duration: 0.0575516
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[EditMode][Tests.NewTestScript.NewTestScriptSimplePasses]'
-      name: NewTestScriptSimplePasses
-      fullName: Tests.NewTestScript.NewTestScriptSimplePasses
-      resultStatus: 2
-      duration: 0.0015693
-      messages: "  Expected: -2\n  But was:  1\n"
-      output: 
-      stacktrace: 'at Tests.NewTestScript.NewTestScriptSimplePasses () [0x00003] in
-        /Users/matsulab/gijiroku/Speech Minutes 2020/Assets/Test/EditMode/NewTestScript.cs:19
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.NewTestScript][suite]'
-    - id: '[EditMode][Tests.NewTestScript.NewTestScriptWithEnumeratorPasses]'
-      name: NewTestScriptWithEnumeratorPasses
-      fullName: Tests.NewTestScript.NewTestScriptWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0222593
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.NewTestScript][suite]'
-    - id: '[EditMode][Tests.Output][suite]'
-      name: Output
-      fullName: Tests.Output
-      resultStatus: 1
-      duration: 0.0293203
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentID: '[Tests][suite]'
-    - id: '[EditMode][Tests.Output.OutputSimplePasses]'
-      name: OutputSimplePasses
-      fullName: Tests.Output.OutputSimplePasses
-      resultStatus: 1
-      duration: 0.0004173
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.Output][suite]'
-    - id: '[EditMode][Tests.Output.OutputWithEnumeratorPasses]'
-      name: OutputWithEnumeratorPasses
-      fullName: Tests.Output.OutputWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0210674
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[EditMode][Tests.Output][suite]'
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 02482ab3e934dbc74bc3ddf43beef20220008a570f314969ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
---- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -903,18 +294,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 284
-<<<<<<< HEAD
-    y: 75
-    width: 860
-    height: 427
-=======
-    y: 30
-    width: 860
-    height: 495
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
+    x: 468
+    y: 181
+    width: 973
+    height: 501
   m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &14
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -936,24 +321,12 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 627
+    y: 626
     width: 1529
-    height: 341
-=======
-<<<<<<< HEAD
-    y: 522
-    width: 1110
-    height: 270
-=======
-    y: 545
-    width: 1146
-    height: 315
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    height: 340
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: Pai
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -962,35 +335,22 @@ MonoBehaviour:
     m_ReferencingInstanceIDs: 
     m_SceneHandles: 
     m_ShowAllHits: 0
-    m_SearchArea: 0
+    m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< HEAD
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ac280000
-    m_LastClickedID: 10412
-    m_ExpandedIDs: 00000000ac280000462a0000ce2a0000582b000000ca9a3b
-=======
-    scrollPos: {x: 0, y: 79}
-<<<<<<< HEAD
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000cc0900007a0a0000b20a0000f20a000000ca9a3b
-=======
-    m_SelectedIDs: a6280000
-    m_LastClickedID: 10406
-    m_ExpandedIDs: 00000000a6280000402a0000522b0000ae2e000000ca9a3b
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    scrollPos: {x: 0, y: 93}
+    m_SelectedIDs: 962a0000
+    m_LastClickedID: 10902
+    m_ExpandedIDs: 00000000ae280000482a0000d02a00005a2b0000dc2b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1018,15 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000ac280000462a0000ce2a0000582b0000
-=======
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000cc0900007a0a0000f20a0000
-=======
-    m_ExpandedIDs: 00000000a6280000402a0000522b0000ae2e0000
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    m_ExpandedIDs: 00000000ae280000482a0000d02a00005a2b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1053,13 +405,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-<<<<<<< HEAD
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000
-=======
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300002e0d000000000000
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1083,10 +430,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 22}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 269
---- !u!114 &15
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1107,24 +454,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 1531
     y: 75
     width: 387
-    height: 893
-=======
-<<<<<<< HEAD
-    x: 1112
-    y: 75
-    width: 326
-    height: 717
-=======
-    x: 1150
-    y: 22
-    width: 290
-    height: 826
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    height: 891
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -1135,7 +468,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
---- !u!114 &16
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1157,38 +490,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
     y: 75
     width: 377
-    height: 532
-=======
-<<<<<<< HEAD
-    y: 75
-    width: 271
-    height: 427
-=======
-    y: 30
-    width: 282
-    height: 495
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    height: 531
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-      m_SelectedIDs: 94070000
-      m_LastClickedID: 0
-      m_ExpandedIDs: e60dffff081affff281affff1433ffff8434ffff723affff803dffff5e41ffffba41ffff3042ffff1c48ffff8648ffff1452ffffa656fffff058fffffe59ffff065bffffa65bffffc05bffffe05bffff085cffff6664ffff0c74ffffdc74ffff8e77ffffca77ffffea77ffffc278ffff0c84ffff1689ffffc68efffff893fffff695ffff629dffff7c9dffff9e9effff70d0ffffe6d1ffff8ad2fffff2d2ffffeae0ffff14e8ffff3af9ffffdefbffff140f000018310000a8310000be310000de3100001632000028320000323200005232000062320000783200003e3300005e330000983300009e330000fe4b0000244c00004c4e0000ce4e000018500000a6500000f45000003e51000054510000a4590000985d0000e66200000e630000dc63000004660000a4660000006700001c6700004a67000084670000c4670000e46700000868000056680000f66800007469000078690000fe9a0000269d0000baa100000ea200002aa3000084a40000a6a4000020aa000046aa00005aaa00006eac00000ead00007eae0000faaf000046b8000016b900003cb9000050b9000064bb000088cc00009ccc0000b0ce000008d3000078d40000f4d5000086db00009adb0000aedd00004ede000000df0000bedf00003ae1000026e70000eee900005eeb0000b8ec000098f90000bef90000640b0100840b0100ce0b0100e00b01003e0d0100f00d0100980e01006c0f0100920f01007c100100a2100100cc100100fe1101006a130100da140100561601003e180100521801007a180100661a0100061b0100761c010096270100aa270100be290100182e0100882f0100043101001e320100c6320100ec32010014350100b8390100283b01008c3e01005041010054410100a841010070420100c4420100c44301001e440100a84d0100ce4d0100965001004851010006520100825301000a5c0100d85c0100005f0100a05f0100086001002460010052600100bc600100cc600100ec600100106101005e610100066201008c62010090620100ea7a0100127d01006e850100d6850100f2850100208601009a860100ba860100de8601002c870100d48701005e880100
-=======
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-<<<<<<< HEAD
-      m_ExpandedIDs: fefaffffd6fbffff
-=======
-      m_ExpandedIDs: aafaffff64fbffffdefbffff
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+      m_SelectedIDs: 4af8ffff
+      m_LastClickedID: -1974
+      m_ExpandedIDs: 4af8ffffbef8ffff06f9ffff3cf9ffffd4faffffd6fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1204,20 +515,15 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-<<<<<<< HEAD
-  m_WindowGUID: 6969d1a6a827749af91e23e773e6ed42
+  m_WindowGUID: b71bdceaec82d4e2eb3c6eb0ade86873
 --- !u!114 &16
-=======
-  m_WindowGUID: 62d7352f9bf8d4fa89fd55462d31988d
---- !u!114 &17
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1233,46 +539,25 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 0}
+    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000,
+      type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 379
     y: 75
     width: 1148
-    height: 532
+    height: 531
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_WindowGUID: 96ca490e84a664aeaa2f06cadd3561ae
-=======
-<<<<<<< HEAD
-    x: 273
-    y: 75
-    width: 835
-    height: 427
-=======
-    x: 284
-    y: 30
-    width: 860
-    height: 495
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_WindowGUID: 05fe7d3110fd645aabd2b3e5f440b4fb
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+  m_WindowGUID: 33d9b203131914068a2039f6a3fbd514
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-    m_Target: {x: 894.34875, y: 425.9276, z: -6.566887}
+    m_Target: {x: 919.65356, y: 321.43118, z: -0.17620611}
     speed: 2
-    m_Value: {x: 894.34875, y: 425.9276, z: -6.566887}
-=======
-    m_Target: {x: 927.9959, y: 484.06268, z: 10.0775}
-    speed: 2
-    m_Value: {x: 927.9959, y: 484.06268, z: 10.0775}
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
+    m_Value: {x: 919.65356, y: 321.43118, z: -0.17620611}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1292,41 +577,33 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: -1}
+    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-<<<<<<< HEAD
-    m_Value: {x: 0, y: 0, z: 0, w: -1}
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 1243.2894
+    m_Target: 22
     speed: 2
-    m_Value: 1243.2894
-=======
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
-  m_Size:
-    m_Target: 1052.1853
-    speed: 2
-    m_Value: 1052.1853
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
+    m_Value: 22
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &18
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1347,24 +624,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 379
     y: 75
     width: 1148
-    height: 532
-=======
-<<<<<<< HEAD
-    x: 273
-    y: 75
-    width: 835
-    height: 427
-=======
-    x: 284
-    y: 30
-    width: 860
-    height: 495
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    height: 531
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -1376,24 +639,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-<<<<<<< HEAD
     m_HBaseRangeMin: -574
     m_HBaseRangeMax: 574
-    m_VBaseRangeMin: -257.5
-    m_VBaseRangeMax: 257.5
-=======
-<<<<<<< HEAD
-    m_HBaseRangeMin: -417.5
-    m_HBaseRangeMax: 417.5
-    m_VBaseRangeMin: -205
-    m_VBaseRangeMax: 205
-=======
-    m_HBaseRangeMin: -215
-    m_HBaseRangeMax: 215
-    m_VBaseRangeMin: -119.5
-    m_VBaseRangeMax: 119.5
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    m_VBaseRangeMin: -257
+    m_VBaseRangeMax: 257
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1411,66 +660,30 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-<<<<<<< HEAD
       width: 1148
-      height: 515
+      height: 514
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 574, y: 257.5}
-=======
-<<<<<<< HEAD
-      width: 835
-      height: 410
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 417.5, y: 205}
-=======
-      width: 860
-      height: 478
-    m_Scale: {x: 2, y: 2}
-    m_Translation: {x: 430, y: 239}
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    m_Translation: {x: 574, y: 257}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
       x: -574
-      y: -257.5
+      y: -257
       width: 1148
-      height: 515
-=======
-<<<<<<< HEAD
-      x: -417.5
-      y: -205
-      width: 835
-      height: 410
-=======
-      x: -215
-      y: -119.5
-      width: 430
-      height: 239
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+      height: 514
     m_MinimalGUI: 1
-  m_defaultScale: 2
+  m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-<<<<<<< HEAD
-  m_LastWindowPixelSize: {x: 1148, y: 532}
-=======
-<<<<<<< HEAD
-  m_LastWindowPixelSize: {x: 1670, y: 854}
-=======
-  m_LastWindowPixelSize: {x: 1720, y: 990}
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+  m_LastWindowPixelSize: {x: 1148, y: 531}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
---- !u!114 &19
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1492,19 +705,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 627
+    y: 626
     width: 1529
-    height: 341
-=======
-<<<<<<< HEAD
-    y: 522
-    width: 1146
-    height: 270
-=======
-    y: 545
-    width: 1146
-    height: 315
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
->>>>>>> parent of 4c6130b... オンラインシーンを変更しました
+    height: 340
   m_PersistentViewDataDictionary: {fileID: 0}
