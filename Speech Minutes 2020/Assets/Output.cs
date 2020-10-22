@@ -69,31 +69,31 @@ public class Output : MonoBehaviour
         switch (number)
         {
             case 0:
-                InputPath = @"\LogDatas\LogData0.txt";
+                InputPath = @"/LogDatas/LogData0.txt";
                 break;
             case 1:
-                InputPath = @"\LogDatas\LogData1.txt";
+                InputPath = @"/LogDatas/LogData1.txt";
                 break;
             case 2:
-                InputPath = @"\LogDatas\LogData2.txt";
+                InputPath = @"/LogDatas/LogData2.txt";
                 break;
             case 3:
-                InputPath = @"\LogDatas\LogData3.txt";
+                InputPath = @"/LogDatas/LogData3.txt";
                 break;
             case 4:
-                InputPath = @"\LogDatas\LogData4.txt";
+                InputPath = @"/LogDatas/LogData4.txt";
                 break;
             case 5:
-                InputPath = @"\LogDatas\LogData5.txt";
+                InputPath = @"/LogDatas/LogData5.txt";
                 break;
             case 6:
-                InputPath = @"\LogDatas\LogData6.txt";
+                InputPath = @"/LogDatas/LogData6.txt";
                 break;
             case 7:
-                InputPath = @"\LogDatas\LogData7.txt";
+                InputPath = @"/LogDatas/LogData7.txt";
                 break;
             default:
-                InputPath = @"\LogDatas\LogData.txt";
+                InputPath = @"/LogDatas/LogData.txt";
                 break;
         }
     }
@@ -104,31 +104,31 @@ public class Output : MonoBehaviour
         switch (number)
         {
             case 0:
-                OutputPath = @"\CSVLogFiles\CSVLogFile0.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile0.csv";
                 break;
             case 1:
-                OutputPath = @"\CSVLogFiles\CSVLogFile1.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile1.csv";
                 break;
             case 2:
-                OutputPath = @"\CSVLogFiles\CSVLogFile2.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile2.csv";
                 break;
             case 3:
-                OutputPath = @"\CSVLogFiles\CSVLogFile3.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile3.csv";
                 break;
             case 4:
-                OutputPath = @"\CSVLogFiles\CSVLogFile4.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile4.csv";
                 break;
             case 5:
-                OutputPath = @"\CSVLogFiles\CSVLogFile5.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile5.csv";
                 break;
             case 6:
-                OutputPath = @"\CSVLogFiles\CSVLogFile6.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile6.csv";
                 break;
             case 7:
-                OutputPath = @"\CSVLogFiles\CSVLogFile7.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile7.csv";
                 break;
             default:
-                OutputPath = @"\CSVLogFiles\CSVLogFile.csv";
+                OutputPath = @"/CSVLogFiles/CSVLogFile.csv";
                 break;
         }
     }

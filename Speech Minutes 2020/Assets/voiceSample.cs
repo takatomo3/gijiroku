@@ -14,7 +14,7 @@ public class voiceSample : MonoBehaviour
     private PXCMSpeechRecognition.Handler handler;
     bool Record = true;
     string filePath;
-    string LogDataFilePath = @"\LogDatas\LogData.txt";       //Assets\以下の音声ファイルの書き込み先のファイル指定
+    string LogDataFilePath = @"/LogDatas/LogData.txt";       //Assets\以下の音声ファイルの書き込み先のファイル指定
     public Text text;
     public GameObject[] Button;
     int NowBottonPushed = -1;
@@ -29,7 +29,7 @@ public class voiceSample : MonoBehaviour
             FilePathSelect(i);
             File.CreateText(filePath);
         }
-        filePath = Application.dataPath + @"\LogDatas\LogData.txt";
+        filePath = Application.dataPath + @"/LogDatas/LogData.txt";
         File.CreateText(filePath);
 
         //インスタンスの生成
@@ -79,47 +79,47 @@ public class voiceSample : MonoBehaviour
         switch (number)
         {
             case 0:
-                LogDataFilePath = @"\LogDatas\LogData0.txt";
+                LogDataFilePath = @"/LogDatas/LogData0.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 1:
-                LogDataFilePath = @"\LogDatas\LogData1.txt";
+                LogDataFilePath = @"/LogDatas/LogData1.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 2:
-                LogDataFilePath = @"\LogDatas\LogData2.txt";
+                LogDataFilePath = @"/LogDatas/LogData2.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 3:
-                LogDataFilePath = @"\LogDatas\LogData3.txt";
+                LogDataFilePath = @"/LogDatas/LogData3.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 4:
-                LogDataFilePath = @"\LogDatas\LogData4.txt";
+                LogDataFilePath = @"/LogDatas/LogData4.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 5:
-                LogDataFilePath = @"\LogDatas\LogData5.txt";
+                LogDataFilePath = @"/LogDatas/LogData5.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 6:
-                LogDataFilePath = @"\LogDatas\LogData6.txt";
+                LogDataFilePath = @"/LogDatas/LogData6.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             case 7:
-                LogDataFilePath = @"\LogDatas\LogData7.txt";
+                LogDataFilePath = @"/LogDatas/LogData7.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
                 break;
             default:
-                LogDataFilePath = @"\LogDatas\LogData.txt";
+                LogDataFilePath = @"/LogDatas/LogData.txt";
                 filePath = Application.dataPath + LogDataFilePath;
                 text.text = "話題未選択";
                 break;

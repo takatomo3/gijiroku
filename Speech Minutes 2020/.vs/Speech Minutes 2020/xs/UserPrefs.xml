@@ -1,41 +1,12 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="97f16226-536c-418d-927e-60563fc4204b" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PaintController.cs">
-=======
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="a0ed9a7c-b18a-4eac-87e7-c263eff9ad11" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/StartSecneMUNScript.cs">
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-    <Files>
-      <File FileName="Assets/TextManager.cs" Line="29" Column="40" />
-      <File FileName="Assets/TextControl.cs" />
-      <File FileName="Assets/Test/EditMode/NewTestScript.cs" />
-<<<<<<< HEAD
-      <File FileName="Assets/Test/EditMode/Gtest1.cs" Line="20" Column="60" />
-      <File FileName="Assets/UIManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/WadaiChange.cs" Line="84" Column="40" />
-      <File FileName="Assets/voiceSample.cs" Line="1" Column="1" />
-      <File FileName="Assets/ButtonActive.cs" Line="1" Column="1" />
-      <File FileName="Assets/PaintController.cs" Line="1" Column="1" />
-=======
-      <File FileName="Assets/Test/EditMode/Gtest1.cs" />
-      <File FileName="Assets/MainSecneMUNScript.cs" Line="52" Column="37" />
-      <File FileName="Assets/StartSecneMUNScript.cs" Line="1" Column="1" />
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
-    </Files>
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="f06c3ee3-e965-4836-9053-49362e996c06" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
-<<<<<<< HEAD
-              <Node name="Test" expanded="True">
-                <Node name="EditMode" expanded="True" />
-              </Node>
-              <Node name="PaintController.cs" selected="True" />
-=======
-              <Node name="StartSecneMUNScript.cs" selected="True" />
->>>>>>> 511f63f4bdd025db7e78ee6f26a915bd72db1aa1
+              <Node name="voiceSample.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -44,7 +15,6 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2cabfedc-d6e5-4449-951e-ebd334b517ad" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

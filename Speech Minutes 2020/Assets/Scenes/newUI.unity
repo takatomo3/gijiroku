@@ -1346,6 +1346,7 @@ GameObject:
   - component: {fileID: 377150900}
   - component: {fileID: 377150902}
   - component: {fileID: 377150901}
+  - component: {fileID: 377150903}
   m_Layer: 5
   m_Name: WadaiPanel
   m_TagString: Untagged
@@ -1372,7 +1373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 455.4, y: 32.6}
+  m_AnchoredPosition: {x: 455.39844, y: 32.601562}
   m_SizeDelta: {x: -995.27264, y: -191.34958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377150901
@@ -1410,6 +1411,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377150899}
   m_CullTransparentMesh: 0
+--- !u!114 &377150903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377150899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!1 &382087126
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,6 +4305,7 @@ GameObject:
   - component: {fileID: 1083913456}
   - component: {fileID: 1083913458}
   - component: {fileID: 1083913457}
+  - component: {fileID: 1083913459}
   m_Layer: 5
   m_Name: WhiteBoardPanel
   m_TagString: Untagged
@@ -4314,7 +4330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 276.1, y: 54.04}
+  m_AnchoredPosition: {x: 276.10156, y: 54.039062}
   m_SizeDelta: {x: -1024.0542, y: -260.3687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083913457
@@ -4352,6 +4368,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083913455}
   m_CullTransparentMesh: 0
+--- !u!114 &1083913459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083913455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!1 &1092946296
 GameObject:
   m_ObjectHideFlags: 0
@@ -4363,6 +4393,7 @@ GameObject:
   - component: {fileID: 1092946297}
   - component: {fileID: 1092946299}
   - component: {fileID: 1092946298}
+  - component: {fileID: 1092946300}
   m_Layer: 5
   m_Name: SendTextPanel
   m_TagString: Untagged
@@ -4388,7 +4419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -77.4, y: -133.2}
+  m_AnchoredPosition: {x: -77.39844, y: -133.19922}
   m_SizeDelta: {x: -830.93567, y: -459.35184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1092946298
@@ -4426,6 +4457,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092946296}
   m_CullTransparentMesh: 0
+--- !u!114 &1092946300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092946296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!1 &1095098722
 GameObject:
   m_ObjectHideFlags: 0
@@ -5251,11 +5296,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
