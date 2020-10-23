@@ -19,13 +19,17 @@ public class WadaiChange : MonoBehaviour
         dropdown2 = dropdown.value;
     }
 
-    /*
+    
     private void Update()
     {
         if(dropdown.value != dropdown2)
         {
-            InputField form = GameObject.Find("InputField").GetComponent<InputField>();
-            form.text = "";
+            if(text[dropdown.value].text != "")
+             {
+                    inputField.text = text[dropdown.value].text;
+             }
+           /* InputField form = GameObject.Find("InputField").GetComponent<InputField>();
+            form.text = "";*/
             dropdown2 = dropdown.value;
         }
 
@@ -69,13 +73,24 @@ public class WadaiChange : MonoBehaviour
         else if (dropdown.value == 7)
         {
 
-        }
+        }*/
     }
-    */
+    
+    /*public void Update()
+    {
+        //テキストにinputFieldの内容を反映
+        if(text[dropdown.value].text != "")
+        {
+            inputField.text = text[dropdown.value].text;
+        }
+       
+       // display.text = inputField.text;
+        //オブジェクトを表示する
+        //  gametext.gameObject.SetActive(true);
+    }*/
 
-
-    // オプションが変更されたときに実行するメソッド
-    public void InputText()
+    //オプションが変更されたときに実行するメソッド
+    /*public void InputText()
     {
         if (dropdown.value != dropdown2)
         {
@@ -84,10 +99,27 @@ public class WadaiChange : MonoBehaviour
             dropdown2 = dropdown.value;
         }
         text[dropdown.value].text = inputField.text;
+    }*/
+
+    public void WadaiSend()
+    {
+        //テキストにinputFieldの内容を反映
+       // InputField form = GameObject.Find("wadaiInputField").GetComponent<InputField>();
+      //  form.text = inputField.text;
+        text[dropdown.value].text = inputField.text;
+        //display.text = inputField.text;
+        //オブジェクトを表示する
+        //  gametext.gameObject.SetActive(true);
+        //インプットフィールドの中身を消す
+        GameObject.Find("wadaiInputField").GetComponent<InputField>().text = "";
+        //gametext.gameObject.SetActive(false);
     }
-
-
-
+   /* public void WadaiSend()
+    {
+        //インプットフィールドの中身を消す
+        GameObject.Find("TextBox").GetComponent<InputField>().text = "";
+        gametext.gameObject.SetActive(false);
+    }*/
 
 
 }
