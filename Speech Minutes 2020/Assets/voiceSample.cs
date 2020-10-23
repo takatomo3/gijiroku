@@ -23,11 +23,15 @@ public class voiceSample : MonoBehaviour
     public void Start()
     {
         //LogData i .txt の初期化
-        for(int i = 0; i < 7; i++)
+        for(int i = 0; i < 8; i++)
         {
             //filePathのパス指定
             FilePathSelect(i);
             File.CreateText(filePath);
+            if (i == 7)
+            {
+                FilePathSelect(-1); break;
+            }
         }
         filePath = Application.dataPath + @"/LogDatas/LogData.txt";
         File.CreateText(filePath);
@@ -58,7 +62,6 @@ public class voiceSample : MonoBehaviour
             handler = new PXCMSpeechRecognition.Handler();
             handler.onRecognition = (x) => Dataoutput(x.scores[0].sentence, x.duration);
             sr.SetDictation();
-
         text.text = "話題未選択";
     }
 

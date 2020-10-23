@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="11a54066-82e5-4379-b741-fa58d48d598d" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/WadaiChange.cs">
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="7a8507a9-a3c0-43e2-a360-2d52f80fe7c9" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/voiceSample.cs">
     <Files>
-      <File FileName="Assets/WadaiChange.cs" Line="32" Column="30" />
-      <File FileName="Assets/TextManager.cs" Line="26" Column="6" />
+      <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
+      <File FileName="Assets/TextManager.cs" />
+      <File FileName="Assets/voiceSample.cs" Line="26" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="WadaiChange.cs" selected="True" />
+              <Node name="voiceSample.cs" selected="True" />
             </Node>
           </Node>
         </State>

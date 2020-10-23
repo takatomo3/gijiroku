@@ -11,7 +11,9 @@ public class WadaiChange : MonoBehaviour
 
     //Dropdownを格納する変数
     [SerializeField] private Dropdown dropdown;
-
+    /// <summary>
+    /// inputfieldとプルダウンの数値を定義
+    /// </summary>
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,9 @@ public class WadaiChange : MonoBehaviour
         dropdown2 = dropdown.value;
     }
 
-    
+    /// <summary>
+    /// プルダウン動作時に話題の文字を参照
+    /// </summary>
     private void Update()
     {
         if(dropdown.value != dropdown2)
@@ -100,7 +104,9 @@ public class WadaiChange : MonoBehaviour
         }
         text[dropdown.value].text = inputField.text;
     }*/
-
+    /// <summary>
+    /// inputfieldの文字を送信ボタンで反映
+    /// </summary>
     public void WadaiSend()
     {
         //テキストにinputFieldの内容を反映
