@@ -1,17 +1,37 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="7a8507a9-a3c0-43e2-a360-2d52f80fe7c9" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/voiceSample.cs">
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="a0ed9a7c-b18a-4eac-87e7-c263eff9ad11" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainSecneMUNScript.cs">
     <Files>
       <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
       <File FileName="Assets/TextManager.cs" />
-      <File FileName="Assets/voiceSample.cs" Line="26" Column="29" />
+      <File FileName="Assets/voiceSample.cs" />
+      <File FileName="Assets/IBMSdkCore/Connection/RESTConnector.cs" />
+      <File FileName="Assets/IBMSdkCore/Debug/DebugReactor.cs" Line="67" Column="18" />
+      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="90" Column="32" />
+      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" Line="614" Column="14" />
+      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextServiceExtension.cs" Line="967" Column="16" />
+      <File FileName="Assets/MainSecneMUNScript.cs" Line="49" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="voiceSample.cs" selected="True" />
+              <Node name="IBMSdkCore" expanded="True">
+                <Node name="Connection" expanded="True" />
+                <Node name="Debug" expanded="True" />
+              </Node>
+              <Node name="Watson" expanded="True">
+                <Node name="Examples" expanded="True" />
+                <Node name="Scripts" expanded="True">
+                  <Node name="Services" expanded="True">
+                    <Node name="SpeechToText" expanded="True">
+                      <Node name="V1" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="MainSecneMUNScript.cs" selected="True" />
             </Node>
           </Node>
         </State>
