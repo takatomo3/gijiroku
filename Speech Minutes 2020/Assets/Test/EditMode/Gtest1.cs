@@ -16,8 +16,9 @@ namespace Tests
             var x = new TextControl();
 
             Assert.IsEmpty(x.chatComent.text);
-            x.chatComent.text = "Matsuno";
-            Assert.AreEqual(x.chatComent.color, Color.black) ; 
+            //x.chatComent.text = "Matsuno";
+            //x.Selecter();
+            //Assert.AreEqual(x.chatComent.color, Color.green) ; 
         }
 
         [Test]

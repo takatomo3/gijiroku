@@ -1,17 +1,23 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="7a8507a9-a3c0-43e2-a360-2d52f80fe7c9" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/voiceSample.cs">
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="962197af-90cc-434d-b6a3-92486c8657b4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextControl.cs">
     <Files>
-      <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
-      <File FileName="Assets/TextManager.cs" />
+      <File FileName="Assets/WadaiChange.cs" Line="114" Column="9" />
+      <File FileName="Assets/TextManager.cs" Line="1" Column="1" />
       <File FileName="Assets/voiceSample.cs" Line="26" Column="29" />
+      <File FileName="Assets/Test/EditMode/Gtest1.cs" Line="13" Column="41" />
+      <File FileName="Assets/MainSecneMUNScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/TextControl.cs" Line="11" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="voiceSample.cs" selected="True" />
+              <Node name="Test" expanded="True">
+                <Node name="EditMode" expanded="True" />
+              </Node>
+              <Node name="TextControl.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -110,8 +110,8 @@ public class WadaiChange : MonoBehaviour
     public void WadaiSend()
     {
         //テキストにinputFieldの内容を反映
-       // InputField form = GameObject.Find("wadaiInputField").GetComponent<InputField>();
-      //  form.text = inputField.text;
+        //InputField form = GameObject.Find("wadaiInputField").GetComponent<InputField>();
+        //form.text = inputField.text;
         text[dropdown.value].text = inputField.text;
         //display.text = inputField.text;
         //オブジェクトを表示する
