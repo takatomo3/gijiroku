@@ -9,6 +9,8 @@ public class Output : MonoBehaviour
 {
 	string InputPath;
     string OutputPath;
+
+
     // Start is called before the first frame update
     void Start()
     {

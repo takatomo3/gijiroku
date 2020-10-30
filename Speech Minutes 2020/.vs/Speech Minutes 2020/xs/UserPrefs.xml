@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
+<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="962197af-90cc-434d-b6a3-92486c8657b4" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextControl.cs">
     <Files>
@@ -8,18 +9,55 @@
       <File FileName="Assets/Test/EditMode/Gtest1.cs" Line="13" Column="41" />
       <File FileName="Assets/MainSecneMUNScript.cs" Line="1" Column="1" />
       <File FileName="Assets/TextControl.cs" Line="11" Column="28" />
+=======
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="a0ed9a7c-b18a-4eac-87e7-c263eff9ad11" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Watson/Examples/voiceSample.cs">
+    <Files>
+      <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
+      <File FileName="Assets/TextManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/voiceSample.cs" Line="89" Column="20" />
+      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" Line="614" Column="14" />
+      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="227" Column="27" />
+>>>>>>> fb3e12a6fb4ed859bef4055a72d626e1ee4ed8c8
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
+<<<<<<< HEAD
               <Node name="Test" expanded="True">
                 <Node name="EditMode" expanded="True" />
               </Node>
               <Node name="TextControl.cs" selected="True" />
+=======
+              <Node name="IBMSdkCore" expanded="True">
+                <Node name="Connection" expanded="True" />
+                <Node name="Debug" expanded="True" />
+              </Node>
+              <Node name="Watson" expanded="True">
+                <Node name="Examples" expanded="True">
+                  <Node name="voiceSample.cs" selected="True" />
+                </Node>
+                <Node name="Scripts" expanded="True">
+                  <Node name="Services" expanded="True">
+                    <Node name="SpeechToText" expanded="True">
+                      <Node name="V1" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+>>>>>>> fb3e12a6fb4ed859bef4055a72d626e1ee4ed8c8
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Speech Minutes 2020" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
