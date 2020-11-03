@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class ChangeLineColors : MonoBehaviour
 {
     GameObject whiteboard;
-    PaintController script;
+    Painter script;
     Dropdown dropdown;
 
     // Start is called before the first frame update
     void Start()
     {
-        whiteboard = GameObject.Find("WhiteBoard");
-        script = whiteboard.GetComponent<PaintController>();
+        whiteboard = GameObject.Find("drowingboad");
+        script = whiteboard.GetComponent<Painter>();
         dropdown = GetComponent<Dropdown>();
     }
 
@@ -21,7 +21,7 @@ public class ChangeLineColors : MonoBehaviour
     void Update()
     {
         if(dropdown.value == 0){
-            script.lineColor = Color.white;
+            script.lineColor = Color.black;
         }
 
         if(dropdown.value == 1){
@@ -42,6 +42,10 @@ public class ChangeLineColors : MonoBehaviour
 
         if(dropdown.value == 5){
             script.lineColor = Color.magenta;
+        }
+        if (dropdown.value == 6)
+        {
+            script.lineColor = Color.white;
         }
     }
 }

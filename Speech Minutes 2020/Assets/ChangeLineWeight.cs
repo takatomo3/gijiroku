@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class ChangeLineWeight : MonoBehaviour
 {
     GameObject whiteboard;
-    PaintController script;
+    Painter script;
     Dropdown dropdown;
     // Start is called before the first frame update
     void Start()
     {
-        whiteboard = GameObject.Find("WhiteBoard"); //Unityちゃんをオブジェクトの名前から取得して変数に格納する
-        script = whiteboard.GetComponent<PaintController>();
+        whiteboard = GameObject.Find("drowingboad"); //Unityちゃんをオブジェクトの名前から取得して変数に格納する
+        script = whiteboard.GetComponent<Painter>();
         dropdown = GetComponent<Dropdown>();
     }
 
