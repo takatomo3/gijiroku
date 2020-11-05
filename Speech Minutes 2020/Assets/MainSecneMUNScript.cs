@@ -44,60 +44,66 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
             roomName = room.name;
         }
         */
-        
-        GUILayout.BeginHorizontal();
-        //Debug.Log(MonobitEngine.MonobitNetwork.room.name);
-        roomName = MonobitEngine.MonobitNetwork.room.name;
-        GUILayout.Label("roomName : " + roomName);
-        GUILayout.EndHorizontal();
-        GUILayout.BeginHorizontal();
-        GUILayout.Label("PlayerList : ");
-        
-        //Debug.Log("PlayerList:");
-        foreach (MonobitPlayer player in MonobitNetwork.playerList)
-                {
-                    GUILayout.Label(player.name + " ");
-                    //Debug.Log(player.name + " ");
-                }
-                GUILayout.EndHorizontal();
+        //MUNサーバに接続している場合
+        if (MonobitNetwork.isConnect)
+        {
+            GUILayout.BeginHorizontal();
+            //Debug.Log(MonobitEngine.MonobitNetwork.room.name);
+            roomName = MonobitEngine.MonobitNetwork.room.name;
+            GUILayout.Label("roomName : " + roomName);
+            GUILayout.EndHorizontal();
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("PlayerList : ");
 
-                // ルームからの退室
-                if (GUILayout.Button("Leave Room", GUILayout.Width(150)))
-                {
-                    MonobitNetwork.LeaveRoom();
-                    //Debug.Log("ルームから退出しました");
-                     /********
-                    ここでメインのシーンに遷移する
-                    *********/
-                    SceneManager.LoadScene("StartScene");
-                }
-                /*
-                // チャット発言文の入力
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("Message : ");
-                chatWord = GUILayout.TextField(chatWord, GUILayout.Width(400));
-                GUILayout.EndHorizontal();
+            //Debug.Log("PlayerList:");
+            foreach (MonobitPlayer player in MonobitNetwork.playerList)
+            {
+                GUILayout.Label(player.name + " ");
+                //Debug.Log(player.name + " ");
+            }
+            GUILayout.EndHorizontal();
 
-                // チャット発言文を送信する
-                if (GUILayout.Button("Send", GUILayout.Width(100)))
-                {
-                    monobitView.RPC("RecvChat",
-                                    MonobitTargets.All,
-                                    MonobitNetwork.playerName,
-                                    chatWord);
-                    chatWord = "";
-                }
+            // ルームからの退室
+            if (GUILayout.Button("Leave Room", GUILayout.Width(150)))
+            {
+                MonobitNetwork.LeaveRoom();
+                //Debug.Log("ルームから退出しました");
+                /********
+               ここでメインのシーンに遷移する
+               *********/
+                SceneManager.LoadScene("StartScene");
+            }
+            /*
+            // チャット発言文の入力
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Message : ");
+            chatWord = GUILayout.TextField(chatWord, GUILayout.Width(400));
+            GUILayout.EndHorizontal();
 
-                // チャットログを表示する
-                string msg = "";
-                for (int i = 0; i < 10; ++i)
-                {
-                    msg += ((i < chatLog.Count) ? chatLog[i] : "") + "\r\n";
-                }
-                GUILayout.TextArea(msg);
-                */
-            
-            
+            // チャット発言文を送信する
+            if (GUILayout.Button("Send", GUILayout.Width(100)))
+            {
+                monobitView.RPC("RecvChat",
+                                MonobitTargets.All,
+                                MonobitNetwork.playerName,
+                                chatWord);
+                chatWord = "";
+            }
+
+            // チャットログを表示する
+            string msg = "";
+            for (int i = 0; i < 10; ++i)
+            {
+                msg += ((i < chatLog.Count) ? chatLog[i] : "") + "\r\n";
+            }
+            GUILayout.TextArea(msg);
+            */
+        }
+
+
+
+
+
 
 
 
