@@ -63,7 +63,6 @@ namespace IBM.Watsson.Examples
         private int _recordingBufferSize = 1;
         private int _recordingHZ = 22050;
         bool OnRecord = true;
-        bool isOnce = false;
 
         //voice_Sample vS = new voice_Sample();
 
@@ -106,10 +105,12 @@ namespace IBM.Watsson.Examples
 
         }
 
+        /*
         private void Update()
         {
             if (Record == false) StartRecording();
         }
+        */
 
         private IEnumerator CreateService()
         {
@@ -169,12 +170,9 @@ namespace IBM.Watsson.Examples
         /// </summary>
         public void StartRecording()
         {
-            if (isOnce)
-            {
-                LogSystem.InstallDefaultReactors();
-                Runnable.Run(CreateService());
-                isOnce = false;
-            }
+            LogSystem.InstallDefaultReactors();
+            Runnable.Run(CreateService());
+
             if (_recordingRoutine == 0)
             {
                 UnityObjectUtil.StartDestroyQueue();
@@ -505,7 +503,6 @@ namespace IBM.Watsson.Examples
             //Recordがtrueなら(最初に押されたら)
             if (Record)
             {
-                isOnce = true;
                 StartRecording();   
                 Record = false;                                                    //Recordをfalseにする
                 Debug.Log("Record True");                                           //デバッグログ
