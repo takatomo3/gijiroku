@@ -88,7 +88,7 @@ public class TextControl : MonoBehaviour, IDragHandler
                     // Textコンポーネントを取得
                     Text text = this.GetComponent<Text>();
                     // 色を指定
-                    text.color = Color.white;
+                    text.color = Color.black;
 
                     Debug.Log("falseですよ");
                 }
