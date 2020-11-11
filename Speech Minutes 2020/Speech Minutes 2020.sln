@@ -1,11 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GProject", "GProject.csproj", "{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatsonUnitySDK", "WatsonUnitySDK.csproj", "{6139A2CE-5140-4E6A-39A8-07718DCEFA44}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBM.Cloud.SDK", "IBM.Cloud.SDK.csproj", "{CF585D5D-8F59-6870-97F0-410723407394}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatsonUnitySDK", "WatsonUnitySDK.csproj", "{6139A2CE-5140-4E6A-39A8-07718DCEFA44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GProject", "GProject.csproj", "{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayMode", "PlayMode.csproj", "{32CE8C07-EC15-D1D2-0F5F-814C64F0B546}"
 EndProject
@@ -17,18 +17,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF585D5D-8F59-6870-97F0-410723407394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF585D5D-8F59-6870-97F0-410723407394}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF585D5D-8F59-6870-97F0-410723407394}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF585D5D-8F59-6870-97F0-410723407394}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6139A2CE-5140-4E6A-39A8-07718DCEFA44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6139A2CE-5140-4E6A-39A8-07718DCEFA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6139A2CE-5140-4E6A-39A8-07718DCEFA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6139A2CE-5140-4E6A-39A8-07718DCEFA44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF585D5D-8F59-6870-97F0-410723407394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF585D5D-8F59-6870-97F0-410723407394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF585D5D-8F59-6870-97F0-410723407394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF585D5D-8F59-6870-97F0-410723407394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED9C1E4-3E45-0D14-CC77-2BD1295717EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{32CE8C07-EC15-D1D2-0F5F-814C64F0B546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32CE8C07-EC15-D1D2-0F5F-814C64F0B546}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32CE8C07-EC15-D1D2-0F5F-814C64F0B546}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -40,8 +40,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
