@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="054316b3-f894-4123-ba64-eb31a0516852" />
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="6f09b1b4-3386-43fe-bcdd-5761562fb189" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextControl.cs">
     <Files>
       <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
-      <File FileName="Assets/TextManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/TextManager.cs" />
       <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" />
       <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" />
-      <File FileName="Assets/MainSecneMUNScript.cs" />
       <File FileName="Assets/Painter.cs" />
       <File FileName="Assets/IBMSdkCore/Debug/DebugReactor.cs" />
       <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextServiceExtension.cs" />
@@ -14,7 +13,7 @@
       <File FileName="Assets/LogDatas/LogData1.txt" />
       <File FileName="Assets/LogDatas/LogData.txt" />
       <File FileName="Assets/LogDatas/LogData2.txt" />
-      <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" Line="1" Column="1" />
+      <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" />
       <File FileName="Assets/TextControl.cs" Line="90" Column="28" />
     </Files>
     <Pads>
@@ -22,6 +21,16 @@
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Monobit Unity Networking" expanded="True">
+                <Node name="Plugins" expanded="True">
+                  <Node name="MonobitNetwork" expanded="True" />
+                </Node>
+                <Node name="Samples" expanded="True">
+                  <Node name="Scripts" expanded="True">
+                    <Node name="SimpleVoiceChat" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
               <Node name="TextControl.cs" selected="True" />
             </Node>
           </Node>
@@ -33,7 +42,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/matsulab/gijiroku/Speech Minutes 2020/Assets/Painter.cs" relfile="Assets/Painter.cs" line="48" column="1" />
+      <Breakpoint file="/Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Assets/Painter.cs" relfile="Assets/Painter.cs" line="48" column="1" />
+      <Breakpoint file="/Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" relfile="Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" line="20" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using MonobitEngine;
 using UnityEngine.SceneManagement;
+using MonobitEngine.VoiceChat;
 
 public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
 {
     /** ルーム名. */
     private string roomName = "";
 
-    /** チャット発言文. */
-    private string chatWord = "";
 
     /** チャット発言ログ. */
     List<string> chatLog = new List<string>();
@@ -34,16 +33,6 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
 
     private void OnGUI()
     {
-
-
-        //Debug.Log("ルームに入室しました");
-        // ルーム内のプレイヤー一覧の表示
-        /*
-        foreach (RoomData room in MonobitNetwork.GetRoomData())
-        {
-            roomName = room.name;
-        }
-        */
         //MUNサーバに接続している場合
         if (MonobitNetwork.isConnect)
         {
@@ -73,40 +62,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                *********/
                 SceneManager.LoadScene("StartScene");
             }
-            /*
-            // チャット発言文の入力
-            GUILayout.BeginHorizontal();
-            GUILayout.Label("Message : ");
-            chatWord = GUILayout.TextField(chatWord, GUILayout.Width(400));
-            GUILayout.EndHorizontal();
 
-            // チャット発言文を送信する
-            if (GUILayout.Button("Send", GUILayout.Width(100)))
-            {
-                monobitView.RPC("RecvChat",
-                                MonobitTargets.All,
-                                MonobitNetwork.playerName,
-                                chatWord);
-                chatWord = "";
-            }
-
-            // チャットログを表示する
-            string msg = "";
-            for (int i = 0; i < 10; ++i)
-            {
-                msg += ((i < chatLog.Count) ? chatLog[i] : "") + "\r\n";
-            }
-            GUILayout.TextArea(msg);
-            */
         }
-
-
-
-
-
-
-
-
-
     }
 }
