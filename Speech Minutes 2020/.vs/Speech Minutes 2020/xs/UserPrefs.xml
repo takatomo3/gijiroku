@@ -1,33 +1,21 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
   <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="6f09b1b4-3386-43fe-bcdd-5761562fb189" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Watson/Examples/ExampleStreaming.cs">
     <Files>
-      <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" NotebookId="2" />
-      <File FileName="Assets/TextManager.cs" NotebookId="2" />
-      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" NotebookId="2" />
-      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" NotebookId="2" />
-      <File FileName="Assets/Painter.cs" NotebookId="2" />
-      <File FileName="Assets/IBMSdkCore/Debug/DebugReactor.cs" NotebookId="2" />
-      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextServiceExtension.cs" NotebookId="2" />
-      <File FileName="Assets/Watson/Scripts/Services/TextToSpeech/V1/TextToSpeechServiceExtension.cs" NotebookId="2" />
-      <File FileName="Assets/LogDatas/LogData1.txt" NotebookId="2" />
-      <File FileName="Assets/LogDatas/LogData.txt" NotebookId="2" />
-      <File FileName="Assets/LogDatas/LogData2.txt" NotebookId="2" />
-      <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" NotebookId="2" />
-      <File FileName="Assets/TextControl.cs" Line="90" Column="28" NotebookId="2" />
+      <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
+      <File FileName="Assets/TextManager.cs" />
+      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" />
+      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="64" Column="21" />
+      <File FileName="Assets/Painter.cs" />
+      <File FileName="Assets/IBMSdkCore/Debug/DebugReactor.cs" />
+      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextServiceExtension.cs" />
+      <File FileName="Assets/Watson/Scripts/Services/TextToSpeech/V1/TextToSpeechServiceExtension.cs" />
+      <File FileName="Assets/LogDatas/LogData1.txt" />
+      <File FileName="Assets/LogDatas/LogData.txt" />
+      <File FileName="Assets/LogDatas/LogData2.txt" />
+      <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" />
+      <File FileName="Assets/TextControl.cs" Line="90" Column="28" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="800" Y="23" Width="640" Height="798">
-        <Files>
-          <File FileName="Assets/MainSecneMUNScript.cs" Line="1" Column="1" />
-        </Files>
-      </FloatingWindow>
-      <FloatingWindow WindowId="2" X="695" Y="23" Width="640" Height="480">
-        <Files>
-          <File FileName="Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" Line="1" Column="1" NotebookId="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -44,7 +32,11 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="TextControl.cs" selected="True" />
+              <Node name="Watson" expanded="True">
+                <Node name="Examples" expanded="True">
+                  <Node name="ExampleStreaming.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
