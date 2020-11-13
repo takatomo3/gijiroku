@@ -5,9 +5,18 @@ using UnityEngine;
 using MonobitEngine;
 using UnityEngine.SceneManagement;
 using MonobitEngine.VoiceChat;
+using UnityEngine.UI;
 
 public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
 {
+    [SerializeField]
+    private Text RoomNameText;
+
+    [SerializeField]
+    private Text PlayerList;
+
+    
+
     /** ルーム名. */
     private string roomName = "";
 
@@ -16,6 +25,20 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
 
     /** 自身が所有するボイスアクターのMonobitViewコンポーネント. */
     private MonobitVoice myVoice = null;
+
+    private GUIStyle m_guiStyle;
+    private GUIStyleState m_styleState;
+
+    private void Start()
+    {
+        m_guiStyle = new GUIStyle();
+        //m_guiStyle.fontSize = 30;
+
+        m_styleState = new GUIStyleState();
+        m_styleState.textColor = new Color32(255, 165, 0,255);   // 文字色の変更.
+        m_guiStyle.normal = m_styleState;
+    }
+
 
     /** ボイスチャット送信可否設定の定数. */
     private enum EnableVC
@@ -40,12 +63,43 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
         }
     }
 
-    
 
-    
+    private void Update()
+    {
+        //MUNサーバに接続している場合
+        if (MonobitNetwork.isConnect)
+        {
+            // ルームに入室している場合
+            if (MonobitNetwork.inRoom)
+            {
+                roomName = MonobitEngine.MonobitNetwork.room.name;
+                RoomNameText.text = "roomName : " + roomName;
+                PlayerList.text = "PlayerList : ";
 
+
+                //Debug.Log("PlayerList:");
+                foreach (MonobitPlayer player in MonobitNetwork.playerList)
+                {
+                    PlayerList.text = PlayerList.text + player.name + " ";
+                }
+            }
+        }
+    }
+
+    public void LeaveRoom()
+    {
+        MonobitNetwork.LeaveRoom();
+        //Debug.Log("ルームから退出しました");
+        //ここでスタートのシーンに遷移する
+        SceneManager.LoadScene("StartScene");
+    }
+
+
+
+    /*
     private void OnGUI()
     {
+
         //MUNサーバに接続している場合
         if (MonobitNetwork.isConnect)
         {
@@ -55,27 +109,29 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                 GUILayout.BeginHorizontal();
                 //Debug.Log(MonobitEngine.MonobitNetwork.room.name);
                 roomName = MonobitEngine.MonobitNetwork.room.name;
-                GUILayout.Label("roomName : " + roomName);
+                RoomNameText.text = "roomName : " + roomName;
+                GUILayout.Label("roomName : " + roomName, m_guiStyle);
                 GUILayout.EndHorizontal();
                 GUILayout.BeginHorizontal();
-                GUILayout.Label("PlayerList : ");
+                GUILayout.Label("PlayerList : ", m_guiStyle);
+                PlayerList.text = "PlayerList : ";
+
 
                 //Debug.Log("PlayerList:");
                 foreach (MonobitPlayer player in MonobitNetwork.playerList)
                 {
+                    PlayerList.text = PlayerList.text + player.name + " ";
                     GUILayout.Label(player.name + " ");
                     //Debug.Log(player.name + " ");
                 }
                 GUILayout.EndHorizontal();
 
                 // ルームからの退室
-                if (GUILayout.Button("Leave Room", GUILayout.Width(150)))
+                if (GUILayout.Button("Leave Room", m_guiStyle, GUILayout.Width(150)))
                 {
                     MonobitNetwork.LeaveRoom();
                     //Debug.Log("ルームから退出しました");
-                    /********
-                   ここでスタートのシーンに遷移する
-                   *********/
+                    //ここでスタートのシーンに遷移する
                     SceneManager.LoadScene("StartScene");
                 }
 
@@ -83,9 +139,9 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                 {
                     // 送信タイプの設定
                     GUILayout.BeginHorizontal();
-                    GUILayout.Label("VoiceChat Send Type : ");
+                    GUILayout.Label("VoiceChat Send Type : ", m_guiStyle);
                     Int32 streamType = myVoice.SendStreamType == StreamType.BROADCAST ? 0 : 1;
-                    myVoice.SendStreamType = (StreamType)GUILayout.Toolbar(streamType, new string[] { "broadcast", "multicast" });
+                    myVoice.SendStreamType = (StreamType)GUILayout.Toolbar(streamType, new string[] { "broadcast", "multicast" }, m_guiStyle);
                     GUILayout.EndHorizontal();
 
                     // マルチキャスト送信の場合の、ボイスチャットの送信可否設定
@@ -97,9 +153,9 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                         {
                             // GUI による送信可否の切替
                             GUILayout.BeginHorizontal();
-                            GUILayout.Label("PlayerName : " + player.name + " ");
-                            GUILayout.Label("Send Permission: ");
-                            vcPlayerInfo[player] = GUILayout.Toolbar(vcPlayerInfo[player], new string[] { "Allow", "Deny" });
+                            GUILayout.Label("PlayerName : " + player.name + " ", m_guiStyle);
+                            GUILayout.Label("Send Permission: ", m_guiStyle);
+                            vcPlayerInfo[player] = GUILayout.Toolbar(vcPlayerInfo[player], new string[] { "Allow", "Deny" }, m_guiStyle);
                             GUILayout.EndHorizontal();
                             // ボイスチャットの送信可のプレイヤー情報を登録する
                             if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
@@ -116,6 +172,8 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
             }
         }
     }
+    */
+    
 
     // 自身がルーム入室に成功したときの処理
     public void OnJoinedRoom()
