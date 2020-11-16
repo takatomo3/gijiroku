@@ -117,6 +117,7 @@
     <Compile Include="Assets\Monobit Unity Networking\Support\Editor\MonobitPlayerMoveTemplateEditor.cs" />
     <Compile Include="Assets\Monobit Unity Networking\Support\MonobitAutoLoginTemplate.cs" />
     <Compile Include="Assets\Monobit Unity Networking\Support\MonobitPlayerMoveTemplate.cs" />
+    <Compile Include="Assets\Mute.cs" />
     <Compile Include="Assets\Output.cs" />
     <Compile Include="Assets\PaintController.cs" />
     <Compile Include="Assets\Painter.cs" />

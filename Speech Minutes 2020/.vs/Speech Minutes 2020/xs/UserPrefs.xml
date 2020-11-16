@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
+<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="fc99710d-49f4-47d8-869c-70c8aff158f2" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextMesh Pro/PixAccess.cs">
     <Files>
@@ -9,17 +10,54 @@
       <File FileName="Assets/TextControl.cs" Line="68" Column="17" />
       <File FileName="Assets/TextManager.cs" Line="15" Column="32" />
       <File FileName="Assets/Inversion.cs" Line="36" Column="50" />
+=======
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="6f09b1b4-3386-43fe-bcdd-5761562fb189" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Watson/Examples/ExampleStreaming.cs">
+    <Files>
+      <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
+      <File FileName="Assets/TextManager.cs" />
+      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" />
+      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="64" Column="21" />
+      <File FileName="Assets/Painter.cs" />
+      <File FileName="Assets/IBMSdkCore/Debug/DebugReactor.cs" />
+      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextServiceExtension.cs" />
+      <File FileName="Assets/Watson/Scripts/Services/TextToSpeech/V1/TextToSpeechServiceExtension.cs" />
+      <File FileName="Assets/LogDatas/LogData1.txt" />
+      <File FileName="Assets/LogDatas/LogData.txt" />
+      <File FileName="Assets/LogDatas/LogData2.txt" />
+      <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" />
+      <File FileName="Assets/TextControl.cs" Line="90" Column="28" />
+>>>>>>> e9aa1b313866174ef0c09402c94ddcf0eb9ea1a9
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
+<<<<<<< HEAD
               <Node name="Monobit Unity Networking" expanded="True" />
               <Node name="TextMesh Pro" expanded="True">
                 <Node name="PixAccess.cs" selected="True" />
               </Node>
               <Node name="Watson" expanded="True" />
+=======
+              <Node name="Monobit Unity Networking" expanded="True">
+                <Node name="Plugins" expanded="True">
+                  <Node name="MonobitNetwork" expanded="True" />
+                </Node>
+                <Node name="Samples" expanded="True">
+                  <Node name="Scripts" expanded="True">
+                    <Node name="SimpleChat" expanded="True" />
+                    <Node name="SimpleVoiceChat" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Watson" expanded="True">
+                <Node name="Examples" expanded="True">
+                  <Node name="ExampleStreaming.cs" selected="True" />
+                </Node>
+              </Node>
+>>>>>>> e9aa1b313866174ef0c09402c94ddcf0eb9ea1a9
             </Node>
           </Node>
         </State>
