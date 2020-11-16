@@ -12,15 +12,15 @@ public class Painter : MonoBehaviour
     Texture2D texture;
     Vector3 beforeMousePos;
 
-    Color bgColor = Color.white;
+    public Color bgColor ;
     public Color lineColor;
     /// <summary>
     /// ボタンと連動
     /// </summary>
     public GameObject PenMode;
-    public bool mode = false;
+    public bool mode = true;
     public Text Buttontext;
-    public Material lineMaterial;
+    public Material fontMaterial;
     [Range(0,10)] public float lineWidth;
 
     void Start()
@@ -43,6 +43,8 @@ public class Painter : MonoBehaviour
 
     void Update()
     {
+        Start();
+        
         if (mode)
         {
 

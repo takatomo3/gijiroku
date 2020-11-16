@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class ChangeLineColors : MonoBehaviour
 {
     GameObject whiteboard;
-    Painter script;
+    PixAccess script;
     Dropdown dropdown;
 
     // Start is called before the first frame update
     void Start()
     {
-        whiteboard = GameObject.Find("drowingboad");
-        script = whiteboard.GetComponent<Painter>();
+        whiteboard = GameObject.Find("Plane");
+        script = whiteboard.GetComponent<PixAccess>();
         dropdown = GetComponent<Dropdown>();
     }
 
