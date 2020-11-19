@@ -15,6 +15,9 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     [SerializeField]
     private Text PlayerList;
 
+    [SerializeField]
+    private GameObject MuteLine;
+
     public bool Mute = false;
     
 
@@ -252,8 +255,31 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
 
     public void muteButtonOnclicked()
     {
-        Mute = !Mute;
-        if (Mute)        myVoice.SendStreamType = StreamType.MULTICAST;
-        else        myVoice.SendStreamType = StreamType.BROADCAST;
+        //MUNサーバに接続している場合
+        if (MonobitNetwork.isConnect)
+        {
+            // ルームに入室している場合
+            if (MonobitNetwork.inRoom)
+            {
+                Mute = !Mute;
+                if (Mute)
+                {
+                    myVoice.SendStreamType = StreamType.MULTICAST;
+                    MuteLine.SetActive(true);
+                }
+
+                else
+                {
+                    myVoice.SendStreamType = StreamType.BROADCAST;
+                    MuteLine.SetActive(false);
+
+                }
+            }
+        }
+
+
+
+
+
     }
 }
