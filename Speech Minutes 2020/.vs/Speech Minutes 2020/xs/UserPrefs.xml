@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="6f09b1b4-3386-43fe-bcdd-5761562fb189" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Watson/Examples/ExampleStreaming.cs">
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="9ed4afd8-3a3b-4141-9043-6657db0db171" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainSecneMUNScript.cs">
     <Files>
       <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
       <File FileName="Assets/TextManager.cs" />
       <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" />
-      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="64" Column="21" />
+      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" />
       <File FileName="Assets/Painter.cs" />
       <File FileName="Assets/IBMSdkCore/Debug/DebugReactor.cs" />
       <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextServiceExtension.cs" />
@@ -14,7 +14,9 @@
       <File FileName="Assets/LogDatas/LogData.txt" />
       <File FileName="Assets/LogDatas/LogData2.txt" />
       <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" />
-      <File FileName="Assets/TextControl.cs" Line="90" Column="28" />
+      <File FileName="Assets/TextControl.cs" />
+      <File FileName="Assets/MainSecneMUNScript.cs" Line="97" Column="1" />
+      <File FileName="Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -33,10 +35,9 @@
                 </Node>
               </Node>
               <Node name="Watson" expanded="True">
-                <Node name="Examples" expanded="True">
-                  <Node name="ExampleStreaming.cs" selected="True" />
-                </Node>
+                <Node name="Examples" expanded="True" />
               </Node>
+              <Node name="MainSecneMUNScript.cs" selected="True" />
             </Node>
           </Node>
         </State>

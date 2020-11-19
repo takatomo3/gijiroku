@@ -15,6 +15,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     [SerializeField]
     private Text PlayerList;
 
+    public bool Mute = false;
     
 
     /** ルーム名. */
@@ -82,6 +83,23 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                 {
                     PlayerList.text = PlayerList.text + player.name + " ";
                 }
+
+                if (Mute)
+                {
+                    List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
+                    List<MonobitPlayer> vcTargets = new List<MonobitPlayer>();
+                    foreach (MonobitPlayer player in playerList)
+                    {
+                        vcPlayerInfo[player] = (Int32)EnableVC.DISABLE;
+                        Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
+                        // ボイスチャットの送信可のプレイヤー情報を登録する
+                        if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
+                        {
+                            vcTargets.Add(player);
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -93,8 +111,6 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
         //ここでスタートのシーンに遷移する
         SceneManager.LoadScene("StartScene");
     }
-
-
 
     /*
     private void OnGUI()
@@ -235,10 +251,5 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     public void OnMicrophoneRestart()
     {
         UnityEngine.Debug.LogWarning("Info: Microphone Restart !!!");
-    }
-
-    public void Mute()
-    {
-        //Microphone.End(null);
     }
 }
