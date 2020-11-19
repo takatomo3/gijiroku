@@ -30,14 +30,11 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     private GUIStyle m_guiStyle;
     private GUIStyleState m_styleState;
 
+    private bool first = true;
+
     private void Start()
     {
-        m_guiStyle = new GUIStyle();
-        //m_guiStyle.fontSize = 30;
 
-        m_styleState = new GUIStyleState();
-        m_styleState.textColor = new Color32(255, 165, 0,255);   // 文字色の変更.
-        m_guiStyle.normal = m_styleState;
     }
 
 
@@ -73,6 +70,13 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
             // ルームに入室している場合
             if (MonobitNetwork.inRoom)
             {
+                if(first)
+                {
+                    myVoice.SendStreamType = StreamType.MULTICAST;
+                    Debug.Log("multicast mode");
+                    first = false;
+                }
+
                 roomName = MonobitEngine.MonobitNetwork.room.name;
                 RoomNameText.text = "roomName : " + roomName;
                 PlayerList.text = "PlayerList : ";
