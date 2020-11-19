@@ -15,7 +15,7 @@
       <File FileName="Assets/LogDatas/LogData2.txt" />
       <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" />
       <File FileName="Assets/TextControl.cs" />
-      <File FileName="Assets/MainSecneMUNScript.cs" Line="97" Column="1" />
+      <File FileName="Assets/MainSecneMUNScript.cs" Line="113" Column="71" />
       <File FileName="Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" />
     </Files>
     <Pads>
@@ -40,6 +40,11 @@
               <Node name="MainSecneMUNScript.cs" selected="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Speech Minutes 2020" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

@@ -70,6 +70,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
             // ルームに入室している場合
             if (MonobitNetwork.inRoom)
             {
+
                 if(first)
                 {
                     myVoice.SendStreamType = StreamType.MULTICAST;
@@ -95,6 +96,21 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                     foreach (MonobitPlayer player in playerList)
                     {
                         vcPlayerInfo[player] = (Int32)EnableVC.DISABLE;
+                        Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
+                        // ボイスチャットの送信可のプレイヤー情報を登録する
+                        if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
+                        {
+                            vcTargets.Add(player);
+                        }
+                    }
+                }
+                else
+                {
+                    List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
+                    List<MonobitPlayer> vcTargets = new List<MonobitPlayer>();
+                    foreach (MonobitPlayer player in playerList)
+                    {
+                        vcPlayerInfo[player] = (Int32)EnableVC.ENABLE;
                         Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
                         // ボイスチャットの送信可のプレイヤー情報を登録する
                         if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
