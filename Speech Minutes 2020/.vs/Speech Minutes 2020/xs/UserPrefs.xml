@@ -2,40 +2,53 @@
   <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="9ed4afd8-3a3b-4141-9043-6657db0db171" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainSecneMUNScript.cs">
     <Files>
-      <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
-      <File FileName="Assets/TextManager.cs" />
-      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" />
-      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" />
-      <File FileName="Assets/Painter.cs" />
-      <File FileName="Assets/IBMSdkCore/Debug/DebugReactor.cs" />
-      <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextServiceExtension.cs" />
-      <File FileName="Assets/Watson/Scripts/Services/TextToSpeech/V1/TextToSpeechServiceExtension.cs" />
-      <File FileName="Assets/LogDatas/LogData1.txt" />
-      <File FileName="Assets/LogDatas/LogData.txt" />
-      <File FileName="Assets/LogDatas/LogData2.txt" />
-      <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" />
-      <File FileName="Assets/TextControl.cs" />
-      <File FileName="Assets/MainSecneMUNScript.cs" Line="258" Column="1" />
-      <File FileName="Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" Line="95" Column="1" />
+      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="206" Column="23" />
+      <File FileName="Assets/MainSecneMUNScript.cs" Line="210" Column="70" />
+      <File FileName="Assets/Watson/Scripts/Services/Assistant/V1/AssistantService.cs" />
+      <File FileName="Assets/IBMSdkCore/Utilities/Runnable.cs" />
+      <File FileName="Assets/Monobit Unity Networking/Editor/MonobitNetwork/MonobitVoiceInspector.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="IBMSdkCore" expanded="True">
+                <Node name="Utilities" expanded="True" />
+              </Node>
               <Node name="Monobit Unity Networking" expanded="True">
+                <Node name="Editor" expanded="True">
+                  <Node name="MonobitNetwork" expanded="True" />
+                </Node>
                 <Node name="Plugins" expanded="True">
                   <Node name="MonobitNetwork" expanded="True" />
                 </Node>
                 <Node name="Samples" expanded="True">
                   <Node name="Scripts" expanded="True">
+                    <Node name="ResourcesController" expanded="True" />
                     <Node name="SimpleChat" expanded="True" />
                     <Node name="SimpleVoiceChat" expanded="True" />
                   </Node>
                 </Node>
               </Node>
               <Node name="Watson" expanded="True">
+                <Node name="Common" expanded="True" />
                 <Node name="Examples" expanded="True" />
+                <Node name="Scripts" expanded="True">
+                  <Node name="Services" expanded="True">
+                    <Node name="Assistant" expanded="True">
+                      <Node name="V1" expanded="True" />
+                    </Node>
+                    <Node name="SpeechToText" expanded="True">
+                      <Node name="V1" expanded="True">
+                        <Node name="Model" expanded="True" />
+                      </Node>
+                    </Node>
+                    <Node name="TextToSpeech" expanded="True">
+                      <Node name="V1" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
               <Node name="MainSecneMUNScript.cs" selected="True" />
             </Node>
