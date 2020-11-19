@@ -252,4 +252,9 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     {
         UnityEngine.Debug.LogWarning("Info: Microphone Restart !!!");
     }
+
+    public void muteButtonOnclicked()
+    {
+        Mute = !Mute;
+    }
 }
