@@ -27,9 +27,6 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     /** 自身が所有するボイスアクターのMonobitViewコンポーネント. */
     private MonobitVoice myVoice = null;
 
-    private GUIStyle m_guiStyle;
-    private GUIStyleState m_styleState;
-
     private bool first = true;
 
     private void Start()
@@ -71,13 +68,6 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
             if (MonobitNetwork.inRoom)
             {
 
-                if(first)
-                {
-                    myVoice.SendStreamType = StreamType.MULTICAST;
-                    Debug.Log("multicast mode");
-                    first = false;
-                }
-
                 roomName = MonobitEngine.MonobitNetwork.room.name;
                 RoomNameText.text = "roomName : " + roomName;
                 PlayerList.text = "PlayerList : ";
@@ -89,6 +79,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                     PlayerList.text = PlayerList.text + player.name + " ";
                 }
 
+                
                 if (Mute)
                 {
                     List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
@@ -103,23 +94,9 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                             vcTargets.Add(player);
                         }
                     }
+                    // ボイスチャットの送信可否設定を反映させる
+                    myVoice.SetMulticastTarget(vcTargets.ToArray());
                 }
-                else
-                {
-                    List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
-                    List<MonobitPlayer> vcTargets = new List<MonobitPlayer>();
-                    foreach (MonobitPlayer player in playerList)
-                    {
-                        vcPlayerInfo[player] = (Int32)EnableVC.ENABLE;
-                        Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
-                        // ボイスチャットの送信可のプレイヤー情報を登録する
-                        if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
-                        {
-                            vcTargets.Add(player);
-                        }
-                    }
-                }
-
             }
         }
     }
@@ -276,5 +253,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     public void muteButtonOnclicked()
     {
         Mute = !Mute;
+        if (Mute)        myVoice.SendStreamType = StreamType.MULTICAST;
+        else        myVoice.SendStreamType = StreamType.BROADCAST;
     }
 }

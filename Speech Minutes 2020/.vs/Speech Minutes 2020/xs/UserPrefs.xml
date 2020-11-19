@@ -15,7 +15,7 @@
       <File FileName="Assets/LogDatas/LogData2.txt" />
       <File FileName="Assets/CSVLogFiles/CSVLogFile1.csv" />
       <File FileName="Assets/TextControl.cs" />
-      <File FileName="Assets/MainSecneMUNScript.cs" Line="113" Column="71" />
+      <File FileName="Assets/MainSecneMUNScript.cs" Line="113" Column="59" />
       <File FileName="Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" />
     </Files>
     <Pads>
