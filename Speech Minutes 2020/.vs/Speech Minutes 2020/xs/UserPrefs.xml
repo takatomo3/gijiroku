@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextMesh Pro/PixAccess.cs">
     <Files>
       <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="206" Column="23" />
-      <File FileName="Assets/MainSecneMUNScript.cs" Line="210" Column="70" />
+      <File FileName="Assets/MainSecneMUNScript.cs" />
       <File FileName="Assets/Watson/Scripts/Services/Assistant/V1/AssistantService.cs" />
       <File FileName="Assets/IBMSdkCore/Utilities/Runnable.cs" />
       <File FileName="Assets/Monobit Unity Networking/Editor/MonobitNetwork/MonobitVoiceInspector.cs" />

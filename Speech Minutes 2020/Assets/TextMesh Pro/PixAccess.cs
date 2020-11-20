@@ -60,7 +60,36 @@ public class PixAccess : MonoBehaviour
     /// </summary>
 	public void Clear()
 	{
-		Start();
+
+		Texture2D mainTexture = (Texture2D)GetComponent<Renderer>().material.mainTexture;
+		Color[] pixels = mainTexture.GetPixels();
+
+		buffer = new Color[pixels.Length];
+		pixels.CopyTo(buffer, 0);
+		/* script.bgColor = Color.white;
+		   //  texscript.texcolor = Color.black;*/
+		for (int x = 0; x < mainTexture.width; x++)
+		{
+			for (int y = 0; y < mainTexture.height; y++)
+			{
+				if (y < mainTexture.height)
+				{
+					buffer.SetValue(Color.white, x + 256 * y);
+				}
+			}
+		}
+		drawTexture = new Texture2D(mainTexture.width, mainTexture.height, TextureFormat.RGBA32, false);
+		drawTexture.filterMode = FilterMode.Point;
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast(ray, out hit, 100.0f))
+		{
+			Draw(hit.textureCoord * 256);
+		}
+
+		drawTexture.SetPixels(buffer);
+		drawTexture.Apply();
+		GetComponent<Renderer>().material.mainTexture = drawTexture;
 	}
 	/// <summary>
     /// 太さ変更
