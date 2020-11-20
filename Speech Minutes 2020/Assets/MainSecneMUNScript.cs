@@ -15,6 +15,10 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     [SerializeField]
     private Text PlayerList;
 
+    [SerializeField]
+    private GameObject MuteLine;
+
+    public bool Mute = false;
     
 
     /** ルーム名. */
@@ -26,17 +30,11 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     /** 自身が所有するボイスアクターのMonobitViewコンポーネント. */
     private MonobitVoice myVoice = null;
 
-    private GUIStyle m_guiStyle;
-    private GUIStyleState m_styleState;
+    private bool first = true;
 
     private void Start()
     {
-        m_guiStyle = new GUIStyle();
-        //m_guiStyle.fontSize = 30;
 
-        m_styleState = new GUIStyleState();
-        m_styleState.textColor = new Color32(255, 165, 0,255);   // 文字色の変更.
-        m_guiStyle.normal = m_styleState;
     }
 
 
@@ -72,6 +70,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
             // ルームに入室している場合
             if (MonobitNetwork.inRoom)
             {
+
                 roomName = MonobitEngine.MonobitNetwork.room.name;
                 RoomNameText.text = "roomName : " + roomName;
                 PlayerList.text = "PlayerList : ";
@@ -81,6 +80,25 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                 foreach (MonobitPlayer player in MonobitNetwork.playerList)
                 {
                     PlayerList.text = PlayerList.text + player.name + " ";
+                }
+
+                
+                if (Mute)
+                {
+                    List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
+                    List<MonobitPlayer> vcTargets = new List<MonobitPlayer>();
+                    foreach (MonobitPlayer player in playerList)
+                    {
+                        vcPlayerInfo[player] = (Int32)EnableVC.DISABLE;
+                        Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
+                        // ボイスチャットの送信可のプレイヤー情報を登録する
+                        if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
+                        {
+                            vcTargets.Add(player);
+                        }
+                    }
+                    // ボイスチャットの送信可否設定を反映させる
+                    myVoice.SetMulticastTarget(vcTargets.ToArray());
                 }
             }
         }
@@ -93,8 +111,6 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
         //ここでスタートのシーンに遷移する
         SceneManager.LoadScene("StartScene");
     }
-
-
 
     /*
     private void OnGUI()
@@ -237,8 +253,33 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
         UnityEngine.Debug.LogWarning("Info: Microphone Restart !!!");
     }
 
-    public void Mute()
+    public void muteButtonOnclicked()
     {
-        //Microphone.End(null);
+        //MUNサーバに接続している場合
+        if (MonobitNetwork.isConnect)
+        {
+            // ルームに入室している場合
+            if (MonobitNetwork.inRoom)
+            {
+                Mute = !Mute;
+                if (Mute)
+                {
+                    myVoice.SendStreamType = StreamType.MULTICAST;
+                    MuteLine.SetActive(true);
+                }
+
+                else
+                {
+                    myVoice.SendStreamType = StreamType.BROADCAST;
+                    MuteLine.SetActive(false);
+
+                }
+            }
+        }
+
+
+
+
+
     }
 }

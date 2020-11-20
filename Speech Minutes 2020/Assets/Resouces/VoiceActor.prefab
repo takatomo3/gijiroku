@@ -220,7 +220,7 @@ MonoBehaviour:
   m_samplingRatePreset: 3
   m_encodeSamplingRate: 16000
   m_decodeSamplingRatePreset: 2
-  m_complexity: 10
+  m_complexity: 1
   m_FrameSizeMs: 40
   m_Surround3D: 0
   m_VoiceActivityDetector: 0
