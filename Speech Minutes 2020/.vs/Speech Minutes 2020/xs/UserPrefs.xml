@@ -1,27 +1,63 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="fc99710d-49f4-47d8-869c-70c8aff158f2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextMesh Pro/PixAccess.cs">
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="9ed4afd8-3a3b-4141-9043-6657db0db171" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainSecneMUNScript.cs">
     <Files>
-      <File FileName="Assets/Painter.cs" Line="15" Column="26" />
-      <File FileName="Assets/TextMesh Pro/PixAccess.cs" Line="137" Column="63" />
-      <File FileName="Assets/ChangeLineWeight.cs" Line="9" Column="23" />
-      <File FileName="Assets/ChangeLineColors.cs" Line="24" Column="44" />
-      <File FileName="Assets/TextControl.cs" Line="68" Column="17" />
-      <File FileName="Assets/TextManager.cs" Line="15" Column="32" />
-      <File FileName="Assets/Inversion.cs" Line="36" Column="50" />
+      <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="206" Column="23" />
+      <File FileName="Assets/MainSecneMUNScript.cs" Line="210" Column="70" />
+      <File FileName="Assets/Watson/Scripts/Services/Assistant/V1/AssistantService.cs" />
+      <File FileName="Assets/IBMSdkCore/Utilities/Runnable.cs" />
+      <File FileName="Assets/Monobit Unity Networking/Editor/MonobitNetwork/MonobitVoiceInspector.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Speech Minutes 2020" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Monobit Unity Networking" expanded="True" />
-              <Node name="TextMesh Pro" expanded="True">
-                <Node name="PixAccess.cs" selected="True" />
+              <Node name="IBMSdkCore" expanded="True">
+                <Node name="Utilities" expanded="True" />
               </Node>
-              <Node name="Watson" expanded="True" />
+              <Node name="Monobit Unity Networking" expanded="True">
+                <Node name="Editor" expanded="True">
+                  <Node name="MonobitNetwork" expanded="True" />
+                </Node>
+                <Node name="Plugins" expanded="True">
+                  <Node name="MonobitNetwork" expanded="True" />
+                </Node>
+                <Node name="Samples" expanded="True">
+                  <Node name="Scripts" expanded="True">
+                    <Node name="ResourcesController" expanded="True" />
+                    <Node name="SimpleChat" expanded="True" />
+                    <Node name="SimpleVoiceChat" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Watson" expanded="True">
+                <Node name="Common" expanded="True" />
+                <Node name="Examples" expanded="True" />
+                <Node name="Scripts" expanded="True">
+                  <Node name="Services" expanded="True">
+                    <Node name="Assistant" expanded="True">
+                      <Node name="V1" expanded="True" />
+                    </Node>
+                    <Node name="SpeechToText" expanded="True">
+                      <Node name="V1" expanded="True">
+                        <Node name="Model" expanded="True" />
+                      </Node>
+                    </Node>
+                    <Node name="TextToSpeech" expanded="True">
+                      <Node name="V1" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="MainSecneMUNScript.cs" selected="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Speech Minutes 2020" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -30,7 +66,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/matsulab/gijiroku/Speech Minutes 2020/Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" relfile="Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" line="20" column="1" />
+      <Breakpoint file="/Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Assets/Painter.cs" relfile="Assets/Painter.cs" line="48" column="1" />
+      <Breakpoint file="/Users/kurimatomohiro/new_cloneforlder/Speech Minutes 2020/Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" relfile="Assets/Monobit Unity Networking/Samples/Scripts/SimpleVoiceChat/SimpleVoiceChat.cs" line="20" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

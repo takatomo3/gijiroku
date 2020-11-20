@@ -206,6 +206,7 @@ namespace IBM.Watsson.Examples
             _recording = Microphone.Start(_microphoneID, true, _recordingBufferSize, _recordingHZ);
             yield return null;      // let _recordingRoutine get set..
 
+            
             if (_recording == null)
             {
                 StopRecording();
