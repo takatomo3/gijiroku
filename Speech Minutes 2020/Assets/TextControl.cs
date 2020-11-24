@@ -10,7 +10,7 @@ public class TextControl : MonoBehaviour, IDragHandler
     private float scroll;
     public Text chatComent;
     public bool Selectflag=false;
-    public Color texcolor;
+   // public Color texcolor;
     public GameObject teO;
     void Start()
     {
@@ -19,7 +19,7 @@ public class TextControl : MonoBehaviour, IDragHandler
         // Textコンポーネントを取得
         Text text = this.GetComponent<Text>();
         // 色を指定
-        text.color = texcolor;
+        text.color = Color.black;
     }
     /// <summary>
     /// テキストコメントを選択するための関数
@@ -65,7 +65,7 @@ public class TextControl : MonoBehaviour, IDragHandler
          {
              Selectflag == false;
          }*/
-        Start();
+        //Start();
         if (Selectflag == true)
         {
             scroll = Input.GetAxis("Mouse ScrollWheel");
@@ -93,7 +93,7 @@ public class TextControl : MonoBehaviour, IDragHandler
                     // Textコンポーネントを取得
                     Text text = this.GetComponent<Text>();
                     // 色を指定
-                    text.color = texcolor;
+                    text.color = Color.black;
 
                     Debug.Log("falseですよ");
                 }

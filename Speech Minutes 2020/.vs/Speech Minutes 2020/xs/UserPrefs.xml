@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="f7d011cd-8208-43aa-a8bf-03bd3b6a020f" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextMesh Pro/PixAccess.cs">
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="5105f5bf-c93e-4460-b465-d51c134a6a69" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextControl.cs">
     <Files>
       <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" Line="206" Column="23" />
       <File FileName="Assets/MainSecneMUNScript.cs" />
@@ -8,6 +8,7 @@
       <File FileName="Assets/IBMSdkCore/Utilities/Runnable.cs" />
       <File FileName="Assets/Monobit Unity Networking/Editor/MonobitNetwork/MonobitVoiceInspector.cs" />
       <File FileName="Assets/TextMesh Pro/PixAccess.cs" Line="1" Column="1" />
+      <File FileName="Assets/TextControl.cs" Line="68" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,9 +33,7 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="TextMesh Pro" expanded="True">
-                <Node name="PixAccess.cs" selected="True" />
-              </Node>
+              <Node name="TextMesh Pro" expanded="True" />
               <Node name="Watson" expanded="True">
                 <Node name="Common" expanded="True" />
                 <Node name="Examples" expanded="True" />
@@ -54,6 +53,7 @@
                   </Node>
                 </Node>
               </Node>
+              <Node name="TextControl.cs" selected="True" />
             </Node>
           </Node>
         </State>

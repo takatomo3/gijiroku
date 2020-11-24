@@ -6953,7 +6953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatComent: {fileID: 0}
   Selectflag: 0
-  texcolor: {r: 0, g: 0, b: 0, a: 0}
   teO: {fileID: 0}
   m_rectTransform: {fileID: 1342288340}
 --- !u!114 &1342288342
