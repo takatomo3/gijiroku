@@ -3309,7 +3309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineMaterial: {fileID: 2100000, guid: 1b95d65e068ad6843815d6072c0950c3, type: 2}
-  lineColor: {r: 1, g: 1, b: 1, a: 1}
+  lineColor: {r: 0.03773582, g: 0.036845826, b: 0.036845826, a: 1}
   lineWidth: 0
   mode: 0
   PenMode: {fileID: 650681876}
