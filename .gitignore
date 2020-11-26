@@ -4,6 +4,11 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+"Speech Minutes 2020"/Library/
+"Speech Minutes 2020"/Temp/
+"Speech Minutes 2020"/obj/
+"Speech Minutes 2020"/Build/
+"Speech Minutes 2020"/Builds/
 
 # Visual Studio cache directory
 .vs/
