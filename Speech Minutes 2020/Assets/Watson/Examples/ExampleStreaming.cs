@@ -27,11 +27,13 @@ using IBM.Cloud.SDK.Authentication.Iam;
 using IBM.Cloud.SDK.Utilities;
 using IBM.Cloud.SDK.DataTypes;
 using System.IO;
+using MonobitEngine;
+using MonobitEngine.VoiceChat;
 
 
 namespace IBM.Watsson.Examples
 {
-    public class ExampleStreaming : MonoBehaviour
+    public class ExampleStreaming : MonobitEngine.MonoBehaviour
     {
         #region PLEASE SET THESE VARIABLES IN THE INSPECTOR
         [Space(10)]
@@ -187,7 +189,7 @@ namespace IBM.Watsson.Examples
         {
             if (_recordingRoutine != 0)
             {
-                Microphone.End(_microphoneID);
+                //Microphone.End(_microphoneID);
                 Runnable.Stop(_recordingRoutine);
                 _recordingRoutine = 0;
             }
@@ -206,12 +208,12 @@ namespace IBM.Watsson.Examples
             _recording = Microphone.Start(_microphoneID, true, _recordingBufferSize, _recordingHZ);
             yield return null;      // let _recordingRoutine get set..
 
-            
             if (_recording == null)
             {
                 StopRecording();
                 yield break;
             }
+
 
             bool bFirstBlock = true;
             int midPoint = _recording.samples / 2;  //多分サンプリング周波数のことだと思う

@@ -28,7 +28,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     private Dictionary<MonobitPlayer, Int32> vcPlayerInfo = new Dictionary<MonobitPlayer, int>();
 
     /** 自身が所有するボイスアクターのMonobitViewコンポーネント. */
-    private MonobitVoice myVoice = null;
+    private MonobitVoice myVoice = null;    
 
     private bool first = true;
 
