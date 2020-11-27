@@ -28,13 +28,17 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     private Dictionary<MonobitPlayer, Int32> vcPlayerInfo = new Dictionary<MonobitPlayer, int>();
 
     /** 自身が所有するボイスアクターのMonobitViewコンポーネント. */
-    private MonobitVoice myVoice = null;    
+    private MonobitVoice myVoice = null;
 
     private bool first = true;
 
+    private MonobitMicrophone Mc = null;
+
+    public AudioClip AC;
+
     private void Start()
     {
-
+        
     }
 
 
@@ -204,11 +208,23 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
 
         GameObject go = MonobitNetwork.Instantiate("VoiceActor", Vector3.zero, Quaternion.identity, 0);
         myVoice = go.GetComponent<MonobitVoice>();
+
+        Mc = go.GetComponent<MonobitMicrophone>();
+        AC = Mc.GetAudioClip();
+
         if (myVoice != null)
         {
             myVoice.SetMicrophoneErrorHandler(OnMicrophoneError);
             myVoice.SetMicrophoneRestartHandler(OnMicrophoneRestart);
         }
+    }
+
+    public void DebugButton()
+    {
+        Debug.Log("myVoice = " + myVoice);
+        Debug.Log("Mc = " + Mc);
+
+        Debug.Log("");
     }
 
     // 誰かがルームにログインしたときの処理
