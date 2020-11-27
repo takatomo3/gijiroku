@@ -113,7 +113,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
         MonobitNetwork.LeaveRoom();
         //Debug.Log("ルームから退出しました");
         //ここでスタートのシーンに遷移する
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("koba_StartScene");
     }
 
     /*
@@ -211,6 +211,8 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
 
         Mc = go.GetComponent<MonobitMicrophone>();
         AC = Mc.GetAudioClip();
+
+        Debug.Log(MonobitNetwork.playerName);
 
         if (myVoice != null)
         {

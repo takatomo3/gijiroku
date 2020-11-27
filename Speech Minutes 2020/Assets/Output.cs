@@ -24,7 +24,7 @@ public class Output : MonoBehaviour
     }
     public void OnClick()
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 9; i++)
         {
             InputPathName(i);                                                   //CSVファイルの書き込み元ファイルを選択します
             string CSVFilePath = Application.dataPath + InputPath;              //書き込み元ファイルの指定
@@ -50,7 +50,7 @@ public class Output : MonoBehaviour
                 {
                     streamWriter.Write(list.ToString() + ',');
                     count++;
-                    if (count % 2 == 0)
+                    if (count % 4 == 0)
                     {
                         streamWriter.WriteLine();
                     }

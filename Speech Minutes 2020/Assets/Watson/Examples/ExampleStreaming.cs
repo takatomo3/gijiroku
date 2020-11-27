@@ -82,7 +82,7 @@ namespace IBM.Watsson.Examples
 
         int NowBottonPushed = -1;
 
-
+        DateTime now;
 
         private SpeechToTextService _service;
 
@@ -111,7 +111,6 @@ namespace IBM.Watsson.Examples
 
             
             text.text = "話題未選択";
-
         }
 
         /*
@@ -280,7 +279,7 @@ namespace IBM.Watsson.Examples
 
                         Log.Debug("ExampleStreaming.OnRecognize()", text);
                         ResultsField.text = text;
-                        if(res.final)   Dataoutput(alt.transcript , alt.confidence);
+                        if(res.final)   Dataoutput(now, MonobitNetwork.playerName, alt.transcript, alt.confidence);
                     }
                     if (res.keywords_result != null && res.keywords_result.keyword != null)
                     {
@@ -318,11 +317,11 @@ namespace IBM.Watsson.Examples
 
         //voicesampleからの移植
         //データの出力
-        public void Dataoutput(string text, double confidence)
+        public void Dataoutput(DateTime now, string myname, string text, double confidence)
         {
             using (StreamWriter sw = new StreamWriter(filePath, true))
             {
-                sw.WriteLine(text + " , " + confidence.ToString()); //テキストファイルに音声認識結果テキストと、音声認識時間(ms)を書きこみ
+                sw.WriteLine(now + " , " + myname + " , " + text + " , " + confidence.ToString()); //テキストファイルに音声認識結果テキストと、音声認識時間(ms)を書きこみ
             }
             //ログの書き出し
             //Debug.Log(text + " , " +confidence.ToString());
@@ -525,6 +524,8 @@ namespace IBM.Watsson.Examples
                 Record = true;              //Recordをtrueにする
                 Debug.Log("Record False");  //デバッグログ
             }
+            Debug.Log(MonobitNetwork.playerName);
+            Debug.Log(now);
         }
 
 
@@ -602,6 +603,7 @@ namespace IBM.Watsson.Examples
 
         private void Update()
         {
+            now = DateTime.Now;
             //MUNサーバに接続している場合
             if (MonobitNetwork.isConnect)
             {
