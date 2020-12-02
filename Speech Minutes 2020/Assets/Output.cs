@@ -5,7 +5,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System;
-public class Output : MonoBehaviour
+using MonobitEngine;
+public class Output : MonobitEngine.MonoBehaviour
 {
 	string InputPath;
     string OutputPath;
@@ -22,6 +23,8 @@ public class Output : MonoBehaviour
     {
         
     }
+
+    [MunRPC]
     public void OnClick()
     {
         for (int i = 0; i < 9; i++)
@@ -64,6 +67,11 @@ public class Output : MonoBehaviour
         }
 
 	}
+
+    public void OutputFlag()
+    {
+        monobitView.RPC("OnClick", MonobitTargets.All);
+    }
 
     //CSVファイルの書き込み元ファイルを選択します
     void InputPathName(int number)

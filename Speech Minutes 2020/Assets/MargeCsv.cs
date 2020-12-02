@@ -16,20 +16,23 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        for (int i = 0; i < 8; i++)
+        Clear();
+        //Debug.Log("start");
+    }
+
+    void Clear()
+    {
+        for (int i = 0; i < 9; i++)
         {
-            //filePathのパス指定
             MargePathName(i);
-            File.CreateText(Application.dataPath + MargefilePath);
-            if (i == 7)
+            string ClearPath = Application.dataPath + MargefilePath;
+            using (var fileStream = new FileStream(ClearPath, FileMode.Open))
             {
-                MargePathName(-1); break;
+                // ストリームの長さを0に設定します。
+                // 結果としてファイルのサイズが0になります。
+                fileStream.SetLength(0);
             }
         }
-        MargefilePath = Application.dataPath + @"/MargeCSVLogFiles/MargeCSVLogFile.csv";
-        File.CreateText(MargefilePath);
-        
     }
 
     [MunRPC]
@@ -47,18 +50,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     [MunRPC]
     public void Send()
     {
-        for (int i = 0; i < 9; i++)
-        {
-            MargePathName(i);
-            string ClearPath = Application.dataPath + MargefilePath;
-            using (var fileStream = new FileStream(ClearPath, FileMode.Open))
-            {
-                // ストリームの長さを0に設定します。
-                // 結果としてファイルのサイズが0になります。
-                fileStream.SetLength(0);
-
-            }
-        }
+        Clear();
 
         for (int i = 0; i < 9; i++)
         {
@@ -91,9 +83,6 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     {
         monobitView.RPC("Send", MonobitTargets.All);
     }
-
-
-    
 
     void MargePathName(int number)
     {
