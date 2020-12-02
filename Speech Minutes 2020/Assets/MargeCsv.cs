@@ -44,18 +44,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             streamWriter.WriteLine();
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
-    public void marge()
-    {
-        //FileUtil.CopyFileOrDirectory("CSVLogFiles/CSVLogFile.csv", "MargeCSV/MargeCSVLogFile.csv");
-        //AssetDatabase.CopyAsset("Assets/CSVLogFiles", "Assets/MargeCSV");
-    }
-
+    [MunRPC]
     public void Send()
     {
         for (int i = 0; i < 9; i++)
@@ -67,12 +56,12 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 // ストリームの長さを0に設定します。
                 // 結果としてファイルのサイズが0になります。
                 fileStream.SetLength(0);
-                
+
             }
         }
 
         for (int i = 0; i < 9; i++)
-        { 
+        {
             InputPathName(i);
             string CSVFilePath = Application.dataPath + InputPath;
             //書き込み先ファイルの指定
@@ -97,6 +86,14 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             }
         }
     }
+
+    public void ClickFlag()
+    {
+        monobitView.RPC("Send", MonobitTargets.All);
+    }
+
+
+    
 
     void MargePathName(int number)
     {
