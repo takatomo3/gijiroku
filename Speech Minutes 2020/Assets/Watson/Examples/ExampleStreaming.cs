@@ -631,6 +631,8 @@ namespace IBM.Watsson.Examples
                         {
                             vcPlayerInfo[player] = (Int32)EnableVC.DISABLE;
                             Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
+                            Debug.Log(player.ToString());
+
                             // ボイスチャットの送信可のプレイヤー情報を登録する
                             if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
                             {
@@ -828,10 +830,10 @@ namespace IBM.Watsson.Examples
                     }
                 }
             }
+        }
 
-
-
-
+        public void OnclickedDebugButoon()
+        {
 
         }
     }

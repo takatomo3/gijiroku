@@ -125,7 +125,8 @@ public class StartSecneMUNScript : MonobitEngine.MonoBehaviour
                         /********
                         ここでメインのシーンに遷移する
                         *********/
-                        SceneManager.LoadScene("koba_newUI");
+                        //SceneManager.LoadScene("koba_newUI");
+                        SceneManager.LoadScene("newUI");
                     }
                 }
             }
