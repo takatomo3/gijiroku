@@ -35,7 +35,6 @@ public class StartSecneMUNScript : MonobitEngine.MonoBehaviour
         //MUNサーバに接続している場合
         if (MonobitNetwork.isConnect)
         {
-            
             //Debug.Log("サーバに接続しました");
             // ルームに入室している場合
             if (MonobitNetwork.inRoom)
@@ -125,8 +124,8 @@ public class StartSecneMUNScript : MonobitEngine.MonoBehaviour
                         /********
                         ここでメインのシーンに遷移する
                         *********/
-                        //SceneManager.LoadScene("koba_newUI");
-                        SceneManager.LoadScene("newUI");
+                        SceneManager.LoadScene("koba_newUI");
+                        //SceneManager.LoadScene("newUI");
                     }
                 }
             }
