@@ -48,6 +48,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             streamWriter.WriteLine();
         }
     }
+
     [MunRPC]
     public void Send()
     {
@@ -84,6 +85,50 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     {
         monobitView.RPC("Send", MonobitTargets.All);
     }
+
+    [MunRPC]
+    public void MargeSort()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            MargePathName(i);
+            string SortFilePath = Application.dataPath + MargefilePath;
+            List<string> lists = new List<string>();
+            using (FileStream fileStream = File.Open(SortFilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                using (StreamReader streamReader = new StreamReader(fileStream))
+                using (StreamWriter streamWriter = new StreamWriter(fileStream))
+                {
+                    while (!streamReader.EndOfStream)
+                    {
+                        lists.AddRange(streamReader.ReadLine().Split('\n'));
+                    }
+
+                    lists.Sort();
+
+                    fileStream.SetLength(0);
+
+                    foreach (var list in lists)
+                    {
+                        streamWriter.Write(list);
+                        streamWriter.WriteLine();
+                    }
+                }
+            }
+        }
+        //ソート前のリスト
+        //Debug.Log("ソート前のリスト" + string.Join("", sortlists));
+        //ShowListContentsInTheDebugLog(sortlists);
+        //sortlists.Sort();
+        //ソート後のリスト
+        //Debug.Log("ソート後のリスト" + string.Join("", sortlists));
+    }
+
+    public void SortFlag()
+    {
+        monobitView.RPC("MargeSort", MonobitTargets.All);
+    }
+
 
     void MargePathName(int number)
     {
@@ -152,105 +197,4 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 break;
         }
     }
-
-    public void MargeSort()
-    {
-        MargePathName(0);
-        string SortFilePath = Application.dataPath + MargefilePath;
-        List<string> lists = new List<string>();
-        using (FileStream fileStream = File.Open(SortFilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite))
-        {
-            using (StreamReader streamReader = new StreamReader(fileStream))
-            using (StreamWriter streamWriter = new StreamWriter(fileStream))
-            {
-                while (!streamReader.EndOfStream)
-                {
-                    lists.AddRange(streamReader.ReadLine().Split('\n'));
-                }
-
-                lists.Sort();
-
-                fileStream.SetLength(0);
-
-                foreach (var list in lists)
-                {
-                    streamWriter.Write(list);
-                    streamWriter.WriteLine();
-                }
-            }
-        }
-
-
-
-
-        /*
-        List<string> sortlists = new List<string>();
-        List<string> sortedlists = new List<string>();
-        MargePathName(0);
-        string SortFilePath = Application.dataPath + MargefilePath;
-        //書き込み先ファイルの指定
-
-
-        var fs = new FileStream(SortFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-
-        //　ストリームで読み込みと書き込み
-        using (StreamReader streamReader = new StreamReader(fs))
-
-        {
-            
-
-            while (!streamReader.EndOfStream)
-            {
-                sortlists.AddRange(streamReader.ReadLine().Split('\n'));
-                //Debug.Log(sortlists[0]);
-            }
-            sortlists.Sort();
-        }
-
-        using (StreamReader streamReader = new StreamReader(sortlists))
-
-        {
-
-
-            while (!streamReader.EndOfStream)
-            {
-                sortedlists.AddRange(streamReader.ReadLine().Split('\n'));
-                //Debug.Log(sortlists[0]);
-            }
-            sortlists.Sort();
-        }
-
-        //ソート前のリスト
-        //Debug.Log("ソート前のリスト" + string.Join(", ", sortlists));
-        //ShowListContentsInTheDebugLog(sortlists);
-        //sortlists.Sort();
-
-        //ソート後のリスト
-        //Debug.Log("ソート後のリスト" + string.Join(", ", sortlists));
-
-        using (StreamWriter streamWriter = new StreamWriter(SortFilePath, true))
-        {
-            streamWriter.Write(sortedlists);
-            streamWriter.WriteLine();
-        }
-        */
-    }
-
-    /*
-    public void ShowListContentsInTheDebugLog<T>(List<T> list)
-    {
-        string log = "";
-
-        foreach (var content in list.Select((val, idx) => new { val, idx }))
-        {
-            if (content.idx == list.Count - 1)
-                log += content.val.ToString();
-            else
-                log += content.val.ToString() + ", ";
-        }
-
-        Debug.Log(log);
-    }
-    */
-
 }
