@@ -16,7 +16,7 @@ namespace Tests
         {
             // Use the Assert class to test conditions
             int i= 1;
-            Assert.AreEqual(1,i);
+            Assert.AreEqual(-2,i);
                 }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
