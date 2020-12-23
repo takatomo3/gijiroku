@@ -33,7 +33,7 @@ public class Painter : MonoBehaviour
         img.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
 
         PenMode = GameObject.Find("PenMode");
-
+        mode = true;
         //背景が透明なTexture2Dを作る
         //http://d.hatena.ne.jp/shinriyo/20140520/p2
         Color32[] texColors = Enumerable.Repeat<Color32>(bgColor, width * height).ToArray();
