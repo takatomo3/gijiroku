@@ -15,7 +15,7 @@ namespace Tests
             // Use the Assert class to test conditions
             var x = new TextControl();
 
-            Assert.IsEmpty(x.chatComent.text);
+            Assert.IsFalse(x.Selectflag);
             //x.chatComent.text = "Matsuno";
             //x.Selecter();
             //Assert.AreEqual(x.chatComent.color, Color.green) ; 

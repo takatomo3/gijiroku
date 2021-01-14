@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Test\PlayMode\NewTestScript.cs" />
     <Compile Include="Assets\Test\PlayMode\otamesi.cs" />
+    <Compile Include="Assets\Test\PlayMode\PlayModeTestTranlationNotifier.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2018.1.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>

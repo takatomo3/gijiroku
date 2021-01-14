@@ -1,35 +1,19 @@
 ﻿<Properties StartupConfiguration="{8B22C8B9-7800-6A49-417E-21C5E35B07C4}|">
-  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="fa23e29d-5dff-4df6-9005-8995d78028d7" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Test/PlayMode/otamesi.cs">
+  <MonoDevelop.Ide.ItemProperties.EditMode PreferredExecutionTarget="ae21963a-3c3b-47b0-918d-163b3989ec0f" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Test/EditMode/Gtest1.cs">
     <Files>
       <File FileName="Assets/WadaiChange.cs" Line="108" Column="31" />
       <File FileName="Assets/TextManager.cs" />
       <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextService.cs" />
       <File FileName="Assets/Watson/Examples/ExampleStreaming.cs" />
       <File FileName="Assets/MainSecneMUNScript.cs" />
-      <File FileName="Assets/Painter.cs" Line="29" Column="9" />
+      <File FileName="Assets/Painter.cs" />
       <File FileName="Assets/IBMSdkCore/Debug/DebugReactor.cs" />
       <File FileName="Assets/Watson/Scripts/Services/SpeechToText/V1/SpeechToTextServiceExtension.cs" />
       <File FileName="Assets/Watson/Scripts/Services/TextToSpeech/V1/TextToSpeechServiceExtension.cs" />
       <File FileName="Assets/Test/PlayMode/otamesi.cs" Line="25" Column="10" />
+      <File FileName="Assets/Test/EditMode/Gtest1.cs" Line="18" Column="40" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Speech Minutes 2020" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="LogDatas" expanded="True" />
-              <Node name="Test" expanded="True">
-                <Node name="EditMode" expanded="True" />
-                <Node name="PlayMode" expanded="True">
-                  <Node name="otamesi.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
