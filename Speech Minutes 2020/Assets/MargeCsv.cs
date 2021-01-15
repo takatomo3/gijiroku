@@ -47,6 +47,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             streamWriter.Write(list);
             streamWriter.WriteLine();
         }
+        monobitView.RPC("MargeSort", MonobitTargets.Host);
     }
 
     [MunRPC]
@@ -75,7 +76,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 }
                 foreach (var list in lists)
                 {
-                    monobitView.RPC("RecvChat", MonobitTargets.All, list, i);
+                    monobitView.RPC("RecvChat", MonobitTargets.Host, list, i);
                 }
             }
         }
