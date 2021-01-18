@@ -36,6 +36,28 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         }
     }
 
+    [MunRPC, MenuItem("Example/Copy Something")]
+    public void Share(string folder)
+    {
+        FileUtil.CopyFileOrDirectory(folder, "Assets/MargeFolder");
+    }
+
+
+    //フォルダのコピー生成
+    [MunRPC,MenuItem("Example/Copy Something")]
+    public void CopySomething()
+    {
+        DateTime time;
+        time = DateTime.Now;
+        string timeStamp = time.ToString("yyyy_MMdd_HH_mm_ss");
+        FileUtil.CopyFileOrDirectory("Assets/MargeCSVLogFiles", "Assets/MargeFolder/"+timeStamp);
+        Debug.Log("コピーしました");
+
+        IEnumerable<string> subFolders = System.IO.Directory.EnumerateDirectories("Assets", "MargeFolder", System.IO.SearchOption.AllDirectories);
+        monobitView.RPC("Share", MonobitTargets.Others, subFolders);
+    }
+
+    //マージファイルに書き込み
     [MunRPC]
     public void RecvChat(string list, int i)
     {
@@ -50,6 +72,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         monobitView.RPC("MargeSort", MonobitTargets.Host);
     }
 
+    //一文ずつ送信
     [MunRPC]
     public void Send()
     {
@@ -82,11 +105,15 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         }
     }
 
+
+    //outputボタンをクリックした時に送信
     public void ClickFlag()
     {
         monobitView.RPC("Send", MonobitTargets.All);
+        monobitView.RPC("CopySomething", MonobitTargets.Host);
     }
 
+    //ソート関数
     [MunRPC]
     public void MargeSort()
     {
@@ -117,6 +144,8 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 }
             }
         }
+        
+
         //ソート前のリスト
         //Debug.Log("ソート前のリスト" + string.Join("", sortlists));
         //ShowListContentsInTheDebugLog(sortlists);

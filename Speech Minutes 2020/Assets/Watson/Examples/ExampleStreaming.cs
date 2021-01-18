@@ -83,6 +83,7 @@ namespace IBM.Watsson.Examples
         int NowBottonPushed = -1;
 
         DateTime now;
+        string timeStamp;
 
         private SpeechToTextService _service;
 
@@ -279,7 +280,7 @@ namespace IBM.Watsson.Examples
 
                         Log.Debug("ExampleStreaming.OnRecognize()", text);
                         ResultsField.text = text;
-                        if(res.final)   Dataoutput(now, MonobitNetwork.playerName, alt.transcript, alt.confidence);
+                        if(res.final)   Dataoutput(timeStamp, MonobitNetwork.playerName, alt.transcript, alt.confidence);
                     }
                     if (res.keywords_result != null && res.keywords_result.keyword != null)
                     {
@@ -317,7 +318,7 @@ namespace IBM.Watsson.Examples
 
         //voicesampleからの移植
         //データの出力
-        public void Dataoutput(DateTime now, string myname, string text, double confidence)
+        public void Dataoutput(string now, string myname, string text, double confidence)
         {
             using (StreamWriter sw = new StreamWriter(filePath, true))
             {
@@ -604,6 +605,7 @@ namespace IBM.Watsson.Examples
         private void Update()
         {
             now = DateTime.Now;
+            timeStamp = now.ToString("yyyy/MM/dd HH:mm:ss");
             //MUNサーバに接続している場合
             if (MonobitNetwork.isConnect)
             {
