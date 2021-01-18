@@ -36,25 +36,24 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         }
     }
 
+    /*
     [MunRPC, MenuItem("Example/Copy Something")]
     public void Share(string folder)
     {
         FileUtil.CopyFileOrDirectory(folder, "Assets/MargeFolder");
     }
+    */
 
 
     //フォルダのコピー生成
     [MunRPC,MenuItem("Example/Copy Something")]
-    public void CopySomething()
+    public void CopySomething(string timeStamp)
     {
-        DateTime time;
-        time = DateTime.Now;
-        string timeStamp = time.ToString("yyyy_MMdd_HH_mm_ss");
-        FileUtil.CopyFileOrDirectory("Assets/MargeCSVLogFiles", "Assets/MargeFolder/"+timeStamp);
+        FileUtil.CopyFileOrDirectory("Assets/MargeCSVLogFiles", "Assets/MargeFolder/" + timeStamp);
         Debug.Log("コピーしました");
-
-        IEnumerable<string> subFolders = System.IO.Directory.EnumerateDirectories("Assets", "MargeFolder", System.IO.SearchOption.AllDirectories);
-        monobitView.RPC("Share", MonobitTargets.Others, subFolders);
+        
+        //IEnumerable<string> subFolders = System.IO.Directory.EnumerateDirectories("Assets", "MargeFolder", System.IO.SearchOption.AllDirectories);
+        //monobitView.RPC("Share", MonobitTargets.Others, subFolders);
     }
 
     //マージファイルに書き込み
@@ -105,12 +104,15 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         }
     }
 
+    DateTime time;
+    string timeStamp;
 
     //outputボタンをクリックした時に送信
     public void ClickFlag()
     {
+        time = DateTime.Now;
+        timeStamp = time.ToString("yyyy_MMdd_HH_mm_ss");
         monobitView.RPC("Send", MonobitTargets.All);
-        monobitView.RPC("CopySomething", MonobitTargets.Host);
     }
 
     //ソート関数
@@ -144,7 +146,8 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 }
             }
         }
-        
+
+        monobitView.RPC("CopySomething", MonobitTargets.Host, timeStamp);
 
         //ソート前のリスト
         //Debug.Log("ソート前のリスト" + string.Join("", sortlists));
@@ -188,8 +191,10 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             case 7:
                 MargefilePath = @"/MargeCSVLogFiles/MargeCSVLogFile7.csv";
                 break;
-            default:
+            case 8:
                 MargefilePath = @"/MargeCSVLogFiles/MargeCSVLogFile.csv";
+                break;
+            default:
                 break;
         }
     }
@@ -222,8 +227,10 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             case 7:
                 InputPath = @"/CSVLogFiles/CSVLogFile7.csv";
                 break;
-            default:
+            case 8:
                 InputPath = @"/CSVLogFiles/CSVLogFile.csv";
+                break;
+            default:
                 break;
         }
     }
