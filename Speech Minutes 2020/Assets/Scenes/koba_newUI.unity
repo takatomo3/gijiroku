@@ -10028,6 +10028,7 @@ GameObject:
   - component: {fileID: 1782908608}
   - component: {fileID: 1782908611}
   - component: {fileID: 1782908612}
+  - component: {fileID: 1782908613}
   m_Layer: 0
   m_Name: MUN
   m_TagString: Untagged
@@ -10113,6 +10114,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5a034469e76cee4bbf6f6026aec016c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1782908613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782908607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb1420a729d74c9c89a6d49068bbfc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1810702199
@@ -11147,6 +11160,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1782908611}
         m_MethodName: ClickFlag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1782908613}
+        m_MethodName: CopyFlag
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

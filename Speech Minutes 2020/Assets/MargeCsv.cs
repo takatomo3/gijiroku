@@ -46,6 +46,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
 
 
     //フォルダのコピー生成
+    /*
     [MunRPC,MenuItem("Example/Copy Something")]
     public void CopySomething(string timeStamp)
     {
@@ -55,6 +56,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         //IEnumerable<string> subFolders = System.IO.Directory.EnumerateDirectories("Assets", "MargeFolder", System.IO.SearchOption.AllDirectories);
         //monobitView.RPC("Share", MonobitTargets.Others, subFolders);
     }
+    */
 
     //マージファイルに書き込み
     [MunRPC]
@@ -147,7 +149,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             }
         }
 
-        monobitView.RPC("CopySomething", MonobitTargets.Host, timeStamp);
+        //monobitView.RPC("CopySomething", MonobitTargets.Host, timeStamp);
 
         //ソート前のリスト
         //Debug.Log("ソート前のリスト" + string.Join("", sortlists));
