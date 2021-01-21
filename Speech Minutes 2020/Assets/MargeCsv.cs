@@ -37,13 +37,14 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         }
     }
 
-    /*
+    
     [MunRPC, MenuItem("Example/Copy Something")]
-    public void Share(string folder)
+    public void Share(string data, string path)
     {
-        FileUtil.CopyFileOrDirectory(folder, "Assets/MargeFolder");
+        //FileUtil.CopyFileOrDirectory(folder, "Assets/MargeFolder");
+        File.WriteAllText(path, data);
     }
-    */
+    
 
 
     //フォルダのコピー生成
@@ -52,9 +53,12 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     {
         FileUtil.CopyFileOrDirectory("Assets/MargeCSVLogFiles", "Assets/MargeFolder/" + timeStamp);
         Debug.Log("コピーしました");
+
+        string path = "Assets/MargeFolder/" + timeStamp + "/MargeCSVLogFile.csv";
+        string data = File.ReadAllText(path);
         
         //IEnumerable<string> subFolders = System.IO.Directory.EnumerateDirectories("Assets", "MargeFolder", System.IO.SearchOption.AllDirectories);
-        //monobitView.RPC("Share", MonobitTargets.Others, subFolders);
+        monobitView.RPC("Share", MonobitTargets.Others, data, path);
     }
 
     //マージファイルに書き込み
@@ -71,19 +75,16 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         }
         // monobitView.RPC("MargeSort", MonobitTargets.Host);
 
-    
-         if(i == 8 && cnt == 0)
-            {
-                player--; 
+        if(i == 8 && cnt == 0)
+        {
+            player--; 
             Debug.Log("player:"+player);
-               if (player == 0)
-                      {
-                        MargeSort();
-                        Debug.Log("margeしました");
-                      }
+            if (player == 0)
+            {
+                MargeSort();
+                Debug.Log("margeしました");
             }
-        
-
+        }
     }
 
     //一文ずつ送信
