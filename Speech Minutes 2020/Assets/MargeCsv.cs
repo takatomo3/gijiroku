@@ -6,7 +6,6 @@ using MonobitEngine;
 using System.IO;
 using System.ComponentModel;
 using System;
-using System.Linq;
 
 public class MargeCsv : MonobitEngine.MonoBehaviour
 {
@@ -61,7 +60,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
 
     //マージファイルに書き込み
     [MunRPC]
-    public void RecvChat(string list, int i, int cnt)
+    public void RecvChat(string list, int i)
     {
         Debug.Log("recvchatしました");
         MargePathName(i);
@@ -73,11 +72,6 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             streamWriter.WriteLine();
         }
         //monobitView.RPC("MargeSort", MonobitTargets.Host);
-
-        if(i == 8 && cnt == 0)
-        {
-            MargeSort();
-        }
     }
 
     //一文ずつ送信
@@ -86,7 +80,6 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     {
         Debug.Log("sendしました");
         Clear();
-        int cnt;
 
         for (int i = 0; i < 9; i++)
         {
@@ -107,25 +100,17 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 {
                     lists.AddRange(streamReader.ReadLine().Split('\n'));
                 }
-                cnt = lists.Count();
                 foreach (var list in lists)
                 {
-                    cnt--;
-                    monobitView.RPC("RecvChat", MonobitTargets.Host, list, i, cnt);
+                    monobitView.RPC("RecvChat", MonobitTargets.Host, list, i);
                 }
             }
         }
 
-        /*
-        if (!MonobitEngine.MonobitNetwork.isHost)
-        {
-            Debug.Log("ホストじゃないよ");
-        }
-        else
+        if (MonobitEngine.MonobitNetwork.isHost)
         {
             MargeSort();
         }
-        */
 
     }
 
@@ -141,7 +126,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     }
 
     //ソート関数
-    //[MunRPC]
+    [MunRPC]
     public void MargeSort()
     {
         Debug.Log("margeしました");
