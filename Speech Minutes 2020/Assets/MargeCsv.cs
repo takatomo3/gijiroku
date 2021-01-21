@@ -46,7 +46,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
 
 
     //フォルダのコピー生成
-    
+    /*
     [MunRPC,MenuItem("Example/Copy Something")]
     public void CopySomething(string timeStamp)
     {
@@ -56,13 +56,12 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         //IEnumerable<string> subFolders = System.IO.Directory.EnumerateDirectories("Assets", "MargeFolder", System.IO.SearchOption.AllDirectories);
         //monobitView.RPC("Share", MonobitTargets.Others, subFolders);
     }
-    
+    */
 
     //マージファイルに書き込み
     [MunRPC]
     public void RecvChat(string list, int i)
     {
-        Debug.Log("recvchatしました");
         MargePathName(i);
         string CSVWriteFilePath = Application.dataPath + MargefilePath;
         Debug.Log(MargefilePath);
@@ -71,14 +70,13 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             streamWriter.Write(list);
             streamWriter.WriteLine();
         }
-        //monobitView.RPC("MargeSort", MonobitTargets.Host);
+        monobitView.RPC("MargeSort", MonobitTargets.Host);
     }
 
     //一文ずつ送信
     [MunRPC]
     public void Send()
     {
-        Debug.Log("sendしました");
         Clear();
 
         for (int i = 0; i < 9; i++)
@@ -106,12 +104,6 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 }
             }
         }
-
-        if (MonobitEngine.MonobitNetwork.isHost)
-        {
-            MargeSort();
-        }
-
     }
 
     DateTime time;
@@ -129,7 +121,6 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     [MunRPC]
     public void MargeSort()
     {
-        Debug.Log("margeしました");
         for (int i = 0; i < 9; i++)
         {
             MargePathName(i);
@@ -157,9 +148,8 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 }
             }
         }
-        Debug.Log("margeしました2");
 
-        monobitView.RPC("CopySomething", MonobitTargets.Host, timeStamp);
+        //monobitView.RPC("CopySomething", MonobitTargets.Host, timeStamp);
 
         //ソート前のリスト
         //Debug.Log("ソート前のリスト" + string.Join("", sortlists));

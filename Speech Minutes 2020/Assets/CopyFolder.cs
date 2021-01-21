@@ -40,4 +40,6 @@ public class CopyFolder : MonobitEngine.MonoBehaviour
         //IEnumerable<string> subFolders = System.IO.Directory.EnumerateDirectories("Assets", "MargeFolder", System.IO.SearchOption.AllDirectories);
         //monobitView.RPC("Share", MonobitTargets.Others, subFolders);
     }
+
+    
 }
