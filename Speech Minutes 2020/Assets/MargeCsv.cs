@@ -6,13 +6,14 @@ using MonobitEngine;
 using System.IO;
 using System.ComponentModel;
 using System;
+using System.Linq;
 
 public class MargeCsv : MonobitEngine.MonoBehaviour
 {
 
     string MargefilePath;
     string InputPath;
-
+    int player;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +59,7 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
 
     //マージファイルに書き込み
     [MunRPC]
-    public void RecvChat(string list, int i)
+    public void RecvChat(string list, int i,int cnt)
     {
         MargePathName(i);
         string CSVWriteFilePath = Application.dataPath + MargefilePath;
@@ -68,7 +69,21 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             streamWriter.Write(list);
             streamWriter.WriteLine();
         }
-        monobitView.RPC("MargeSort", MonobitTargets.Host);
+        // monobitView.RPC("MargeSort", MonobitTargets.Host);
+
+    
+         if(i == 8 && cnt == 0)
+            {
+                player--; 
+            Debug.Log("player:"+player);
+               if (player == 0)
+                      {
+                        MargeSort();
+                        Debug.Log("margeしました");
+                      }
+            }
+        
+
     }
 
     //一文ずつ送信
@@ -76,7 +91,8 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     public void Send()
     {
         Clear();
-
+        int cnt;
+        player = MonobitEngine.MonobitNetwork.room.playerCount;
         for (int i = 0; i < 9; i++)
         {
             InputPathName(i);
@@ -96,9 +112,11 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 {
                     lists.AddRange(streamReader.ReadLine().Split('\n'));
                 }
+                cnt = lists.Count();
                 foreach (var list in lists)
                 {
-                    monobitView.RPC("RecvChat", MonobitTargets.Host, list, i);
+                    cnt--;
+                    monobitView.RPC("RecvChat", MonobitTargets.Host, list, i,cnt);
                 }
             }
         }
@@ -110,13 +128,11 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     //outputボタンをクリックした時に送信
     public void ClickFlag()
     {
-        time = DateTime.Now;
-        timeStamp = time.ToString("yyyy_MMdd_HH_mm_ss");
         monobitView.RPC("Send", MonobitTargets.All);
     }
 
     //ソート関数
-    [MunRPC]
+    //[MunRPC]
     public void MargeSort()
     {
         for (int i = 0; i < 9; i++)
@@ -146,7 +162,9 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
                 }
             }
         }
-
+        time = DateTime.Now;
+        timeStamp = time.ToString("yyyy_MMdd_HH_mm_ss");
+        Debug.Log(timeStamp);
         monobitView.RPC("CopySomething", MonobitTargets.Host, timeStamp);
 
         //ソート前のリスト
@@ -157,10 +175,6 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
         //Debug.Log("ソート後のリスト" + string.Join("", sortlists));
     }
 
-    public void SortFlag()
-    {
-        monobitView.RPC("MargeSort", MonobitTargets.All);
-    }
 
 
     void MargePathName(int number)
