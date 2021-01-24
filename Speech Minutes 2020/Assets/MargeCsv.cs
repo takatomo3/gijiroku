@@ -39,10 +39,17 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
 
     
     [MunRPC, MenuItem("Example/Copy Something")]
-    public void Share(string data, string path)
+    public void Share(string data, string path, string file)
     {
         //FileUtil.CopyFileOrDirectory(folder, "Assets/MargeFolder");
-        File.WriteAllText(path, data);
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        FileStream stream = File.Create(file);
+        stream.Close();
+        File.WriteAllText(file, data);
     }
     
 
@@ -51,14 +58,23 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
     [MunRPC,MenuItem("Example/Copy Something")]
     public void CopySomething(string timeStamp)
     {
-        FileUtil.CopyFileOrDirectory("Assets/MargeCSVLogFiles", "Assets/MargeFolder/" + timeStamp);
+        string path = "Assets/MargeFolder/" + timeStamp;
+        FileUtil.CopyFileOrDirectory("Assets/MargeCSVLogFiles", path/*"Assets/MargeFolder/" + timeStamp*/);
         Debug.Log("コピーしました");
 
-        string path = "Assets/MargeFolder/" + timeStamp + "/MargeCSVLogFile.csv";
-        string data = File.ReadAllText(path);
-        
+        string[] files = System.IO.Directory.GetFiles(path, "*.csv", System.IO.SearchOption.AllDirectories);
+        //string path = "Assets/MargeFolder/" + timeStamp;
+        //string data = File.ReadAllText(path);
+
+        foreach (var file in files)
+        {
+            Debug.Log(file);
+            string data = File.ReadAllText(file);
+            monobitView.RPC("Share", MonobitTargets.Others, data, path, file);
+        }
+
         //IEnumerable<string> subFolders = System.IO.Directory.EnumerateDirectories("Assets", "MargeFolder", System.IO.SearchOption.AllDirectories);
-        monobitView.RPC("Share", MonobitTargets.Others, data, path);
+        //monobitView.RPC("Share", MonobitTargets.Others, data, path);
     }
 
     //マージファイルに書き込み
