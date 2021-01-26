@@ -29,6 +29,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 
 		private AudioClip _microphoneWorkingAudioClip;
 
+		private AudioClip TempMUNAudioClip;
+
         private int _currentSamplePosition;
 
         private int _previousSamplePosition;
@@ -155,10 +157,19 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 			return _maxVoiceFrame;
 		}
 
+		public void MUNAudioClipAccess(AudioClip MUNAudioClip)
+        {
+			TempMUNAudioClip = MUNAudioClip;
+        }
+
 		public void StartRecord(bool withVoiceDetection = false)
 		{
+			Debug.Log("StartRecord");
 			if (IsRecording)
+			{
+				Debug.Log("IsRecording");
 				return;
+			}
 
 			if(!ReadyToRecord())
 			{
@@ -188,6 +199,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 			}
 
 			_microphoneWorkingAudioClip = CustomMicrophone.Start(MicrophoneDevice, true, 1, 16000);
+			//_microphoneWorkingAudioClip = TempMUNAudioClip;
 
 			_currentAudioSamples = new float[_microphoneWorkingAudioClip.samples * _microphoneWorkingAudioClip.channels];
 
@@ -208,7 +220,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 
 			IsRecording = false;
 
-			CustomMicrophone.End(MicrophoneDevice);
+			//CustomMicrophone.End(MicrophoneDevice);
 
 			if (!DetectVoice)
 			{

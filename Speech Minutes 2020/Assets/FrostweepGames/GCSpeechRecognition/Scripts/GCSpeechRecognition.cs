@@ -186,6 +186,11 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 			return _mediaManager.GetMaxFrame();
 		}
 
+		public void MUNAudioClipAccess(AudioClip MUNAudioClip)
+        {
+			_mediaManager.MUNAudioClipAccess(MUNAudioClip);
+        }
+
 		public void StartRecord(bool withVoiceDetection)
         {
             _mediaManager.StartRecord(withVoiceDetection);

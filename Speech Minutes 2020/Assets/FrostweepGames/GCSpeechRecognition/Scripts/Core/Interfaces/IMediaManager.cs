@@ -23,6 +23,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 
 		float GetLastFrame();
 		float GetMaxFrame();
+		void MUNAudioClipAccess(AudioClip MUNAudioClip);
 		void StartRecord(bool withVoiceDetection = false);
 		void StopRecord();
 		bool ReadyToRecord();
