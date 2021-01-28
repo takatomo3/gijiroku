@@ -212,24 +212,28 @@ namespace IBM.Watsson.Examples
         private IEnumerator RecordingHandler()
         {
             Log.Debug("ExampleStreaming.RecordingHandler()", "devices: {0}", Microphone.devices);
-            _recording = Microphone.Start(_microphoneID, true, _recordingBufferSize, _recordingHZ);
-            //_recording = AC;
+            //_recording = Microphone.Start(_microphoneID, true, _recordingBufferSize, _recordingHZ);
+            _recording = go.GetComponent<AudioSource>().clip;
             yield return null;      // let _recordingRoutine get set..
 
+            
             if (_recording == null)
             {
-                StopRecording();
+                StopRecording(); Debug.Log("ExampleStreeming 222行目");
                 yield break;
             }
+            Debug.Log("ExampleStreeming 225行目");
 
 
             bool bFirstBlock = true;
             int midPoint = _recording.samples / 2;  //多分サンプリング周波数のことだと思う
             float[] samples = null;
 
+            Debug.Log("ExampleStreeming 232行目");
             while (_recordingRoutine != 0 && _recording != null)
             {
                 int writePos = Microphone.GetPosition(_microphoneID);
+                /*
                 if (writePos > _recording.samples || !Microphone.IsRecording(_microphoneID))
                 {
                     Log.Error("ExampleStreaming.RecordingHandler()", "Microphone disconnected.");
@@ -237,10 +241,11 @@ namespace IBM.Watsson.Examples
                     StopRecording();
                     yield break;
                 }
-
+                */
                 if ((bFirstBlock && writePos >= midPoint)
                   || (!bFirstBlock && writePos < midPoint))
                 {
+                    Debug.Log("ExampleStreeming 248行目");
                     // front block is recorded, make a RecordClip and pass it onto our callback.
                     samples = new float[midPoint];
                     _recording.GetData(samples, bFirstBlock ? 0 : midPoint);
@@ -575,7 +580,9 @@ namespace IBM.Watsson.Examples
 
         private MonobitMicrophone Mc = null;
 
-        public AudioClip AC;
+        private AudioClip AC;
+
+        GameObject go;
 
 
         /** ボイスチャット送信可否設定の定数. */
@@ -612,7 +619,6 @@ namespace IBM.Watsson.Examples
                 // ルームに入室している場合
                 if (MonobitNetwork.inRoom)
                 {
-
                     roomName = MonobitNetwork.room.name;
                     RoomNameText.text = "roomName : " + roomName;
                     PlayerList.text = "PlayerList : ";
@@ -624,7 +630,7 @@ namespace IBM.Watsson.Examples
                         PlayerList.text = PlayerList.text + player.name + " ";
                     }
 
-
+                    /*
                     if (Mute)
                     {
                         List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
@@ -644,6 +650,45 @@ namespace IBM.Watsson.Examples
                         // ボイスチャットの送信可否設定を反映させる
                         myVoice.SetMulticastTarget(vcTargets.ToArray());
                     }
+                    else
+                    {
+                        List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
+                        List<MonobitPlayer> vcTargets = new List<MonobitPlayer>();
+                        foreach (MonobitPlayer player in playerList)
+                        {
+                            vcPlayerInfo[player] = (Int32)EnableVC.ENABLE;
+                            Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
+                            Debug.Log(player.ToString());
+
+                            // ボイスチャットの送信可のプレイヤー情報を登録する
+                            if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
+                            {
+                                vcTargets.Add(player);
+                            }
+                        }
+                        // ボイスチャットの送信可否設定を反映させる
+                        myVoice.SetMulticastTarget(vcTargets.ToArray());
+                    }
+                    */
+
+                    List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
+                    List<MonobitPlayer> vcTargets = new List<MonobitPlayer>();
+                    foreach (MonobitPlayer player in playerList)
+                    {
+                        if(Mute)    vcPlayerInfo[player] = (Int32)EnableVC.DISABLE;
+                        else vcPlayerInfo[player] = (Int32)EnableVC.ENABLE;
+
+                        Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
+                        Debug.Log(player.ToString());
+
+                        // ボイスチャットの送信可のプレイヤー情報を登録する
+                        if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
+                        {
+                            vcTargets.Add(player);
+                        }
+                    }
+                    // ボイスチャットの送信可否設定を反映させる
+                    myVoice.SetMulticastTarget(vcTargets.ToArray());
                 }
             }
         }
@@ -656,85 +701,6 @@ namespace IBM.Watsson.Examples
             SceneManager.LoadScene("StartScene");
         }
 
-        /*
-        private void OnGUI()
-        {
-
-            //MUNサーバに接続している場合
-            if (MonobitNetwork.isConnect)
-            {
-                // ルームに入室している場合
-                if (MonobitNetwork.inRoom)
-                {
-                    GUILayout.BeginHorizontal();
-                    //Debug.Log(MonobitEngine.MonobitNetwork.room.name);
-                    roomName = MonobitEngine.MonobitNetwork.room.name;
-                    RoomNameText.text = "roomName : " + roomName;
-                    GUILayout.Label("roomName : " + roomName, m_guiStyle);
-                    GUILayout.EndHorizontal();
-                    GUILayout.BeginHorizontal();
-                    GUILayout.Label("PlayerList : ", m_guiStyle);
-                    PlayerList.text = "PlayerList : ";
-
-
-                    //Debug.Log("PlayerList:");
-                    foreach (MonobitPlayer player in MonobitNetwork.playerList)
-                    {
-                        PlayerList.text = PlayerList.text + player.name + " ";
-                        GUILayout.Label(player.name + " ");
-                        //Debug.Log(player.name + " ");
-                    }
-                    GUILayout.EndHorizontal();
-
-                    // ルームからの退室
-                    if (GUILayout.Button("Leave Room", m_guiStyle, GUILayout.Width(150)))
-                    {
-                        MonobitNetwork.LeaveRoom();
-                        //Debug.Log("ルームから退出しました");
-                        //ここでスタートのシーンに遷移する
-                        SceneManager.LoadScene("StartScene");
-                    }
-
-                    if (myVoice != null)
-                    {
-                        // 送信タイプの設定
-                        GUILayout.BeginHorizontal();
-                        GUILayout.Label("VoiceChat Send Type : ", m_guiStyle);
-                        Int32 streamType = myVoice.SendStreamType == StreamType.BROADCAST ? 0 : 1;
-                        myVoice.SendStreamType = (StreamType)GUILayout.Toolbar(streamType, new string[] { "broadcast", "multicast" }, m_guiStyle);
-                        GUILayout.EndHorizontal();
-
-                        // マルチキャスト送信の場合の、ボイスチャットの送信可否設定
-                        if (myVoice.SendStreamType == StreamType.MULTICAST)
-                        {
-                            List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
-                            List<MonobitPlayer> vcTargets = new List<MonobitPlayer>();
-                            foreach (MonobitPlayer player in playerList)
-                            {
-                                // GUI による送信可否の切替
-                                GUILayout.BeginHorizontal();
-                                GUILayout.Label("PlayerName : " + player.name + " ", m_guiStyle);
-                                GUILayout.Label("Send Permission: ", m_guiStyle);
-                                vcPlayerInfo[player] = GUILayout.Toolbar(vcPlayerInfo[player], new string[] { "Allow", "Deny" }, m_guiStyle);
-                                GUILayout.EndHorizontal();
-                                // ボイスチャットの送信可のプレイヤー情報を登録する
-                                if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
-                                {
-                                    vcTargets.Add(player);
-                                }
-                            }
-
-                            // ボイスチャットの送信可否設定を反映させる
-                            myVoice.SetMulticastTarget(vcTargets.ToArray());
-                        }
-                    }
-
-                }
-            }
-        }
-        */
-
-
         // 自身がルーム入室に成功したときの処理
         public void OnJoinedRoom()
         {
@@ -746,11 +712,17 @@ namespace IBM.Watsson.Examples
                 vcPlayerInfo.Add(player, (Int32)EnableVC.ENABLE);
             }
 
-            GameObject go = MonobitNetwork.Instantiate("VoiceActor", Vector3.zero, Quaternion.identity, 0);
+            go = MonobitNetwork.Instantiate("VoiceActor", Vector3.zero, Quaternion.identity, 0);
             myVoice = go.GetComponent<MonobitVoice>();
 
-            Mc = go.GetComponent<MonobitMicrophone>();
-            AC = Mc.GetAudioClip();
+            go.GetComponent<AudioSource>().mute = true;
+
+            myVoice.SendStreamType = StreamType.MULTICAST;
+
+
+
+
+
 
             if (myVoice != null)
             {
@@ -818,25 +790,45 @@ namespace IBM.Watsson.Examples
                 if (MonobitNetwork.inRoom)
                 {
                     Mute = !Mute;
-                    if (Mute)
-                    {
-                        myVoice.SendStreamType = StreamType.MULTICAST;
-                        MuteLine.SetActive(true);
-                    }
-
-                    else
-                    {
-                        myVoice.SendStreamType = StreamType.BROADCAST;
-                        MuteLine.SetActive(false);
-
-                    }
+                    if (Mute)   MuteLine.SetActive(true);
+                    else        MuteLine.SetActive(false);
                 }
             }
         }
 
         public void OnclickedDebugButoon()
         {
+            
+            //MUNサーバに接続している場合
+            if (MonobitNetwork.isConnect)
+            {
+                // ルームに入室している場合
+                if (MonobitNetwork.inRoom)
+                {
+                    
+                    myVoice.SendStreamType = StreamType.MULTICAST;
+                    List<MonobitPlayer> playerList = new List<MonobitPlayer>(vcPlayerInfo.Keys);
+                    List<MonobitPlayer> vcTargets = new List<MonobitPlayer>();
+                    foreach (MonobitPlayer player in playerList)
+                    {
+                        vcPlayerInfo[player] = (Int32)EnableVC.ENABLE;
+                        Debug.Log("vcPlayerInfo[" + player + "] = " + vcPlayerInfo[player]);
+                        Debug.Log(player.ToString());
 
+                        // ボイスチャットの送信可のプレイヤー情報を登録する
+                        if (vcPlayerInfo[player] == (Int32)EnableVC.ENABLE)
+                        {
+                            vcTargets.Add(player);
+                        }
+                    }
+                    
+
+                    // ボイスチャットの送信可否設定を反映させる
+                    myVoice.SetMulticastTarget(vcTargets.ToArray());
+                    AC = go.GetComponent<AudioSource>().clip;
+
+                }
+            }
         }
     }
 }
