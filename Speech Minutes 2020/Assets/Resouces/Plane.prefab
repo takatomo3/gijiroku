@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277584237ad31144584195f79af03cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_viewIdField: 0
+  m_viewIdField: 80
   m_IsDontDestroyOnRoom: 0
   m_IsInstantiated: 0
   m_ObjectStreamCheckTime: 0
