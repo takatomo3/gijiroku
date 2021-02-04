@@ -24,6 +24,8 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     /** ルーム名. */
     private string roomName = "";
 
+    private GameObject whiteObject = null;
+
     /** ルーム内のプレイヤーに対するボイスチャット送信可否設定. */
     private Dictionary<MonobitPlayer, Int32> vcPlayerInfo = new Dictionary<MonobitPlayer, int>();
 
@@ -66,7 +68,7 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
     }
 
 
-    private void Update()
+     void Update()
     {
         //MUNサーバに接続している場合
         if (MonobitNetwork.isConnect)
@@ -78,6 +80,10 @@ public class MainSecneMUNScript : MonobitEngine.MonoBehaviour
                 roomName = MonobitEngine.MonobitNetwork.room.name;
                 RoomNameText.text = "roomName : " + roomName;
                 PlayerList.text = "PlayerList : ";
+                if (whiteObject == null)
+                {
+                    whiteObject = MonobitNetwork.Instantiate("Plane", Vector3.zero, Quaternion.identity, 0);
+                }
 
 
                 //Debug.Log("PlayerList:");
