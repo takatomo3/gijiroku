@@ -5,9 +5,11 @@ using System;
 using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine;
+using MonobitEngine;
 
 
-public class PixAccess : MonoBehaviour
+public class PixAccess : MonobitEngine.MonoBehaviour
 {
 	Texture2D drawTexture;
 	Color[] buffer;
@@ -84,7 +86,7 @@ public class PixAccess : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 100.0f))
 		{
-			Draw(hit.textureCoord * 256);
+			monobitView.RPC("Draw", MonobitTargets.All, hit.textureCoord * 256);
 		}
 
 		drawTexture.SetPixels(buffer);
@@ -92,9 +94,10 @@ public class PixAccess : MonoBehaviour
 		GetComponent<Renderer>().material.mainTexture = drawTexture;
 	}
 	/// <summary>
-    /// 太さ変更
-    /// </summary>
-    /// <param name="p"></param>
+	/// 太さ変更
+	/// </summary>
+	/// <param name="p"></param>
+  [MunRPC]
 	public void Draw(Vector2 p)
 	{
 		for (int x = 0; x < 256; x++)
@@ -158,7 +161,7 @@ public class PixAccess : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 100.0f))
 		{
-			Draw(hit.textureCoord * 256);
+			monobitView.RPC("Draw", MonobitTargets.All, hit.textureCoord * 256);
 		}
 
 		drawTexture.SetPixels(buffer);
@@ -176,7 +179,7 @@ public class PixAccess : MonoBehaviour
 				RaycastHit hit;
 				if (Physics.Raycast(ray, out hit, 100.0f))
 				{
-					Draw(hit.textureCoord * 256);
+					monobitView.RPC("Draw", MonobitTargets.All, hit.textureCoord * 256);
 				}
 
 				drawTexture.SetPixels(buffer);
