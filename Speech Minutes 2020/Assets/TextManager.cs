@@ -12,7 +12,7 @@ public class TextManager : MonoBehaviour
     public Text display;
 
     public GameObject canvas;//キャンバス
-    public GameObject gametext;
+    public GameObject FusenPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +38,8 @@ public class TextManager : MonoBehaviour
     { 
         if (GameObject.Find("TextBox").GetComponent<InputField>().text != "") {
             //テキストがあればプレハブからオブジェクト生成
-            gametext.gameObject.SetActive(true);
-            GameObject prefab = (GameObject)Instantiate(gametext);
+            FusenPanel.gameObject.SetActive(true);
+            GameObject prefab = (GameObject)Instantiate(FusenPanel);
             prefab.transform.SetParent(canvas.transform, false);
             //int px = Random.Range(30, -35);
             //int py = Random.Range(19, -25);
@@ -71,6 +71,6 @@ public class TextManager : MonoBehaviour
     {
         //インプットフィールドの中身を消す
         GameObject.Find("TextBox").GetComponent<InputField>().text = "";
-        gametext.gameObject.SetActive(false);
+        FusenPanel.gameObject.SetActive(false);
     }
 }
