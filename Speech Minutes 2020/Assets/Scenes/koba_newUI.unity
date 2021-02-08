@@ -7591,7 +7591,7 @@ MonoBehaviour:
   text: {fileID: 1342288347}
   display: {fileID: 1316108159}
   canvas: {fileID: 1220727752}
-  gametext: {fileID: 1342288339}
+  FusenPanel: {fileID: 0}
   input_rectTransform: {fileID: 1342288340}
   display_rectTransform: {fileID: 1316108156}
 --- !u!4 &1450070124
@@ -10313,6 +10313,7 @@ MonoBehaviour:
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 0, b: 0, a: 0}
   lineWidth: 0
+  itakire: {fileID: 1810702199}
 --- !u!64 &1810702201
 MeshCollider:
   m_ObjectHideFlags: 0

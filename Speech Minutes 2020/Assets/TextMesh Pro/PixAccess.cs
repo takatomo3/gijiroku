@@ -21,7 +21,7 @@ public class PixAccess : MonobitEngine.MonoBehaviour
 	public Material lineMaterial;
 	public Color lineColor;
 	[Range(0, 64)] public float lineWidth;
-	GameObject itakire = GameObject.Find("Plane");
+	public GameObject itakire = GameObject.Find("Plane");
 	/// <summary>
 	/// 白黒反転
 	/// </summary>
