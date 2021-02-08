@@ -9,7 +9,7 @@ public class TextControl : MonoBehaviour, IDragHandler
     // マウススクロール変数
     private float scroll;
     public Text chatComent;
-    public bool Selectflag=false;
+    public bool Selectflag = false;
    // public Color texcolor;
     public GameObject teO;
     void Start()
@@ -17,7 +17,7 @@ public class TextControl : MonoBehaviour, IDragHandler
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         // Textコンポーネントを取得
-        Text text = this.GetComponent<Text>();
+        Text text = this.GetComponentInChildren<Text>();
         // 色を指定
         text.color = Color.black;
     }
@@ -36,7 +36,7 @@ public class TextControl : MonoBehaviour, IDragHandler
         if (Selectflag == true)
         {
             // Textコンポーネントを取得
-               chatComent = this.GetComponent<Text>();
+               chatComent = this.GetComponentInChildren<Text>();
                // 色を指定
                chatComent.color = Color.green;
                Debug.Log("Selectされました");
@@ -69,7 +69,7 @@ public class TextControl : MonoBehaviour, IDragHandler
         if (Selectflag == true)
         {
             scroll = Input.GetAxis("Mouse ScrollWheel");
-            Text textfont = this.GetComponent<Text>();
+            Text textfont = this.GetComponentInChildren<Text>();
 
             if (scroll > 0)
             {
@@ -91,7 +91,7 @@ public class TextControl : MonoBehaviour, IDragHandler
                 if (Selectflag == false)
                 {
                     // Textコンポーネントを取得
-                    Text text = this.GetComponent<Text>();
+                    Text text = this.GetComponentInChildren<Text>();
                     // 色を指定
                     text.color = Color.black;
 
@@ -116,7 +116,9 @@ public class TextControl : MonoBehaviour, IDragHandler
         if (Input.GetMouseButtonDown(2))
             Debug.Log("Pressed middle click.ｑ２");
     }
+
     public RectTransform m_rectTransform = null;
+
     /// <summary>
     /// テキストの位置取得
     /// </summary>
