@@ -5,7 +5,6 @@ using System;
 using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine;
 using MonobitEngine;
 
 
@@ -14,17 +13,18 @@ public class PixAccess : MonobitEngine.MonoBehaviour
 	Texture2D drawTexture;
 	Color[] buffer;
 	/// <summary>
-    /// ボタンと連動
-    /// </summary>
+	/// ボタンと連動
+	/// </summary>
 	public GameObject PenMode;
 	public bool mode = false;
 	public Text Buttontext;
 	public Material lineMaterial;
 	public Color lineColor;
 	[Range(0, 64)] public float lineWidth;
+	GameObject itakire = GameObject.Find("Plane");
 	/// <summary>
-    /// 白黒反転
-    /// </summary>
+	/// 白黒反転
+	/// </summary>
 	int inversionFlag = 0;
 
 	public void Start()
@@ -58,8 +58,9 @@ public class PixAccess : MonobitEngine.MonoBehaviour
 		}
 	}
 	/// <summary>
-    /// 初期化
-    /// </summary>
+	/// 初期化
+	/// </summary>
+	[MunRPC]
 	public void Clear()
 	{
 
@@ -93,11 +94,17 @@ public class PixAccess : MonobitEngine.MonoBehaviour
 		drawTexture.Apply();
 		GetComponent<Renderer>().material.mainTexture = drawTexture;
 	}
+
+
+	public void Clearfjag()
+	{
+		monobitView.RPC("Clear", MonobitTargets.All);
+    }
 	/// <summary>
 	/// 太さ変更
 	/// </summary>
 	/// <param name="p"></param>
-  [MunRPC]
+	[MunRPC]
 	public void Draw(Vector2 p)
 	{
 		for (int x = 0; x < 256; x++)
@@ -168,9 +175,18 @@ public class PixAccess : MonobitEngine.MonoBehaviour
 		drawTexture.Apply();
 		GetComponent<Renderer>().material.mainTexture = drawTexture;
 	}
+
+	[MunRPC]
+	public void objectCloorUpdate()
+    {
+		Material sphere1 = itakire.GetComponent<Renderer>().material;
+		itakire.GetComponent<Renderer>().material.color = sphere1.color;
+	}
+
 	void Update()
     {
-		
+		monobitView.RPC("objectCloorUpdate", MonobitTargets.All);
+
 		if (mode)
 		{
 			if (Input.GetMouseButton(0))

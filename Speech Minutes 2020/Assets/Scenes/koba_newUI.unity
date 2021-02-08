@@ -6852,7 +6852,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1810702200}
-        m_MethodName: Clear
+        m_MethodName: Clearfjag
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
