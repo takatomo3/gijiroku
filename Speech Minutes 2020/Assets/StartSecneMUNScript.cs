@@ -103,7 +103,7 @@ public class StartSecneMUNScript : MonobitEngine.MonoBehaviour
                     /********
                     ここでメインのシーンに遷移する
                     *********/
-                    SceneManager.LoadScene("newUI");
+                    SceneManager.LoadScene("koba_newUI");
                 }
                 // ルーム一覧を検索
                 foreach (RoomData room in MonobitNetwork.GetRoomData())
@@ -124,7 +124,7 @@ public class StartSecneMUNScript : MonobitEngine.MonoBehaviour
                         /********
                         ここでメインのシーンに遷移する
                         *********/
-                        SceneManager.LoadScene("newUI");
+                        SceneManager.LoadScene("koba_newUI");
                         //SceneManager.LoadScene("newUI");
                     }
                 }
