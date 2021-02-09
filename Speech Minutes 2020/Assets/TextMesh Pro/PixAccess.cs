@@ -179,8 +179,9 @@ public class PixAccess : MonobitEngine.MonoBehaviour
 	[MunRPC]
 	public void objectCloorUpdate()
     {
-		Material sphere1 = itakire.GetComponent<Renderer>().material;
-		itakire.GetComponent<Renderer>().material.color = sphere1.color;
+		drawTexture.SetPixels(buffer);
+		drawTexture.Apply();
+		GetComponent<Renderer>().material.mainTexture = drawTexture;
 	}
 
 	void Update()
