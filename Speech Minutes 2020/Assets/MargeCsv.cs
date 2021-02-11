@@ -115,13 +115,10 @@ public class MargeCsv : MonobitEngine.MonoBehaviour
             InputPathName(i);
             string CSVFilePath = Application.dataPath + InputPath;
             //書き込み先ファイルの指定
-
-
             var fs = new FileStream(CSVFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 
             //　ストリームで読み込みと書き込み
             using (StreamReader streamReader = new StreamReader(fs))
-
             {
                 List<string> lists = new List<string>();
 
