@@ -14,9 +14,10 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
 
     string MargefilePath;
     string InputPath;
+    string LogDataPath;
     int player;
     [SerializeField]
-    Text PanelText;
+    GameObject PopUp;
 
     // Start is called before the first frame update
     void Start()
@@ -83,28 +84,11 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
 
     //マージファイルに書き込み
     [MunRPC]
-    public void RecvChat(string list, int i, int cnt)
+    public void RecvChat(string list)
     {
-        MargePathName(i);
-        string CSVWriteFilePath = Application.dataPath + MargefilePath;
-        Debug.Log(MargefilePath);
-        using (StreamWriter streamWriter = new StreamWriter(CSVWriteFilePath, true))
-        {
-            streamWriter.Write(list);
-            streamWriter.WriteLine();
-        }
-        // monobitView.RPC("MargeSort", MonobitTargets.Host);
+        PopUp.GetComponent<Text>().text += Environment.NewLine;
+        PopUp.GetComponent<Text>().text += list;
 
-        if (i == 8 && cnt == 0)
-        {
-            player--;
-            Debug.Log("player:" + player);
-            if (player == 0)
-            {
-                MargeSort();
-                Debug.Log("margeしました");
-            }
-        }
     }
 
     //一文ずつ送信
@@ -112,15 +96,15 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
     public void Send()
     {
         
-        Clear();
-        int cnt;
-        player = MonobitEngine.MonobitNetwork.room.playerCount;
-        for (int i = 0; i < 9; i++)
-        {
-            InputPathName(i);
-            string CSVFilePath = Application.dataPath + InputPath;
+        //Clear();
+        //int cnt;
+        //player = MonobitEngine.MonobitNetwork.room.playerCount;
+        //for (int i = 0; i < 9; i++)
+        //{
+            LogDataName(0);
+            string LogPath = Application.dataPath + LogDataPath;
             //書き込み先ファイルの指定
-            var fs = new FileStream(CSVFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            var fs = new FileStream(LogPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 
             //　ストリームで読み込みと書き込み
             using (StreamReader streamReader = new StreamReader(fs))
@@ -131,17 +115,17 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
                 {
                     lists.AddRange(streamReader.ReadLine().Split('\n'));
                 }
-                cnt = lists.Count();
+                //cnt = lists.Count();
                 foreach (var list in lists)
                 {
-                    cnt--;
-                    monobitView.RPC("RecvChat", MonobitTargets.Host, list, i, cnt);
+                    //cnt--;
+                    monobitView.RPC("RecvChat", MonobitTargets.All, list);
                 }
             }
 
 
 
-        }
+        //}
     }
 
     DateTime time;
@@ -267,6 +251,40 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
                 InputPath = @"/CSVLogFiles/CSVLogFile.csv";
                 break;
             default:
+                break;
+        }
+    }
+
+    void LogDataName(int number)
+    {
+        switch (number)
+        {
+            case 0:
+                LogDataPath = @"/LogDatas/LogData0.txt";
+                break;
+            case 1:
+                LogDataPath = @"/LogDatas/LogData1.txt";
+                break;
+            case 2:
+                LogDataPath = @"/LogDatas/LogData2.txt";
+                break;
+            case 3:
+                LogDataPath = @"/LogDatas/LogData3.txt";
+                break;
+            case 4:
+                LogDataPath = @"/LogDatas/LogData4.txt";
+                break;
+            case 5:
+                LogDataPath = @"/LogDatas/LogData5.txt";
+                break;
+            case 6:
+                LogDataPath = @"/LogDatas/LogData6.txt";
+                break;
+            case 7:
+                LogDataPath = @"/LogDatas/LogData7.txt";
+                break;
+            default:
+                LogDataPath = @"/LogDatas/LogData.txt";
                 break;
         }
     }

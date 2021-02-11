@@ -674,7 +674,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -22.499996, y: -5}
-  m_SizeDelta: {x: 0, y: 15.576235}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &73081252
 MonoBehaviour:
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1841276888}
+      - m_Target: {fileID: 123208624}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -1845,7 +1845,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -17, y: -5}
-  m_SizeDelta: {x: 0, y: 15.576235}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304829236
 MonoBehaviour:
@@ -2296,7 +2296,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &359752876
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2323,7 +2323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &377150900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2345,7 +2345,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 455.39844, y: 32.601562}
-  m_SizeDelta: {x: -1270, y: -710.1718}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377150901
 MonoBehaviour:
@@ -3217,7 +3217,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -22.499996, y: -5}
-  m_SizeDelta: {x: 0, y: 15.576235}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556685380
 MonoBehaviour:
@@ -5893,7 +5893,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -22.499996, y: -5}
-  m_SizeDelta: {x: 0, y: 15.576235}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025394761
 MonoBehaviour:
@@ -7800,7 +7800,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -17.9, y: -5}
-  m_SizeDelta: {x: 0, y: 15.576235}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1329308088
 MonoBehaviour:
@@ -10338,7 +10338,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -22.499996, y: -5}
-  m_SizeDelta: {x: 0, y: 15.576235}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654918210
 MonoBehaviour:
@@ -10584,7 +10584,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -22.499996, y: -5}
-  m_SizeDelta: {x: 0, y: 15.576235}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747620560
 MonoBehaviour:
@@ -11014,7 +11014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e2dfabc61bc4d839bf1fbbebb5d341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanelText: {fileID: 0}
+  PopUp: {fileID: 359752873}
 --- !u!1 &1810702199
 GameObject:
   m_ObjectHideFlags: 0
@@ -11451,7 +11451,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -17.9, y: -5}
-  m_SizeDelta: {x: 0, y: 15.576235}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841249691
 MonoBehaviour:
@@ -12835,7 +12835,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1782908613}
         m_MethodName: ClickFlag
