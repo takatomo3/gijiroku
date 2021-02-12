@@ -59,7 +59,8 @@ namespace IBM.Watsson.Examples
         public Text text;
         [SerializeField]
         public GameObject[] Button;
-        public GameObject LogText;
+        [SerializeField]
+        public GameObject[] LogText;
 
 
         private int _recordingRoutine = 0;
@@ -85,6 +86,7 @@ namespace IBM.Watsson.Examples
 
         DateTime now;
         string timeStamp;
+        string logtime;
 
         private SpeechToTextService _service;
 
@@ -123,10 +125,28 @@ namespace IBM.Watsson.Examples
         */
 
         [MunRPC]
-        public void RecvChat(string timestamp, string name, string word)
+        public void RecvChat(string logtime, string name, string word)
         {
-            LogText.GetComponent<Text>().text += Environment.NewLine;
-            LogText.GetComponent<Text>().text += timestamp + "," + name + "," + word;
+            if(NowBottonPushed == -1)
+            {
+                LogText[8].GetComponent<Text>().text += Environment.NewLine;
+                LogText[8].GetComponent<Text>().text += logtime + "," + name + "," + word;
+            }
+            else
+            {
+                LogText[NowBottonPushed].GetComponent<Text>().text += Environment.NewLine;
+                LogText[NowBottonPushed].GetComponent<Text>().text += logtime +"," + name + "," + word;
+            }
+
+        }
+
+        public void LogClear()
+        {
+            //Text0~8を非アクティブ
+            for(int i=0; i<9; i++)
+            {
+                LogText[i].SetActive(false);
+            }
         }
 
 
@@ -296,7 +316,7 @@ namespace IBM.Watsson.Examples
                         if (res.final)
                         {
                             Dataoutput(timeStamp, MonobitNetwork.playerName, alt.transcript, alt.confidence);
-                            monobitView.RPC("RecvChat", MonobitTargets.All, timeStamp, MonobitNetwork.playerName, alt.transcript);
+                            monobitView.RPC("RecvChat", MonobitTargets.All, logtime, MonobitNetwork.playerName, alt.transcript);
 
 
 
@@ -358,6 +378,7 @@ namespace IBM.Watsson.Examples
                     LogDataFilePath = @"/LogDatas/LogData0.txt";
                     filePath = Application.dataPath + LogDataFilePath;
                     text.text = Button[number].GetComponentInChildren<Text>().text + "を選択中";
+
                     break;
                 case 1:
                     LogDataFilePath = @"/LogDatas/LogData1.txt";
@@ -611,21 +632,14 @@ namespace IBM.Watsson.Examples
         /**
         * RPC 受信関数.
         */
-        [MunRPC]
-        void RecvChat(string senderName, string senderWord)
-        {
-            chatLog.Add(senderName + " : " + senderWord);
-            if (chatLog.Count > 10)
-            {
-                chatLog.RemoveAt(0);
-            }
-        }
 
 
         private void Update()
         {
             now = DateTime.Now;
             timeStamp = now.ToString("yyyy/MM/dd HH:mm:ss");
+            logtime = now.ToLongTimeString();
+
             //MUNサーバに接続している場合
             if (MonobitNetwork.isConnect)
             {
