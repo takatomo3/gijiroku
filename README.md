@@ -10,3 +10,5 @@
 ## gitignoreについて
 [こちら](https://www.cg-method.com/unity-gitignore-setting/　 )のサイトを参考にignoreを設定した
 
+## Unityのバージョンについて
+- Unityのバージョンは2018.4.23.f1を使用
