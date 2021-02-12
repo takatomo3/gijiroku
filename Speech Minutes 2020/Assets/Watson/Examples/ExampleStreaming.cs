@@ -59,6 +59,7 @@ namespace IBM.Watsson.Examples
         public Text text;
         [SerializeField]
         public GameObject[] Button;
+        public GameObject LogText;
 
 
         private int _recordingRoutine = 0;
@@ -120,6 +121,18 @@ namespace IBM.Watsson.Examples
             if (Record == false) StartRecording();
         }
         */
+
+        [MunRPC]
+        public void RecvChat(string timestamp, string name, string word)
+        {
+            LogText.GetComponent<Text>().text += Environment.NewLine;
+            LogText.GetComponent<Text>().text += timestamp + "," + name + "," + word;
+        }
+
+
+
+
+
 
         private IEnumerator CreateService()
         {
@@ -280,7 +293,14 @@ namespace IBM.Watsson.Examples
 
                         Log.Debug("ExampleStreaming.OnRecognize()", text);
                         ResultsField.text = text;
-                        if(res.final)   Dataoutput(timeStamp, MonobitNetwork.playerName, alt.transcript, alt.confidence);
+                        if (res.final)
+                        {
+                            Dataoutput(timeStamp, MonobitNetwork.playerName, alt.transcript, alt.confidence);
+                            monobitView.RPC("RecvChat", MonobitTargets.All, timeStamp, MonobitNetwork.playerName, alt.transcript);
+
+
+
+                        }
                     }
                     if (res.keywords_result != null && res.keywords_result.keyword != null)
                     {

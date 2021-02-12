@@ -28,18 +28,7 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
 
     void Clear()
     {
-        for (int i = 0; i < 9; i++)
-        {
-            MargePathName(i);
-            string ClearPath = Application.dataPath + MargefilePath;
-            using (var fileStream = new FileStream(ClearPath, FileMode.Open))
-            {
-                // ストリームの長さを0に設定します。
-                // 結果としてファイルのサイズが0になります。
-                fileStream.SetLength(0);
-            }
-
-        }
+        PopUp.GetComponent<Text>().text = "";
     }
 
 
@@ -95,8 +84,7 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
     [MunRPC]
     public void Send()
     {
-        
-        //Clear();
+        Clear();
         //int cnt;
         //player = MonobitEngine.MonobitNetwork.room.playerCount;
         //for (int i = 0; i < 9; i++)
@@ -115,7 +103,8 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
                 {
                     lists.AddRange(streamReader.ReadLine().Split('\n'));
                 }
-                //cnt = lists.Count();
+            //cnt = lists.Count();
+
                 foreach (var list in lists)
                 {
                     //cnt--;
