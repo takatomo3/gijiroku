@@ -111,9 +111,6 @@ public class MargeTxt : MonobitEngine.MonoBehaviour
                     monobitView.RPC("RecvChat", MonobitTargets.All, list);
                 }
             }
-
-
-
         //}
     }
 
